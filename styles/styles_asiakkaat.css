@@ -1,0 +1,26 @@
+body {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+table {
+    border: 1px solid black;
+}
+table#asiakkaat, table#asiakkaat td, table#asiakkaat th {
+    font-family: Helvetica, Arial, sans-serif;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    padding: 3px;
+}
+table#asiakkaat th {
+    background-color: rgb(31, 198, 253);
+    font-size: 1.2em;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+table#asiakkaat tr:nth-child(even) {
+    background-color: white;
+}
+table#asiakkaat tr:nth-child(odd) {
+    background-color: lightblue;
+} 
