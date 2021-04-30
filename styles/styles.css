@@ -141,6 +141,7 @@ a:active.itlinkki {
   margin-right: 30%;
   margin-top: 40px;
   padding: 5px;
+  width: fit-content;
 }
 .naytteet:hover {
   font-size: 40px;
@@ -150,6 +151,7 @@ a:active.itlinkki {
   margin-left: 30%;
   margin-right: 30%;
   margin-top: 40px;
+  width: fit-content;
 }
 th {
   text-align: center;
