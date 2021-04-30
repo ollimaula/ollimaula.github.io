@@ -1,53 +1,60 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <title>Olli Maula</title>
-    <link rel="stylesheet" href="styles/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Olli Maula</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- rel = relationship; nykyinen sivu <-> linkitetty sivu -->
 </head>
 <body>
-    <h1 class="banner"><em><u>Olli Maula</u></em></h1>
-    <!-- em (emphasis) korostaa tekstin osaa. -->
-    <p class="nav">
-        <a href="index.html" title="Etusivu"><b>Etusivu</b></a> |
-        <a href="harrastukset.html" title="Harrastukset">Harrastukset</a> | 
-        <a href="portfolio.html" title="Portfolio">Portfolio</a>
-    </p>
-    <h2>TIETOA MINUSTA</h2>
-    <img id="omakuva" src="images/omakuva.jpg" alt="OMAKUVA">
-    <!-- Käyttämällä id:tä sen sijaan, että lisäisi tyylin suoraan elementin sisään, pysyy koodi huomattavasti siistimpänä. -->
-    <p>
-        <strong>Tällä hetkellä työskentelen <a title="www.securitas.fi" href="https://www.securitas.fi/" target="_blank">Securitas Oy:llä</a> 
-        ase- ja räjähdeteollisuuden kohteissa paikallisvartijana.<br></strong>
-        Vastaan työssäni kohteiden fyysisestä turvallisuudesta sekä LVISJ- ja prosessihälytyksiin reagoinnista.<br>
-        Käytän työssäni enenevissä määrin elektronista valvontaa ja se on saanut minut kiinnostumaan kyberturvallisuudesta alana.<br>
-        Tarkoituksenani on opiskella työni ohessa ICT-insinööriksi ja erikoistua kyberturvallisuuteen.<br>  
-        <!-- strong kertoo tekstin tärkeydestä. -->
-    </p>
-    <h3>HARRASTUKSENI</h3>
-    <p>
-        Vapaa-aikani menee pääasiallisesti erilaisten elektronisten laitteiden sekä ruutujen parissa.<br>
-        Näiden lisäksi harrastan myös kamppailulajeja (tämä tosin on sattuneesta syystä jäänyt viimeaikoina hieman vähemmälle...) ja vietän aikaa koirani kanssa.<br>
-        Tässä muutamia harrastuksiani lueteltuina:
-    </p>
-    <ul id="harrastukset">
-        <li>Tietotekniikka</li>
-        <li>Elektroniikka</li>
-        <li>Videopelit</li>
-        <li>Elokuvat</li>
-        <li>Kamppailulajit</li>
-    </ul>
-    <!-- ul (unordered list) luo listan jonka järjestyksellä ei ole väliä. -->
-    <!-- li tulee sanoista "list item". -->
-    <!-- lista näyttää left align paddingillä siistimmältä, kuin center align. -->
-    <div id="pohja">
-        <h2 class="footer">Yhteystietoni</h2>
-        <address>
-            <b>E-mail: </b><a href="mailto:olli.maula@gmail.com"><i>olli.maula@gmail.com</i></a><br>
-            <b>Puh: </b><i>045 634 6077</i>
-        </address>
-        <!-- address määrittää yhteystiedot. -->
-        <!-- Lisäämällä body:n pohjaan paddingiä, ei #pohja tule muiden elementtien päälle, vaikka sen positio onkin fixed. -->
-    </div>
+
+<h1 class="banner"><em><u>Olli Maula</u></em></h1>
+<!-- em (emphasis) korostaa tekstin osaa. -->
+<p class="nav">
+  <a href="index.html" title="Etusivu"><b>Etusivu</b></a> |
+  <a href="harrastukset.html" title="Harrastukset">Harrastukset</a> | 
+  <a href="portfolio.html" title="Portfolio">Portfolio</a>
+</p>
+
+<h2>TIETOA MINUSTA</h2>
+<img id="omakuva" src="images/omakuva.jpg" alt="OMAKUVA">
+<!-- Käyttämällä id:tä sen sijaan, että lisäisi tyylin suoraan elementin sisään, pysyy koodi huomattavasti siistimpänä. -->
+<p>
+  <strong>Tällä hetkellä työskentelen <a title="www.securitas.fi" href="https://www.securitas.fi/" target="_blank">Securitas Oy:llä</a> 
+  ase- ja räjähdeteollisuuden kohteissa paikallisvartijana.<br></strong>
+  Vastaan työssäni kohteiden fyysisestä turvallisuudesta sekä LVISJ- ja prosessihälytyksiin reagoinnista.<br>
+  Käytän työssäni enenevissä määrin elektronista valvontaa ja se on saanut minut kiinnostumaan kyberturvallisuudesta alana.<br>
+  Tarkoituksenani on opiskella työni ohessa ICT-insinööriksi ja erikoistua kyberturvallisuuteen.<br>  
+  <!-- strong kertoo tekstin tärkeydestä. -->
+</p>
+
+<h3>HARRASTUKSENI</h3>
+<p>
+  Vapaa-aikani menee pääasiallisesti erilaisten elektronisten laitteiden sekä ruutujen parissa.<br>
+  Näiden lisäksi harrastan myös kamppailulajeja (tämä tosin on sattuneesta syystä jäänyt viimeaikoina hieman vähemmälle...) ja vietän aikaa koirani kanssa.<br>
+  Tässä muutamia harrastuksiani lueteltuina:
+</p>
+<ul id="harrastukset">
+  <li>Tietotekniikka</li>
+  <li>Elektroniikka</li>
+  <li>Videopelit</li>
+  <li>Elokuvat</li>
+  <li>Kamppailulajit</li>
+</ul>
+<!-- ul (unordered list) luo listan jonka järjestyksellä ei ole väliä. -->
+<!-- li tulee sanoista "list item". -->
+<!-- lista näyttää left align paddingillä siistimmältä, kuin center align. -->
+
+<div id="pohja">
+  <h2 class="footer">Yhteystietoni</h2>
+  <address id="addtxt">
+    <b>E-mail: </b><a id="email" href="mailto:olli.maula@gmail.com"><i>olli.maula@gmail.com</i></a><br>
+    <b>Puh: </b><i>045 634 6077</i>
+  </address>
+  <!-- address määrittää yhteystiedot. -->
+  <!-- Lisäämällä body:n pohjaan paddingiä, ei #pohja tule muiden elementtien päälle, vaikka sen positio onkin fixed. -->
+</div>
+
 </body>
 </html>
