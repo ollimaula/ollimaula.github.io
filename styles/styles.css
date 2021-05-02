@@ -80,6 +80,7 @@ a:active#email {
 a:link.itlinkki {
   color: #000099;
   text-decoration: none;
+  display: block;
 }
 a:visited.itlinkki {
   color: #00004d;
@@ -138,21 +139,22 @@ a:active.itlinkki {
   background-color: rgb(164, 207, 124);
   color: rgb(39, 39, 39);
   border-radius: 30px; /* pyöristää reunoja */
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 34%;
   margin-top: 40px;
   padding: 5px;
-  min-width: 200px;
+  min-width: 500px;
+  max-width: 800px;
 }
 .naytteet:hover {
   font-size: 40px;
   border: 3px red ridge;
   border-radius: 30px;
   background-color: royalblue;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 34%;
   margin-top: 40px;
-  min-width: 200px;
+  padding: 5px;
+  min-width: 500px;
+  max-width: 800px;
 }
 th {
   text-align: center;
