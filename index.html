@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <title>Olli Maula</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <!-- rel = relationship; nykyinen sivu <-> linkitetty sivu -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Turvallisuusalan portfolio">
+<meta name="keywords" content="Portfolio, CV, Curriculum Vitae, Turvallisuusala, Vartija">
+<meta name="author" content="Olli Maula">
+<meta charset="UTF-8">
+<title>Olli Maula - Etusivu</title>
+<link rel="stylesheet" href="styles/styles.css">
+<link href="styles/lightbox.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/55ff3240d5.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<h1 class="banner"><em><u>Olli Maula</u></em></h1>
-<!-- em (emphasis) korostaa tekstin osaa. -->
-<p class="nav">
-  <a href="index.html" title="Etusivu"><b>Etusivu</b></a> |
-  <a href="harrastukset.html" title="Harrastukset">Harrastukset</a> | 
-  <a href="portfolio.html" title="Portfolio">Portfolio</a>
-</p>
+<main>
 
-<h2>TIETOA MINUSTA</h2>
-<img id="omakuva" src="images/omakuva.jpg" alt="OMAKUVA">
-<!-- Käyttämällä id:tä sen sijaan, että lisäisi tyylin suoraan elementin sisään, pysyy koodi huomattavasti siistimpänä. -->
-<p>
-  <strong>Tällä hetkellä työskentelen <a title="www.securitas.fi" href="https://www.securitas.fi/" target="_blank">Securitas Oy:llä</a> 
-  ase- ja räjähdeteollisuuden kohteissa paikallisvartijana.<br></strong>
-  Vastaan työssäni kohteiden fyysisestä turvallisuudesta sekä LVISJ- ja prosessihälytyksiin reagoinnista.<br>
-  Käytän työssäni enenevissä määrin elektronista valvontaa ja se on saanut minut kiinnostumaan kyberturvallisuudesta alana.<br>
-  Tarkoituksenani on opiskella työni ohessa ICT-insinööriksi ja erikoistua kyberturvallisuuteen.<br>  
-  <!-- strong kertoo tekstin tärkeydestä. -->
-</p>
+  <div>
+    <nav>
+      <ul id="navlist">
+        <li class="navig"><a class="active" href="index.html" title="Etusivu"><p class="bar"><i class="fas fa-home"></i> ETUSIVU</p></a></li>
+        <li class="navig"><a class="nonactive" href="harrastukset.html" title="Harrastukset"><p class="bar"><i class="far fa-keyboard"></i>  HARRASTUKSET</p></a></li>
+        <li class="navig"><a class="nonactive" href="portfolio.html" title="Portfolio"><p class="bar"><i class="far fa-file-alt"></i> PORTFOLIO</p></a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Olli Maula</h1>
+    </header>
+  </div>
 
-<h3>HARRASTUKSENI</h3>
-<p>
-  Vapaa-aikani menee pääasiallisesti erilaisten elektronisten laitteiden sekä ruutujen parissa.<br>
-  Näiden lisäksi harrastan myös kamppailulajeja (tämä tosin on sattuneesta syystä jäänyt viimeaikoina hieman vähemmälle...) ja vietän aikaa koirani kanssa.<br>
-  Tässä muutamia harrastuksiani lueteltuina:
-</p>
-<ul id="harrastukset">
-  <li>Tietotekniikka</li>
-  <li>Elektroniikka</li>
-  <li>Videopelit</li>
-  <li>Elokuvat</li>
-  <li>Kamppailulajit</li>
-</ul>
-<!-- ul (unordered list) luo listan jonka järjestyksellä ei ole väliä. -->
-<!-- li tulee sanoista "list item". -->
-<!-- lista näyttää left align paddingillä siistimmältä, kuin center align. -->
+  <article>
 
-<div id="pohja">
-  <h2 class="footer">Yhteystietoni</h2>
-  <address id="addtxt">
-    <b>E-mail: </b><a id="email" href="mailto:olli.maula@gmail.com"><i>olli.maula@gmail.com</i></a><br>
-    <b>Puh: </b><i>045 634 6077</i>
-  </address>
-  <!-- address määrittää yhteystiedot. -->
-  <!-- Lisäämällä body:n pohjaan paddingiä, ei #pohja tule muiden elementtien päälle, vaikka sen positio onkin fixed. -->
-</div>
+    <section class="left">
+      <h2><i class="fas fa-info-circle"></i> Tietoa minusta</h2>
+      <p class="content">
+        <strong>Tällä hetkellä työskentelen <a title="www.securitas.fi" href="https://www.securitas.fi/" target="_blank">Securitas Oy:llä</a> 
+        ase- ja räjähdeteollisuuden kohteissa paikallisvartijana.<br></strong>
+        Vastaan työssäni kohteiden fyysisestä turvallisuudesta sekä LVISJ- ja prosessihälytyksiin reagoinnista.
+        Tämän lisäksi työskentelen keikkaluontoisesti tapahtumajärjestyksenvalvojana sekä suoritan turvallisuusalan ammattitutkintoa oppisopimuksella Turun AKK:n kautta.<br>
+        Käytän työssäni enenevissä määrin elektronista valvontaa ja se on saanut minut kiinnostumaan kyberturvallisuudesta alana.<br>
+        Tarkoituksenani on opiskella työni ohessa ICT-insinööriksi ja erikoistua kyberturvallisuuteen.<br>
+        Vapaa-aikani menee pääasiallisesti erilaisten elektronisten laitteiden sekä ruutujen parissa.
+        Näiden lisäksi harrastan myös kamppailulajeja ja vietän aikaa koirani kanssa.<br></p>
+    </section>
 
-</body>
+    <div class="content kuva">
+      <img src="images/omakuva2.png" alt="Omakuva" height="811.5px" width="480px">
+    </div>
+
+  </article>
+
+  <footer>
+    <div class="contact">
+      <i class="far fa-envelope fa-2x"></i>
+      <span><a class="aplinkki" href="mailto:olli.maula@gmail.com">olli.maula@gmail.com</a>
+      | <i class="fas fa-phone"></i> 045 634 6077</span>
+    </div>
+  </footer>
+
+</main>
+
+</body> 
 </html>
