@@ -3,69 +3,84 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Turvallisuusalan portfolio">
-<meta name="keywords" content="Portfolio, CV, Curriculum Vitae, Turvallisuusala, Vartija">
+<meta name="keywords" content="Portfolio, CV, Curriculum Vitae, Turvallisuusala, Vartija, Olli Maula">
 <meta name="author" content="Olli Maula">
 <meta charset="UTF-8">
 <title>Olli Maula - Harrastukset</title>
-<link rel="stylesheet" media="screen and (max-width: 1120px)" href="styles/tablet.css">
-<link rel="stylesheet" media="screen and (min-width: 1120px)" href="styles/desktop.css">
+<link rel="stylesheet" media="all and (max-width: 785px)" href="styles/phone.css">
+<link rel="stylesheet" media="all and (min-width: 785px)" href="styles/tablet.css">
+<link rel="stylesheet" media="all and (min-width: 1120px)" href="styles/desktop.css">
 <link rel="stylesheet" href="styles/lightbox.css">
 <script src="https://kit.fontawesome.com/55ff3240d5.js" crossorigin="anonymous"></script>
+<script src="jscript/mobilemenu.js"></script>
 </head>
 <body>
 
 <main class="flex">
 
   <div id="top" class="row">
-    <nav class="col-6">
+
+    <header class="col-5 col-t11">
+      <h1>Olli Maula</h1>
+      <h3>Turvallisuuden ammattilainen</h3>
+    </header>
+
+    <nav class="mobileDisable col-6 col-t11">
       <ul id="navlist">
         <li class="navig"><a class="nonactive" href="index.html" title="Etusivu"><p class="bar"><i class="fas fa-home"></i> ETUSIVU</p></a></li>
         <li class="navig"><a class="active" href="harrastukset.html" title="Harrastukset"><p class="bar"><i class="far fa-keyboard"></i>  HARRASTUKSET</p></a></li>
         <li class="navig"><a class="nonactive" href="portfolio.html" title="Portfolio"><p class="bar"><i class="far fa-file-alt"></i> PORTFOLIO</p></a></li>
       </ul>
     </nav>
-    <header class="col-5">
-      <h1>Olli Maula</h1>
-      <h3>Turvallisuuden ammattilainen</h3>
-    </header>
+
+    <nav class="desktopDisable mobileNav col-">
+      <a class="activeLink" href="harrastukset.html" title="Harrastukset"><i class="far fa-keyboard"></i> HARRASTUKSET</a>
+      <div id="links">
+        <a href="index.html" title="Etusivu"><i class="fas fa-home"></i> ETUSIVU</a>
+        <a href="portfolio.html" title="Portfolio"><i class="far fa-file-alt"></i> PORTFOLIO</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fas fa-bars"></i></a>
+    </nav>
+
   </div>
 
-  <article class="row">
+  <div class="row">
 
-      <section class="left col-5">  
-        <h2><i class="fas fa-keyboard"></i> Tietotekniikka &amp; elektroniikka</h2>
-        <p class="sectiontxt">
-            Tykkään purkaa ja rakentaa erilaisia tietotekniikka- ja elektroniikkalaitteita. 
-            Kasaan esimerkiksi jokaisen pöytätietokoneeni itse. 
-            Sähkö- ja automaatioasentajan ammattiosaamiseni on tukenut tätä harrastusta erinomaisesti.<br><br>
-            Viime vuosina olen keskittynyt rakentamaan erilaisia mekaanisia näppäimistöjä niin omaksi ilokseni kuin oikeaan käyttöönkin. 
-            Koska käytän näppäimistöjä paljon, hyvällä näppäimistöllä on minulle paljon arvoa.
-            Kaupassa myytävät mekaaniset näppäimistöt eivät vastanneet tarpeitani, 
-            joten tutustuin sellaisten rakentamiseen itse internetistä löytyvien Youtube- ja tekstipohjaisten ohjeiden avulla.<br><br>
-            Tilaan osat lähtökohtaisesti Kiinasta pienistä liikkeistä tai vaihtoehtoisesti ryhmätilauksena, 
-            jossa rahat kasataan internetin välityksellä harrastajaporukan kesken ja maksetaan könttänä etukäteen tehtaalle,
-            joka valmistaa haluttua tuotetta mittatilauksena vain yhden erän.<br><br></p>
-            <a href="#middle"><i class="fas fa-images"></i> Kuvagalleria</a>
-      </section>
+    <article class="left padClean col-5 col-t12">  
+      <h2><i class="fas fa-keyboard"></i> Tietotekniikka &amp; elektroniikka</h2>
+      <p class="sectiontxt">
+          Tykkään purkaa ja rakentaa erilaisia tietotekniikka- ja elektroniikkalaitteita. 
+          Kasaan esimerkiksi jokaisen pöytätietokoneeni itse. 
+          Sähkö- ja automaatioasentajan ammattiosaamiseni on tukenut tätä harrastusta erinomaisesti.<br><br>
+          Viime vuosina olen keskittynyt rakentamaan erilaisia mekaanisia näppäimistöjä niin omaksi ilokseni kuin oikeaan käyttöönkin. 
+          Koska käytän näppäimistöjä paljon, hyvällä näppäimistöllä on minulle paljon arvoa.
+          Kaupassa myytävät mekaaniset näppäimistöt eivät vastanneet tarpeitani, 
+          joten tutustuin sellaisten rakentamiseen itse internetistä löytyvien Youtube- ja tekstipohjaisten ohjeiden avulla.<br><br>
+          Tilaan osat lähtökohtaisesti Kiinasta pienistä liikkeistä tai vaihtoehtoisesti ryhmätilauksena, 
+          jossa rahat kasataan internetin välityksellä harrastajaporukan kesken ja maksetaan könttänä etukäteen tehtaalle,
+          joka valmistaa haluttua tuotetta mittatilauksena vain yhden erän.<br><br></p>
+          <a href="#middle"><i class="fas fa-images"></i> Kuvagalleria</a>
+    </article>
 
-      <section class="right col-6">
-        <h2><i class="fas fa-fist-raised"></i> Kamppailulajit</h2>
-        <a class="kuva" href="images/reenit.jpg" data-lightbox="Album2" data-title="Teleskooppipatukkaharjoitus">
-          <img id="reenikuva" src="images/reenit_thumb.jpg" alt="REENIKUVA" title="Teleskooppipatukkaharjoitus" height="180px;" width="132px;"></a>
-        <p class="sectiontxt">
-          Olen harrastanut kamppailulajeja pienestä pitäen. Aiemmin olen harrastanut judoa, karatea, nyrkkeilyä, lukkopainia, vapaaottelua sekä potkunyrkkeilyä.
-          Kokeilin nuorempana myös tennistä useamman vuoden ajan, mutta totesin kamppailulajien olevan itselleni mieluisin liikuntamuoto.<br><br>
-          Myöhemmin kamppailulajit ovat siirtyneet sujuvasti tukemaan myös yksityisen turvallisuuspuolen työtehtäviäni.
-          Nykyään harrastan kamppailulajeja pienen turvallisuusalan porukan kesken, voimankäytölliseen elementtiin keskittyen.<br><br> 
-          Seuraan myös jonkin verran kamppailu-urheilua eri medioiden kautta; Aiemmin seurasin aktiivisemmin nyrkkeilyä, 
-          mutta aloitettuani lukkopainin aloin seuraamaan pääasiassa vapaaottelua.</p>
-      </section>
+    <article class="right padClean col-6 col-t12">
+      <h2><i class="fas fa-fist-raised"></i> Kamppailulajit</h2>
+      <a class="kuva" href="images/reenit.jpg" data-lightbox="Album2" data-title="Teleskooppipatukkaharjoitus">
+        <img id="reenikuva" src="images/reenit_thumb.jpg" alt="REENIKUVA" title="Teleskooppipatukkaharjoitus" height="180" width="132"></a>
+      <p class="sectiontxt">
+        Olen harrastanut kamppailulajeja pienestä pitäen. Aiemmin olen harrastanut judoa, karatea, nyrkkeilyä, lukkopainia, vapaaottelua sekä potkunyrkkeilyä.
+        Kokeilin nuorempana myös tennistä useamman vuoden ajan, mutta totesin kamppailulajien olevan itselleni mieluisin liikuntamuoto.<br><br>
+        Myöhemmin kamppailulajit ovat siirtyneet sujuvasti tukemaan myös yksityisen turvallisuuspuolen työtehtäviäni.
+        Nykyään harrastan kamppailulajeja pienen turvallisuusalan porukan kesken, voimankäytölliseen elementtiin keskittyen.<br><br> 
+        Seuraan myös jonkin verran kamppailu-urheilua eri medioiden kautta; Aiemmin seurasin aktiivisemmin nyrkkeilyä, 
+        mutta aloitettuani lukkopainin aloin seuraamaan pääasiassa vapaaottelua.</p>
+    </article>
 
-  </article>
+  </div>
 
-  <article class="alempi row">
-    <div id="middle" class="col-12"><a class="linkki" href="#top"><i class="fas fa-angle-up fa-6x"></i></a></div>
-    <section class="galleria col-12">
+  <div class="alempi row">
+    <div id="middle" class="col-12 col-t12"><a class="linkki" href="#top"><i class="fas fa-angle-up fa-6x"></i></a></div>
+    <article class="galleria col-12 col-t12">
+      <h4 class="col-12 col-t12"><i class="fas fa-images"></i> Kuvagalleria</h4>
       <a href="images/winkeyless.jpg" data-lightbox="Album1" data-title="Winkeyless">
         <img src="images/winkeyless_thumb.jpg" style="width: 200px; height: 100px;" alt="Winkeyless"/></a>
       <a href="images/ledstrip.jpg" data-lightbox="Album1" data-title="Ledstrip">
@@ -80,14 +95,13 @@
         <img src="images/full_thumb.jpg" style="width: 200px; height: 100px;" alt="Full"/></a>
       <a href="images/puinen.jpg" data-lightbox="Album1" data-title="Puinen"> 
         <img src="images/puinen_thumb.jpg" style="width: 200px; height: 100px;" alt="Puinen"/></a>
-    </section>
-  </article>
+    </article>
+  </div>
 
   <footer class="row">
-    <div class="contact tab">
+    <div class="contact" onclick="">
       <i class="far fa-envelope fa-2x"></i>
-      <span><a class="aplinkki" href="mailto:olli.maula@gmail.com">olli.maula@gmail.com</a>
-      | <i class="fas fa-phone"></i> 045 634 6077</span>
+      <span>olli.maula@gmail.com | <i class="fas fa-phone"></i> 045 634 6077</span>
     </div>
   </footer>
 

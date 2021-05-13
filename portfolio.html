@@ -3,48 +3,62 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Turvallisuusalan portfolio">
-<meta name="keywords" content="Portfolio, CV, Curriculum Vitae, Turvallisuusala, Vartija">
+<meta name="keywords" content="Portfolio, CV, Curriculum Vitae, Turvallisuusala, Vartija, Olli Maula">
 <meta name="author" content="Olli Maula">
 <meta charset="UTF-8">
 <title>Olli Maula - Portfolio</title>
-<link rel="stylesheet" media="screen and (max-width: 1120px)" href="styles/tablet.css">
-<link rel="stylesheet" media="screen and (min-width: 1120px)" href="styles/desktop.css">
+<link rel="stylesheet" media="all and (max-width: 785px)" href="styles/phone.css">
+<link rel="stylesheet" media="all and (min-width: 785px)" href="styles/tablet.css">
+<link rel="stylesheet" media="all and (min-width: 1120px)" href="styles/desktop.css">
 <link rel="stylesheet" href="styles/lightbox.css">
 <script src="https://kit.fontawesome.com/55ff3240d5.js" crossorigin="anonymous"></script>
+<script src="jscript/mobilemenu.js"></script>
 </head>
 <body>
 
 <main class="flex">
 
   <div id="top" class="row">
-    <nav class="col-6">
+
+    <header class="col-5 col-t11">
+      <h1>Olli Maula</h1>
+      <h3>Turvallisuuden ammattilainen</h3>
+    </header>
+
+    <nav class="mobileDisable col-6 col-t11">
       <ul id="navlist">
         <li class="navig"><a class="nonactive" href="index.html" title="Etusivu"><p class="bar"><i class="fas fa-home"></i> ETUSIVU</p></a></li>
         <li class="navig"><a class="nonactive" href="harrastukset.html" title="Harrastukset"><p class="bar"><i class="far fa-keyboard"></i>  HARRASTUKSET</p></a></li>
         <li class="navig"><a class="active" href="portfolio.html" title="Portfolio"><p class="bar"><i class="far fa-file-alt"></i> PORTFOLIO</p></a></li>
       </ul>
     </nav>
-    <header class="col-5">
-      <h1>Olli Maula</h1>
-      <h3>Turvallisuuden ammattilainen</h3>
-    </header>
-    
+
+    <nav class="desktopDisable mobileNav col-">
+      <a class="activeLink" href="portfolio.html" title="Portfolio"><i class="far fa-file-alt"></i> PORTFOLIO</a>
+      <div id="links">
+        <a href="index.html" title="Etusivu"><i class="fas fa-home"></i> ETUSIVU</a>
+        <a href="harrastukset.html" title="Harrastukset"><i class="far fa-keyboard"></i> HARRASTUKSET</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fas fa-bars"></i></a>
+    </nav>
+
   </div>
 
-  <article class="row">
+  <div class="row">
 
-    <section class="col-12">
-      <div class="left tausta col-5">
+    <section class="col-12 col-t11">
+
+      <div class="left padBox mobileBox tausta col-5 col-t12">
         <h2><i class="fas fa-certificate"></i> Pätevyydet</h2>
         <p class="sectiontxt">
           <a class="linkki" href="https://ensiapukoulutus.fi/ensiapukurssi-ea2-8t/" target="_blank">SPR Ensiapu 2</a>  -<i>Voimassa: 11 / 2021</i><br>
+          Tulityökortti - <i>Voimassa: 5 / 2025</i><br>
           <a class="linkki" href="https://www.naemt.org/education/tecc" target="_blank">TECC Ensiapu 1</a>  - <i>Voimassa: 9 / 2025</i><br>
           Työturvallisuuskortti - <i>Voimassa: 10 / 2025</i><br>
-          Paloilmoitinlaitteenhoitaja - <i>Voimassa: Toistaiseksi</i><br>
-          Tulityökortti - <i>Voimassa: 5 / 2025</i></p>
+          Paloilmoitinlaitteenhoitaja - <i>Voimassa: Toistaiseksi</i></p>
       </div>
 
-      <div class="right tausta col-6">
+      <div class="right padBox mobileBox tausta col-6 col-t12">
         <h2><i class="fas fa-graduation-cap"></i> Koulutukset</h2>
         <p class="sectiontxt">
           Sähkö- ja automaatioasentajan perustutkinto,<i> Jyväskylän ammattiopisto, 2012.</i><br>
@@ -52,23 +66,24 @@
           Vartijan peruskoulutus,<i> Turun AKK, 2015.</i><br>
           Turvallisuusalan ammattitutkinto,<i> Turun AKK - Oppisopimus, 2020 (kesken).</i></p>
       </div>
+
     </section>
 
-    <section>
-      <div class="left"><a href="#middle"><i class="fas fa-briefcase"></i> Työkokemus</a></div>
-      <div class="left"><a href="#bottom"><i class="fas fa-laptop-code"></i> IT-alan työnäytteet</a></div>
-    </section>
+    <div class="left col-12 col-t12">
+      <div class="col-t12"><a href="#middle"><i class="fas fa-briefcase"></i> Työkokemus</a></div>
+      <div class="col-t12"><a href="#bottom"><i class="fas fa-laptop-code"></i> IT-alan työnäytteet</a></div>
+    </div>
 
-  </article>
+  </div>
     
 
-  <article class="alempi row">
+  <div class="alempi row">
 
-    <div id="middle" class="col-12">
+    <div id="middle" class="col-12 col-t12">
       <a class="linkki" href="#top"><i class="fas fa-angle-up fa-6x"></i></a>
     </div>
 
-    <table class="col-12" id="kokemus">
+    <table class="mobileDisable col-12 col-t11" id="kokemus">
       <tr>
         <th id="otsikko" colspan="4">Työkokemus</th>
       </tr>
@@ -134,33 +149,33 @@
       </tr>
     </table>
 
-    <div class="col-12">
+    <div class="col-12 col-t12">
       <a class="linkki" href="#bottom"><i class="fas fa-angle-down fa-6x"></i></a>
     </div>
 
-  </article>
+  </div>
 
-  <article class="alempi row">
+  <div class="alempi row">
 
-    <div id="bottom" class="col-12">
+    <div id="bottom" class="col-12 col-t12">
       <a class="linkki" href="#middle"><i class="fas fa-angle-up fa-6x"></i></a><br>
       <a class="linkki" href="#top"><i class="fas fa-angle-double-up fa-6x"></i></a>
     </div>
 
-    <section class="col-12">
+    <article class="col-12 col-t12">
+      <h4 class="col-12 col-t12">IT-alan työnäytteitä</h4>
       <a href="https://student.labranet.jamk.fi/~ab3681/web_tekniikat/harj7/" target="_blank">HTML mediat</a>
       <a href="https://student.labranet.jamk.fi/~ab3681/web_tekniikat/harj3/asiakkaat_taulukko.html" target="_blank">Taulukoiden muotoilut</a>
       <a href="https://student.labranet.jamk.fi/~ab3681/web_tekniikat/harj4/" target="_blank">Kiinteä sivusto</a>
       <a href="https://student.labranet.jamk.fi/~ab3681/web_tekniikat/harj6/" target="_blank">Responsiivinen sivusto</a>
-    </section>
+    </article>
 
-  </article>
+  </div>
 
   <footer class="row">
-    <div class="contact tab">
+    <div class="contact" onclick="">
       <i class="far fa-envelope fa-2x"></i>
-      <span><a class="aplinkki" href="mailto:olli.maula@gmail.com">olli.maula@gmail.com</a>
-      | <i class="fas fa-phone"></i> 045 634 6077</span>
+      <span>olli.maula@gmail.com | <i class="fas fa-phone"></i> 045 634 6077</span>
     </div>
   </footer>
 
