@@ -7,7 +7,8 @@
 <meta name="author" content="Olli Maula">
 <meta charset="UTF-8">
 <title>Olli Maula - Portfolio</title>
-<link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" media="screen and (max-width: 1120px)" href="styles/tablet.css">
+<link rel="stylesheet" media="screen and (min-width: 1120px)" href="styles/desktop.css">
 <link rel="stylesheet" href="styles/lightbox.css">
 <script src="https://kit.fontawesome.com/55ff3240d5.js" crossorigin="anonymous"></script>
 </head>
@@ -15,26 +16,25 @@
 
 <main class="flex">
 
-  <div id="top">
-    <nav>
+  <div id="top" class="row">
+    <nav class="col-6">
       <ul id="navlist">
         <li class="navig"><a class="nonactive" href="index.html" title="Etusivu"><p class="bar"><i class="fas fa-home"></i> ETUSIVU</p></a></li>
         <li class="navig"><a class="nonactive" href="harrastukset.html" title="Harrastukset"><p class="bar"><i class="far fa-keyboard"></i>  HARRASTUKSET</p></a></li>
         <li class="navig"><a class="active" href="portfolio.html" title="Portfolio"><p class="bar"><i class="far fa-file-alt"></i> PORTFOLIO</p></a></li>
       </ul>
     </nav>
-    <header>
+    <header class="col-5">
       <h1>Olli Maula</h1>
-      <h3>Turvallisuusalan ammattilainen</h3>
+      <h3>Turvallisuuden ammattilainen</h3>
     </header>
     
   </div>
 
-  <article>
+  <article class="row">
 
-    <section>
-
-      <div class="left tausta">
+    <section class="col-12">
+      <div class="left tausta col-5">
         <h2><i class="fas fa-certificate"></i> Pätevyydet</h2>
         <p class="sectiontxt">
           <a class="linkki" href="https://ensiapukoulutus.fi/ensiapukurssi-ea2-8t/" target="_blank">SPR Ensiapu 2</a>  -<i>Voimassa: 11 / 2021</i><br>
@@ -44,7 +44,7 @@
           Tulityökortti - <i>Voimassa: 5 / 2025</i></p>
       </div>
 
-      <div class="right tausta">
+      <div class="right tausta col-6">
         <h2><i class="fas fa-graduation-cap"></i> Koulutukset</h2>
         <p class="sectiontxt">
           Sähkö- ja automaatioasentajan perustutkinto,<i> Jyväskylän ammattiopisto, 2012.</i><br>
@@ -52,7 +52,6 @@
           Vartijan peruskoulutus,<i> Turun AKK, 2015.</i><br>
           Turvallisuusalan ammattitutkinto,<i> Turun AKK - Oppisopimus, 2020 (kesken).</i></p>
       </div>
-
     </section>
 
     <section>
@@ -63,13 +62,13 @@
   </article>
     
 
-  <article class="alempi">
+  <article class="alempi row">
 
-    <div id="middle">
+    <div id="middle" class="col-12">
       <a class="linkki" href="#top"><i class="fas fa-angle-up fa-6x"></i></a>
     </div>
 
-    <table id="kokemus">
+    <table class="col-12" id="kokemus">
       <tr>
         <th id="otsikko" colspan="4">Työkokemus</th>
       </tr>
@@ -135,21 +134,20 @@
       </tr>
     </table>
 
-    <div>
+    <div class="col-12">
       <a class="linkki" href="#bottom"><i class="fas fa-angle-down fa-6x"></i></a>
     </div>
 
   </article>
 
-  <article class="alempi">
+  <article class="alempi row">
 
-    <div id="bottom">
+    <div id="bottom" class="col-12">
       <a class="linkki" href="#middle"><i class="fas fa-angle-up fa-6x"></i></a><br>
       <a class="linkki" href="#top"><i class="fas fa-angle-double-up fa-6x"></i></a>
     </div>
-    
 
-    <section class="center">
+    <section class="col-12">
       <a href="https://student.labranet.jamk.fi/~ab3681/web_tekniikat/harj7/" target="_blank">HTML mediat</a>
       <a href="https://student.labranet.jamk.fi/~ab3681/web_tekniikat/harj3/asiakkaat_taulukko.html" target="_blank">Taulukoiden muotoilut</a>
       <a href="https://student.labranet.jamk.fi/~ab3681/web_tekniikat/harj4/" target="_blank">Kiinteä sivusto</a>
@@ -158,8 +156,8 @@
 
   </article>
 
-  <footer>
-    <div class="contact">
+  <footer class="row">
+    <div class="contact tab">
       <i class="far fa-envelope fa-2x"></i>
       <span><a class="aplinkki" href="mailto:olli.maula@gmail.com">olli.maula@gmail.com</a>
       | <i class="fas fa-phone"></i> 045 634 6077</span>

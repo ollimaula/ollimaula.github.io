@@ -7,7 +7,8 @@
 <meta name="author" content="Olli Maula">
 <meta charset="UTF-8">
 <title>Olli Maula - Harrastukset</title>
-<link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" media="screen and (max-width: 1120px)" href="styles/tablet.css">
+<link rel="stylesheet" media="screen and (min-width: 1120px)" href="styles/desktop.css">
 <link rel="stylesheet" href="styles/lightbox.css">
 <script src="https://kit.fontawesome.com/55ff3240d5.js" crossorigin="anonymous"></script>
 </head>
@@ -15,23 +16,23 @@
 
 <main class="flex">
 
-  <div id="top">
-    <nav>
+  <div id="top" class="row">
+    <nav class="col-6">
       <ul id="navlist">
         <li class="navig"><a class="nonactive" href="index.html" title="Etusivu"><p class="bar"><i class="fas fa-home"></i> ETUSIVU</p></a></li>
         <li class="navig"><a class="active" href="harrastukset.html" title="Harrastukset"><p class="bar"><i class="far fa-keyboard"></i>  HARRASTUKSET</p></a></li>
         <li class="navig"><a class="nonactive" href="portfolio.html" title="Portfolio"><p class="bar"><i class="far fa-file-alt"></i> PORTFOLIO</p></a></li>
       </ul>
     </nav>
-    <header>
+    <header class="col-5">
       <h1>Olli Maula</h1>
-      <h3>Turvallisuusalan ammattilainen</h3>
+      <h3>Turvallisuuden ammattilainen</h3>
     </header>
   </div>
 
-  <article>
+  <article class="row">
 
-      <section class="left">  
+      <section class="left col-5">  
         <h2><i class="fas fa-keyboard"></i> Tietotekniikka &amp; elektroniikka</h2>
         <p class="sectiontxt">
             Tykkään purkaa ja rakentaa erilaisia tietotekniikka- ja elektroniikkalaitteita. 
@@ -47,7 +48,7 @@
             <a href="#middle"><i class="fas fa-images"></i> Kuvagalleria</a>
       </section>
 
-      <section class="right">
+      <section class="right col-6">
         <h2><i class="fas fa-fist-raised"></i> Kamppailulajit</h2>
         <a class="kuva" href="images/reenit.jpg" data-lightbox="Album2" data-title="Teleskooppipatukkaharjoitus">
           <img id="reenikuva" src="images/reenit_thumb.jpg" alt="REENIKUVA" title="Teleskooppipatukkaharjoitus" height="180px;" width="132px;"></a>
@@ -62,28 +63,28 @@
 
   </article>
 
-  <article class="alempi">
-    <div id="middle"><a class="linkki" href="#top"><i class="fas fa-angle-up fa-6x"></i></a></div>
-    <section class="center">
-      <a class="kuva" href="images/winkeyless.jpg" data-lightbox="Album1" data-title="Winkeyless">
-        <img class="galleria" src="images/winkeyless_thumb.jpg" style="width: 200px; height: 100px;" alt="Winkeyless"/></a>
-      <a class="kuva" href="images/ledstrip.jpg" data-lightbox="Album1" data-title="Ledstrip">
-        <img class="galleria" src="images/ledstrip_thumb.jpg" style="width: 200px; height: 100px;" alt="Ledstrip"/></a><br>
-      <a class="kuva" href="images/tenkeyless.jpg" data-lightbox="Album1" data-title="Tenkeyless">
-        <img class="galleria" src="images/tenkeyless_thumb.jpg" style="width: 200px; height: 100px;" alt="Tenkeyless"/></a>
-      <a class="kuva" href="images/numpad.jpg" data-lightbox="Album1" data-title="Numpad">
-        <img class="galleria" src="images/numpad_thumb.jpg" style="width: 200px; height: 100px;" alt="Numpad"/></a>
-      <a class="kuva" href="images/flat.jpg" data-lightbox="Album1" data-title="Flat">
-        <img class="galleria" src="images/flat_thumb.jpg" style="width: 200px; height: 100px;" alt="Flat"/></a><br>
-      <a class="kuva" href="images/full.jpg" data-lightbox="Album1" data-title="Full">
-        <img class="galleria" src="images/full_thumb.jpg" style="width: 200px; height: 100px;" alt="Full"/></a>
-      <a class="kuva" href="images/puinen.jpg" data-lightbox="Album1" data-title="Puinen"> 
-        <img class="galleria" src="images/puinen_thumb.jpg" style="width: 200px; height: 100px;" alt="Puinen"/></a>
+  <article class="alempi row">
+    <div id="middle" class="col-12"><a class="linkki" href="#top"><i class="fas fa-angle-up fa-6x"></i></a></div>
+    <section class="galleria col-12">
+      <a href="images/winkeyless.jpg" data-lightbox="Album1" data-title="Winkeyless">
+        <img src="images/winkeyless_thumb.jpg" style="width: 200px; height: 100px;" alt="Winkeyless"/></a>
+      <a href="images/ledstrip.jpg" data-lightbox="Album1" data-title="Ledstrip">
+        <img src="images/ledstrip_thumb.jpg" style="width: 200px; height: 100px;" alt="Ledstrip"/></a><br>
+      <a href="images/tenkeyless.jpg" data-lightbox="Album1" data-title="Tenkeyless">
+        <img src="images/tenkeyless_thumb.jpg" style="width: 200px; height: 100px;" alt="Tenkeyless"/></a>
+      <a href="images/numpad.jpg" data-lightbox="Album1" data-title="Numpad">
+        <img src="images/numpad_thumb.jpg" style="width: 200px; height: 100px;" alt="Numpad"/></a>
+      <a href="images/flat.jpg" data-lightbox="Album1" data-title="Flat">
+        <img src="images/flat_thumb.jpg" style="width: 200px; height: 100px;" alt="Flat"/></a><br>
+      <a href="images/full.jpg" data-lightbox="Album1" data-title="Full">
+        <img src="images/full_thumb.jpg" style="width: 200px; height: 100px;" alt="Full"/></a>
+      <a href="images/puinen.jpg" data-lightbox="Album1" data-title="Puinen"> 
+        <img src="images/puinen_thumb.jpg" style="width: 200px; height: 100px;" alt="Puinen"/></a>
     </section>
   </article>
 
-  <footer>
-    <div class="contact">
+  <footer class="row">
+    <div class="contact tab">
       <i class="far fa-envelope fa-2x"></i>
       <span><a class="aplinkki" href="mailto:olli.maula@gmail.com">olli.maula@gmail.com</a>
       | <i class="fas fa-phone"></i> 045 634 6077</span>

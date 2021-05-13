@@ -7,7 +7,9 @@
 <meta name="author" content="Olli Maula">
 <meta charset="UTF-8">
 <title>Olli Maula - Etusivu</title>
-<link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" media="all and (max-width: 785px)" href="styles/phone.css">
+<link rel="stylesheet" media="all and (min-width: 785px)" href="styles/tablet.css">
+<link rel="stylesheet" media="all and (min-width: 1120px)" href="styles/desktop.css">
 <link rel="stylesheet" href="styles/lightbox.css">
 <script src="https://kit.fontawesome.com/55ff3240d5.js" crossorigin="anonymous"></script>
 </head>
@@ -15,23 +17,25 @@
 
 <main class="flex">
 
-  <div id="top">
-    <nav>
+  <div id="top" class="row">
+
+    <nav class="col-6 col-t12">
       <ul id="navlist">
         <li class="navig"><a class="active" href="index.html" title="Etusivu"><p class="bar"><i class="fas fa-home"></i> ETUSIVU</p></a></li>
         <li class="navig"><a class="nonactive" href="harrastukset.html" title="Harrastukset"><p class="bar"><i class="far fa-keyboard"></i>  HARRASTUKSET</p></a></li>
         <li class="navig"><a class="nonactive" href="portfolio.html" title="Portfolio"><p class="bar"><i class="far fa-file-alt"></i> PORTFOLIO</p></a></li>
       </ul>
     </nav>
-    <header>
+    <header class="col-5 col-t12">
       <h1>Olli Maula</h1>
-      <h3>Turvallisuusalan ammattilainen</h3>
+      <h3 class="col-t8">Turvallisuuden ammattilainen</h3>
     </header>
+
   </div>
 
-  <article>
+  <article class="row">
 
-    <section class="left">
+    <section class="col-6 col-t6 left">
       <h2><i class="fas fa-info-circle"></i> Tietoa minusta</h2>
       <p class="sectiontxt">
         <strong>Tällä hetkellä työskentelen <a class="linkki" title="www.securitas.fi" href="https://www.securitas.fi/" target="_blank">Securitas Oy:llä</a> 
@@ -46,14 +50,14 @@
         Lisäksi harrastan myös kamppailulajeja ja vietän aikaa koirani kanssa.</p>
     </section>
 
-    <aside class="omakuva flex">
+    <aside class="col-5 col-t4 omakuva">
       <img src="images/omakuva2.png" alt="Omakuva" height="730.35px" width="432px">
     </aside>
 
   </article>
 
-  <footer>
-    <div class="contact">
+  <footer class="row">
+    <div class="contact" onclick="">
       <i class="far fa-envelope fa-2x"></i>
       <span><a class="aplinkki" href="mailto:olli.maula@gmail.com">olli.maula@gmail.com</a>
       | <i class="fas fa-phone"></i> 045 634 6077</span>
