@@ -5,6 +5,7 @@
   --darkred:#662200;
   --lightgrey: #333333;
   --background: #fafafa;
+  --grey: #494949;
 }
 
 * {
@@ -90,7 +91,7 @@ h1 {
   text-shadow: grey 5px 5px 10px;
 }
 h2 {
-  color: rgb(73, 73, 73);
+  color: var(--grey);
   background-color: transparent;
   font-family: 'Play', sans-serif;
   text-align: left;
@@ -101,8 +102,8 @@ h2 {
 }
 h3 {
   font-family: 'Russo One', sans-serif;
-  letter-spacing: 0.06rem;
   margin: 0;
+  margin-top: 0.5rem;
   padding: 0;
   float: left;
 }
@@ -158,6 +159,7 @@ nav {
   margin-left: 0.8em;
   padding: 0;
   background-color: transparent;
+  background-image: none;
   color: white;
   font-size: 1.2em;
   overflow: visible;
@@ -185,6 +187,7 @@ li a {
   display: block;
   color: white;
   font-family: 'Play', sans-serif;
+  background: rgb(175, 4, 4); /* IE fallback */
   background-color: var(--red);
   text-decoration: none;
   border: 0.1875em solid #1a1a2e;
@@ -368,6 +371,7 @@ footer {
   display: block;
   float: right;
   color: whitesmoke;
+  background: rgb(175, 4, 4); /* IE fallback */
   background-color: var(--red);
   border: 2px solid black;
   border-radius: 25px;

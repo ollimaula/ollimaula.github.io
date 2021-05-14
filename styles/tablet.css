@@ -92,7 +92,7 @@ h1 {
   text-shadow: grey 5px 5px 10px;
 }
 h2 {
-  color: rgb(73, 73, 73);
+  color: var(--grey);
   background-color: transparent;
   font-family: 'Play', sans-serif;
   text-align: left;
