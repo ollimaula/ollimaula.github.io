@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Permanent+Marker&family=Play&family=Roboto&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Ubuntu&family=Audiowide&family=Permanent+Marker&family=Play&family=Roboto&family=Press+Start+2P&display=swap');
 
 :root {
   --red:#af0404;
   --darkred:#662200;
-  --lightgrey: #333333;
-  --background: #fafafa;
   --grey: #494949;
+  --darkgrey: #333333;
+  --lightgrey: #808080;
+  --border: #1a1a2e;
+  --black: #000000;
+  --background: #fafafa;
+  --white: #f5f5f5;
 }
 
-* {
-  box-sizing: border-box;
-}
+* {box-sizing: border-box;}
 
 .row::after {
   clear: both;
@@ -39,7 +41,8 @@ html {
   color: var(--background);
 }
 body {
-  font-family: "Lucida Sans Unicode", sans-serif;
+  font-family: sans-serif; /* Fallback */
+  font-size: 100%;
   margin: 0 auto;
   max-width: 1440px;
   min-height: 100%;
@@ -72,13 +75,10 @@ section, article, .content {
   text-align: center;
   margin: 0 auto;
 }
-p {
-  margin: 0;
-  padding: 0;
-}
+p {margin: 0; padding: 0;}
 p.sectiontxt {
   text-align: left;
-  color: var(--lightgrey);
+  color: var(--darkgrey);
   font-family: 'Roboto', sans-serif;
   font-size: 110%;
   padding: 1em;
@@ -88,7 +88,7 @@ h1 {
   font-family: 'Press Start 2P', cursive;
   letter-spacing: 0.1875em;
   text-decoration: underline;
-  text-shadow: grey 5px 5px 10px;
+  text-shadow: var(--lightgrey) 5px 5px 10px;
 }
 h2 {
   color: var(--grey);
@@ -107,39 +107,66 @@ h3 {
   padding: 0;
   float: left;
 }
-
-#top, #middle, #bottom {
+h4, h5 {  
+  color: var(--grey);
+  background-color: transparent;
   margin: 0;
   padding: 0;
 }
-#middle, #bottom {
-  padding-top: 2rem;
+h4 {font-family: 'Audiowide', cursive; font-size: 120%;}
+h5 {font-family: 'Ubuntu', sans-serif; font-size: 150%;}
+h6 {
+  color: var(--darkgrey);
+  background-color: transparent;
+  font-family: 'Ubuntu', sans-serif; 
+  font-size: 150%;
+  text-decoration: underline;
+  text-shadow: var(--lightgrey) 2px 2px 2px;
 }
 
-a.linkki:link {
-  color: var(--red);
-  text-decoration: none;
-}
-a.linkki:visited {
-  color: var(--red);
-  text-decoration: none;
-}
-a.linkki:hover { 
-  color: var(--darkred);
-  text-decoration: underline;
-}
-a.linkki:active {
-  color: var(--darkred);
-  text-decoration: underline;
-}
+a.block {display: block; width: max-content; margin: 0 auto;}
 
-.tausta {
+#top, #middle, #bottom, .arrow {text-align: center; margin: 0; padding: 0;}
+
+a.clean:link {text-decoration: none;}
+a.clean:visited {text-decoration: none;}
+a.clean:hover {text-decoration: none;}
+a.clean:active {text-decoration: none;}
+
+a.linkki:link {color: var(--red); text-decoration: none;}
+a.linkki:visited {color: var(--red); text-decoration: none;}
+a.linkki:hover {color: var(--darkred); text-decoration: underline;}
+a.linkki:active {color: var(--darkred); text-decoration: underline;}
+
+.bigBox {
   padding: 1em;
+  overflow: visible;
   background-color: var(--background);
   border: 2px solid var(--red);
   border-radius: 25px;
-  box-shadow: grey 5px 5px 5px;
+  box-shadow: var(--lightgrey) 5px 5px 5px;
 }
+.smallBox {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  overflow: visible;
+  background-color: var(--background);
+  border: 2px solid var(--red);
+  border-radius: 25px;
+  box-shadow: var(--lightgrey) 5px 5px 5px;
+  transition-duration: 1s;
+}
+.smallBox:hover {
+  box-shadow: var(--lightgrey) 7px 7px 7px;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  transition-duration: 1s;
+}
+.linkContainer {margin: 2rem;}
+.itContainer {margin: 0; margin-top: 5rem;}
 
 /* Yläpalkki */
 header {
@@ -160,7 +187,7 @@ nav {
   padding: 0;
   background-color: transparent;
   background-image: none;
-  color: white;
+  color: var(--white);
   font-size: 1.2em;
   overflow: visible;
   float: left;
@@ -185,14 +212,14 @@ li.navig:hover {
 }
 li a {
   display: block;
-  color: white;
-  font-family: 'Play', sans-serif;
+  color: var(--white);
+  font-family: Play, sans-serif;
   background: rgb(175, 4, 4); /* IE fallback */
   background-color: var(--red);
   text-decoration: none;
-  border: 0.1875em solid #1a1a2e;
-  -ms-transform: skewX(-25deg);
+  border: 0.1875em solid var(--border);
   -webkit-transform: skewX(-25deg);
+  -ms-transform: skewX(-25deg);
   transform: skewX(-25deg);
   margin: 0;
   padding-top: 0.3em;
@@ -200,29 +227,24 @@ li a {
   padding-left: 0.5em;
   padding-right: 0.5em;
   float: left;
-  box-shadow: grey 5px 5px 5px;
+  box-shadow: var(--lightgrey) 5px 5px 5px;
 }
 p.bar {
-  -ms-transform: skewX(25deg);
   -webkit-transform: skewX(25deg);
+  -ms-transform: skewX(25deg);
   transform: skewX(25deg);
 }
-a.active {
-  background-color: var(--darkred);
-  height: 2em;
-}
-a.nonactive {
-  height: 2em;
-}
-a.nonactive:hover {
-  background-color: #414141c2;
-  height: 2em;
-}
+a.active {background-color: var(--darkred); height: 2em;}
+a.nonactive {height: 2em;}
+a.nonactive:hover {background-color: var(--lightgrey); height: 2em;}
+
+.floatLeft {float: left; margin-right: 1rem;}
 
 .left {
   margin: 0;
   margin-top: 1em;
   margin-left: 2em;
+  padding-bottom: 1rem;
   float: left;
   overflow: hidden;
   background-color: var(--background);
@@ -278,7 +300,7 @@ a.nonactive:hover {
   margin-right: 1.5em;
   margin-bottom: 0.2em;
   border: 0.2em var(--red) ridge;
-  box-shadow: grey 5px 5px 5px;
+  box-shadow: var(--lightgrey) 5px 5px 5px;
   transition-duration: 0.5s;
 }
 
@@ -292,7 +314,7 @@ a.nonactive:hover {
   max-width: 200px;
   max-height: 100px;
   border: 0.5em var(--red) ridge;
-  box-shadow: grey 4px 4px 4px;
+  box-shadow: var(--lightgrey) 4px 4px 4px;
   transition-duration: 0.5s;
 }
 .galleria img:hover {
@@ -300,7 +322,9 @@ a.nonactive:hover {
   max-width: 200px;
   max-height: 100px;
   border: 0.5em var(--red) ridge;
-  box-shadow: grey 7px 7px 4px;
+  box-shadow: var(--lightgrey) 7px 7px 4px;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
   transition-duration: 0.5s;
 }
@@ -312,20 +336,21 @@ a.nonactive:hover {
 
 /* Työkokemustaulukko */
 table#kokemus {
-  border: 2px solid black;
+  border: 2px solid var(--black);
   border-radius: 25px;
   border-spacing: 1em;
   margin: 1rem;
   margin-left: 5%;
   margin-right: 5%;
   width: 90%;
-  background-color: white;
-  color: #333333;
-  box-shadow: grey 4px 4px 4px;
+  background-color: var(--white);
+  color: var(--darkgrey);
+  box-shadow: var(--lightgrey) 4px 4px 4px;
 }
 th {
+  font-family: Play, sans-serif;
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid var(--black);
 }
 td {
   font-family: Roboto, sans-serif;
@@ -334,14 +359,14 @@ td {
   padding: 0;
   padding-left: 1.5em;
   padding-right: 1em;
-  border: 1px solid black;
-  border-left: 2px solid black;
+  border: 1px solid var(--black);
+  border-left: 2px solid var(--black);
 }
 td.kuvaus {
   font-family: Roboto, sans-serif;
   text-align: left;
-  border: 1px solid black;
-  border-left: 2px solid black;
+  border: 1px solid var(--black);
+  border-left: 2px solid var(--black);
   margin: 0.5em;
   padding-left: 2em;
   padding-top: 3px;
@@ -370,15 +395,15 @@ footer {
 .contact {
   display: block;
   float: right;
-  color: whitesmoke;
+  color: var(--white);
   background: rgb(175, 4, 4); /* IE fallback */
   background-color: var(--red);
-  border: 2px solid black;
+  border: 2px solid var(--black);
   border-radius: 25px;
   padding: 0.3em;
   padding-left: 1.1em;
   padding-right: 0;
-  box-shadow: grey 5px 5px 5px;
+  box-shadow: var(--lightgrey) 5px 5px 5px;
 }
 footer span {
   display: inline-block;

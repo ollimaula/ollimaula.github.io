@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Permanent+Marker&family=Play&family=Roboto&family=Press+Start+2P&display=swap');
-
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Audiowide&family=Permanent+Marker&family=Play&family=Roboto&family=Press+Start+2P&display=swap');
 
 :root {
   --red:#af0404;
   --darkred:#662200;
-  --lightgrey: #333333;
+  --grey: #494949;
+  --darkgrey: #333333;
+  --lightgrey: #808080;
+  --border: #1a1a2e;
+  --black: #000000;
   --background: #fafafa;
+  --white: #f5f5f5;
 }
+
+* {box-sizing: border-box;}
 
 .row::after {
   clear: both;
@@ -38,8 +41,8 @@ html {
   color: var(--background);
 }
 body {
-  font-family: "Lucida Sans Unicode", sans-serif;
-  margin: 0;
+  font-family: sans-serif; /* Fallback */
+  margin: 0 auto;
   max-width: 1120px;
   min-height: 100%;
   background-image: url("../images/background6.jpg");
@@ -71,13 +74,10 @@ section, article, .content {
   margin: 0;
   /* float: left; */
 }
-p {
-  margin: 0;
-  padding: 0;
-}
+p {margin: 0; padding: 0;} 
 p.sectiontxt {
   text-align: left;
-  color: var(--lightgrey);
+  color: var(--grey);
   font-family: 'Roboto', sans-serif;
   font-size: 110%;
   padding: 1em;
@@ -89,7 +89,7 @@ h1 {
   margin: 0;
   padding: 0;
   text-decoration: underline;
-  text-shadow: grey 5px 5px 10px;
+  text-shadow: var(--lightgrey) 5px 5px 10px;
 }
 h2 {
   color: var(--grey);
@@ -108,34 +108,50 @@ h3 {
   padding: 0;
   float: left;
 }
-
-#top, #middle, #bottom {
+h4, h5 {  
+  color: var(--darkgrey);
+  background-color: transparent;
   margin: 0;
   padding: 0;
 }
-#middle, #bottom {
-  padding-top: 2rem;
-}
-
-a.linkki:link {
-  color: var(--red);
-  text-decoration: none;
-}
-a.linkki:visited {
-  color: var(--red);
-  text-decoration: none;
-}
-a.linkki:active {
-  color: var(--darkred);
+h4 {font-family: 'Audiowide', cursive; font-size: 120%;}
+h5 {font-family: 'Ubuntu', sans-serif; font-size: 150%;}
+h6 {
+  color: var(--darkgrey);
+  background-color: transparent;
+  font-family: 'Ubuntu', sans-serif; 
+  font-size: 150%;
   text-decoration: underline;
+  text-shadow: var(--lightgrey) 2px 2px 2px;
 }
 
-.tausta {
+a.block {display: block; width: max-content; margin: 0 auto;}
+
+#top, #middle, #bottom, .arrow {text-align: center; margin: 0; padding: 0;}
+
+a.clean:link {text-decoration: none;}
+a.clean:visited {text-decoration: none;}
+a.clean:active {text-decoration: none;}
+
+a.linkki:link {color: var(--red); text-decoration: none;}
+a.linkki:visited {color: var(--red); text-decoration: none;}
+a.linkki:active {color: var(--darkred); text-decoration: underline;}
+
+.bigBox {
   padding: 1em;
   background-color: var(--background);
   border: 2px solid var(--red);
   border-radius: 25px;
-  box-shadow: grey 5px 5px 5px;
+  box-shadow: var(--lightgrey) 5px 5px 5px;
+}
+.smallBox {
+  text-align: center;
+  margin: 0.2rem;
+  padding: 0.5rem;
+  background-color: var(--background);
+  border: 2px solid var(--red);
+  border-radius: 25px;
+  box-shadow: var(--lightgrey) 5px 5px 5px;
 }
 
 /* Yläpalkki */
@@ -154,7 +170,7 @@ nav {
   margin-left: 0.8em;
   padding: 0;
   background-color: transparent;
-  color: white;
+  color: var(--white);
   font-size: 1.2em;
 }
 .desktopDisable {display: none;}
@@ -171,7 +187,7 @@ li.navig {
 }
 li a {
   display: block;
-  color: white;
+  color: var(--white);
   font-family: 'Play', sans-serif;
   background-color: var(--red);
   text-decoration: none;
@@ -185,20 +201,17 @@ li a {
   padding-left: 0.5em;
   padding-right: 0.5em;
   float: left;
-  box-shadow: grey 5px 5px 5px;
+  box-shadow: var(--lightgrey) 5px 5px 5px;
 }
 p.bar {
   -ms-transform: skewX(25deg);
   -webkit-transform: skewX(25deg);
   transform: skewX(25deg);
 }
-a.active {
-  background-color: var(--darkred);
-  height: 2em;
-}
-a.nonactive {
-  height: 2em;
-}
+a.active {background-color: var(--darkred); height: 2em;}
+a.nonactive {height: 2em;}
+
+.floatLeft {float: left; margin-right: 1rem;}
 
 .padBox {
   margin: 3rem;
@@ -210,6 +223,7 @@ a.nonactive {
   margin: 0;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  padding-bottom: 1rem;
   overflow: hidden;
   background-color: var(--background);
   border-radius: 25px;
@@ -257,7 +271,7 @@ a.nonactive {
   max-width: 200px;
   max-height: 100px;
   border: 0.5em var(--red) ridge;
-  box-shadow: grey 4px 4px 4px;
+  box-shadow: var(--lightgrey) 4px 4px 4px;
 }
 a.kuva {
   background-color: transparent;
@@ -267,18 +281,21 @@ a.kuva {
 
 /* Työkokemustaulukko */
 table#kokemus {
-  border: 2px solid black;
+  border: 2px solid var(--black);
   border-radius: 25px;
   border-spacing: 1em;
   margin: 1rem;
-  margin-left: 3rem;
-  background-color: white;
-  color: var(--lightgrey);
-  box-shadow: grey 4px 4px 4px;
+  margin-left: 5%;
+  margin-right: 5%;
+  max-width: 90%;
+  background-color: var(--white);
+  color: var(--darkgrey);
+  box-shadow: var(--lightgrey) 4px 4px 4px;
 }
 th {
+  font-family: Play, sans-serif;
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid var(--black);
 }
 td {
   font-family: Roboto, sans-serif;
@@ -287,14 +304,14 @@ td {
   padding: 0;
   padding-left: 1.5em;
   padding-right: 1em;
-  border: 1px solid black;
-  border-left: 2px solid black;
+  border: 1px solid var(--black);
+  border-left: 2px solid var(--black);
 }
 td.kuvaus {
   font-family: Roboto, sans-serif;
   text-align: left;
-  border: 1px solid black;
-  border-left: 2px solid black;
+  border: 1px solid var(--black);
+  border-left: 2px solid var(--black);
   margin: 0.5em;
   padding-left: 2em;
   padding-top: 3px;
@@ -323,14 +340,14 @@ footer {
 .contact {
   display: block;
   float: right;
-  color: whitesmoke;
+  color: var(--white);
   background-color: var(--red);
-  border: 2px solid black;
+  border: 2px solid var(--black);
   border-radius: 25px;
   padding: 0.3em;
   padding-left: 1.1em;
   padding-right: 0;
-  box-shadow: grey 5px 5px 5px;
+  box-shadow: var(--lightgrey) 5px 5px 5px;
 }
 footer span {
   display: inline-block;
