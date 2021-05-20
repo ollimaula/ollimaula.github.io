@@ -8,8 +8,8 @@
 <meta charset="UTF-8">
 <title>Olli Maula - Etusivu</title>
 <link rel="stylesheet" media="all and (max-width: 890px)" href="styles/phone.css">
-<link rel="stylesheet" media="all and (min-width: 891px) and (min-height: 1px)" href="styles/tablet.css">
-<link rel="stylesheet" media="all and (min-width: 1120px) and (min-height: 800px)" href="styles/desktop.css">
+<link rel="stylesheet" media="all and (min-width: 891px) and (max-width: 1119px)" href="styles/tablet.css">
+<link rel="stylesheet" media="all and (min-width: 1120px)" href="styles/desktop.css">
 <link rel="stylesheet" href="styles/lightbox.css">
 <script src="https://kit.fontawesome.com/55ff3240d5.js" crossorigin="anonymous"></script>
 <script src="jscript/mobilemenu.js"></script>
@@ -20,8 +20,8 @@
 
   <div id="top" class="row">
 
-    <header class="col-5 col-t11">
-      <h1>Olli Maula</h1>
+    <header class="tausta col-5 col-t11">
+      <h1>Olli<br>Maula</h1>
       <h3>Turvallisuuden ammattilainen</h3>
     </header>
 
@@ -33,9 +33,9 @@
       </ul>
     </nav>
 
-    <nav class="desktopDisable mobileNav col-">
-      <a class="activeLink" href="index.html" title="Etusivu"><i class="fas fa-home"></i> ETUSIVU</a>
+    <nav class="desktopDisable tabDisable mobileNav col-">
       <div id="links">
+        <a class="activeLink" href="index.html" title="Etusivu"><i class="fas fa-home"></i> ETUSIVU</a>
         <a href="harrastukset.html" title="Harrastukset"><i class="far fa-keyboard"></i> HARRASTUKSET</a>
         <a href="portfolio.html" title="Portfolio"><i class="far fa-file-alt"></i> PORTFOLIO</a>
       </div>
@@ -61,7 +61,7 @@
         Lisäksi harrastan myös kamppailulajeja ja vietän aikaa koirani kanssa.</p>
     </article>
 
-    <div class="mobileDisable omakuva col-5 col-t5"></div>
+    <aside class="mobileDisable omakuva col-5 col-t5"></aside>
 
   </div>
 

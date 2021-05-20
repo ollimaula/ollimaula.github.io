@@ -8,8 +8,8 @@
 <meta charset="UTF-8">
 <title>Olli Maula - Harrastukset</title>
 <link rel="stylesheet" media="all and (max-width: 890px)" href="styles/phone.css">
-<link rel="stylesheet" media="all and (min-width: 891px) and (min-height: 1px)" href="styles/tablet.css">
-<link rel="stylesheet" media="all and (min-width: 1120px) and (min-height: 800px)" href="styles/desktop.css">
+<link rel="stylesheet" media="all and (min-width: 891px) and (max-width: 1119px)" href="styles/tablet.css">
+<link rel="stylesheet" media="all and (min-width: 1120px)" href="styles/desktop.css">
 <link rel="stylesheet" href="styles/lightbox.css">
 <script src="https://kit.fontawesome.com/55ff3240d5.js" crossorigin="anonymous"></script>
 <script src="jscript/mobilemenu.js"></script>
@@ -21,7 +21,7 @@
   <div id="top" class="row">
 
     <header class="col-5 col-t11">
-      <h1>Olli Maula</h1>
+      <h1>Olli<br>Maula</h1>
       <h3>Turvallisuuden ammattilainen</h3>
     </header>
 
@@ -33,10 +33,10 @@
       </ul>
     </nav>
 
-    <nav class="desktopDisable mobileNav col-">
-      <a class="activeLink" href="harrastukset.html" title="Harrastukset"><i class="far fa-keyboard"></i> HARRASTUKSET</a>
+    <nav class="desktopDisable tabDisable mobileNav col-">
       <div id="links">
         <a href="index.html" title="Etusivu"><i class="fas fa-home"></i> ETUSIVU</a>
+        <a class="activeLink" href="harrastukset.html" title="Harrastukset"><i class="far fa-keyboard"></i> HARRASTUKSET</a>
         <a href="portfolio.html" title="Portfolio"><i class="far fa-file-alt"></i> PORTFOLIO</a>
       </div>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fas fa-bars"></i></a>
@@ -59,7 +59,7 @@
           Tilaan osat lähtökohtaisesti Kiinasta pienistä liikkeistä tai vaihtoehtoisesti ryhmätilauksena, 
           jossa rahat kasataan internetin välityksellä harrastajaporukan kesken ja maksetaan könttänä etukäteen tehtaalle,
           joka valmistaa haluttua tuotetta mittatilauksena vain yhden erän.<br><br></p>
-          <a class="clean block smallBox" href="#middle"><h4><i class="fas fa-images"></i> Kuvagalleria</h4></a>
+          <a class="clean block smallBox" href="#bottom"><h4><i class="fas fa-images"></i> Kuvagalleria</h4></a>
     </article>
 
     <article class="right padClean mobileClean col-6 col-t12">
@@ -77,12 +77,13 @@
 
   </div>
 
-  <div class="alempi row">
-
-    <div id="middle" class="col-12 col-t12"><a class="linkki" href="#top"><i class="fas fa-angle-up fa-6x"></i></a></div>
+  <div class="alin row">
 
     <article class="galleria col-12 col-t12">
+
+      <div id="bottom" class="col-12 col-t12"><a class="linkki" href="#top"><i class="fas fa-angle-up fa-6x"></i></a></div>
       <h4 class="col-12 col-t12"><i class="fas fa-images"></i> Kuvagalleria</h4>
+
       <a href="images/winkeyless.jpg" data-lightbox="Album1" data-title="Winkeyless">
         <img src="images/winkeyless_thumb.jpg" style="width: 200px; height: 100px;" alt="Winkeyless"/></a>
       <a href="images/ledstrip.jpg" data-lightbox="Album1" data-title="Ledstrip">
@@ -97,6 +98,7 @@
         <img src="images/full_thumb.jpg" style="width: 200px; height: 100px;" alt="Full"/></a>
       <a href="images/puinen.jpg" data-lightbox="Album1" data-title="Puinen"> 
         <img src="images/puinen_thumb.jpg" style="width: 200px; height: 100px;" alt="Puinen"/></a>
+
     </article>
 
   </div>

@@ -34,7 +34,6 @@
 html {
   min-height: 100%;
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 ::selection, ::-moz-selection{
   background: var(--red);
@@ -73,7 +72,6 @@ main {
 section, article, .content {
   background-color: transparent;
   text-align: center;
-  margin: 0 auto;
 }
 p {margin: 0; padding: 0;}
 p.sectiontxt {
@@ -89,6 +87,8 @@ h1 {
   letter-spacing: 0.1875em;
   text-decoration: underline;
   text-shadow: var(--lightgrey) 5px 5px 10px;
+  margin: 0;
+  padding: 0;
 }
 h2 {
   color: var(--grey);
@@ -114,6 +114,7 @@ h4, h5 {
   padding: 0;
 }
 h4 {font-family: 'Audiowide', cursive; font-size: 120%;}
+.galleria h4 {padding-bottom: 2rem;}
 h5 {font-family: 'Ubuntu', sans-serif; font-size: 150%;}
 h6 {
   color: var(--darkgrey);
@@ -123,6 +124,7 @@ h6 {
   text-decoration: underline;
   text-shadow: var(--lightgrey) 2px 2px 2px;
 }
+article span {font-style: italic;}
 
 a.block {display: block; width: max-content; margin: 0 auto;}
 
@@ -165,8 +167,47 @@ a.linkki:active {color: var(--darkred); text-decoration: underline;}
   transform: scale(1.05);
   transition-duration: 1s;
 }
-.linkContainer {margin: 2rem;}
+.itBox {
+  padding: 1em;
+  overflow: visible;
+  background-color: var(--background);
+  border: 2px solid var(--red);
+  border-radius: 25px;
+  box-shadow: var(--lightgrey) 5px 5px 5px;
+}
+.linkContainer {
+  margin: 0rem; 
+  margin-top: 5rem; 
+  margin-bottom: 3rem; 
+  float: left;
+}
+.kouluBox {
+  margin: 0rem; 
+  margin-left: 4rem;
+  float: left;
+}
 .itContainer {margin: 0; margin-top: 5rem;}
+.floatLeft {float: left;}
+
+.left {
+  margin: 0;
+  margin-top: 1em;
+  margin-left: 2em;
+  padding-bottom: 1rem;
+  float: left;
+  overflow: hidden;
+  background-color: var(--background);
+  border-radius: 25px;
+}
+.right {
+  margin: 0;
+  margin-top: 10rem;
+  margin-right: 2rem;
+  float: right;
+  overflow: hidden;
+  background-color: var(--background);
+  border-radius: 25px;
+}
 
 /* Yläpalkki */
 header {
@@ -238,32 +279,16 @@ a.active {background-color: var(--darkred); height: 2em;}
 a.nonactive {height: 2em;}
 a.nonactive:hover {background-color: var(--lightgrey); height: 2em;}
 
-.floatLeft {float: left; margin-right: 1rem;}
-
-.left {
+.alempi {
   margin: 0;
-  margin-top: 1em;
-  margin-left: 2em;
-  padding-bottom: 1rem;
-  float: left;
-  overflow: hidden;
-  background-color: var(--background);
-  border-radius: 25px;
-}
-.right {
-  margin: 0;
-  margin-top: 10rem;
-  margin-right: 2rem;
-  float: right;
-  overflow: hidden;
-  background-color: var(--background);
-  border-radius: 25px;
+  margin-top: 10%;
+  padding: 0;
 }
 
-.alempi{
+.alin {
   margin: 0;
-  margin-top: 100%;
-  margin-bottom: 100%;
+  margin-top: 15%;
+  margin-bottom: 35%;
   padding: 0;
 }
 
@@ -343,7 +368,7 @@ table#kokemus {
   margin-left: 5%;
   margin-right: 5%;
   width: 90%;
-  background-color: var(--white);
+  background-color: var(--background);
   color: var(--darkgrey);
   box-shadow: var(--lightgrey) 4px 4px 4px;
 }
