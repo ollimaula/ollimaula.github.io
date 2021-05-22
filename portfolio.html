@@ -7,25 +7,26 @@
 <meta name="author" content="Olli Maula">
 <meta charset="UTF-8">
 <title>Olli Maula - Portfolio</title>
-<link rel="stylesheet" media="all and (max-width: 890px)" href="styles/phone.css">
-<link rel="stylesheet" media="all and (min-width: 891px) and (max-width: 1119px)" href="styles/tablet.css">
-<link rel="stylesheet" media="all and (min-width: 1120px)" href="styles/desktop.css">
-<link rel="stylesheet" href="styles/lightbox.css">
+<link rel="stylesheet" media="all" href="styles/general.css"> <!-- Kaikille näkymille yhteiset tyylit -->
+<link rel="stylesheet" media="all and (max-width: 890px)" href="styles/phone.css"> <!-- Mobiilinäkymä -->
+<link rel="stylesheet" media="all and (min-width: 891px) and (max-width: 1119px)" href="styles/tablet.css"> <!-- Tabletnäkymä -->
+<link rel="stylesheet" media="all and (min-width: 1120px)" href="styles/desktop.css"> <!-- Desktopnäkymä -->
 <script src="https://kit.fontawesome.com/55ff3240d5.js" crossorigin="anonymous"></script>
-<script src="jscript/mobilemenu.js"></script>
+<script src="jscript/mobilemenu.js"></script> <!-- Hampurilaisvalikko -->
 </head>
 <body>
 
 <main class="flex">
 
-  <section id="top" class="row">
+  <div id="top" class="row">
 
     <header class="col-5 col-t11">
       <h1>Olli<br>Maula</h1>
       <h3>Turvallisuuden ammattilainen</h3>
     </header>
 
-    <nav class="mobileDisable col-6 col-t11">
+    <!-- Desktop- ja Tabletnäkymän navigointi -->
+    <nav class="mobileDisable col-6 col-t11"> 
       <ul id="navlist">
         <li class="navig">
           <a class="nonactive" href="index.html" title="Etusivu"><p class="bar"><i class="fas fa-home"></i> ETUSIVU</p></a></li>
@@ -36,7 +37,8 @@
       </ul>
     </nav>
 
-    <nav class="desktopDisable tabDisable mobileNav col-">
+    <!-- Mobiilinäkymän navigointi -->
+    <nav class="desktopDisable tabDisable mobileNav col-"> 
       <div id="links">
         <a href="index.html" title="Etusivu"><i class="fas fa-home"></i> ETUSIVU</a>
         <a href="harrastukset.html" title="Harrastukset"><i class="far fa-keyboard"></i> HARRASTUKSET</a>
@@ -45,20 +47,21 @@
       <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fas fa-bars"></i></a>
     </nav>
 
-  </section>
+  </div> <!-- top päättyy -->
 
-  <div class="row">
+  <div class="row"> <!-- Yläosan sisältö alkaa -->
 
       <article class="first bigBox padBox mobileBox col-5 col-t11">
+
         <h2><i class="fas fa-certificate"></i> Pätevyydet</h2>
-        <p class="sectiontxt">
-          <a class="linkki" href="https://ensiapukoulutus.fi/ensiapukurssi-ea2-8t/" target="_blank"><strong>SPR Ensiapu 2</strong></a><br>- <span>Voimassa: 11 / 2021</span><br>
-          <a class="linkki" href="https://www.naemt.org/education/tecc" target="_blank"><strong>TECC Ensiapu 1</strong></a><br>- <span>Voimassa: 9 / 2025</span><br>
-          <strong>Tulityökortti</strong><br>- <span>Voimassa: 5 / 2025</span><br>
-          <strong>Työturvallisuuskortti</strong><br>- <span>Voimassa: 10 / 2025</span><br>
-          <strong>Paloilmoitinlaitteenhoitaja</strong><br>- <span>Voimassa: toistaiseksi</span><br><br>
-          <strong>Järjestyksenvalvojakortti</strong><br>- Kaasusumutinkoulutus<br>- Teleskooppipatukkakoulutus<br>- Yleinen osa<br>- Voimankäytön lisäkoulutus<br><br>
-          <strong>Vartijakortti</strong><br>- Kaasusumutinkoulutus<br>- Teleskooppipatukkakoulutus<br>- Yleinen osa</p>
+        <p><a class="linkki" href="https://ensiapukoulutus.fi/ensiapukurssi-ea2-8t/" target="_blank"><strong>SPR Ensiapu 2</strong></a><br>- <span>Voimassa: 11 / 2021</span><br>
+        <a class="linkki" href="https://www.naemt.org/education/tecc" target="_blank"><strong>TECC Ensiapu 1</strong></a><br>- <span>Voimassa: 9 / 2025</span><br>
+        <strong>Tulityökortti</strong><br>- <span>Voimassa: 5 / 2025</span><br>
+        <strong>Työturvallisuuskortti</strong><br>- <span>Voimassa: 10 / 2025</span><br>
+        <strong>Paloilmoitinlaitteenhoitaja</strong><br>- <span>Voimassa: toistaiseksi</span></p>
+        <p><strong>Järjestyksenvalvojakortti</strong><br>- Kaasusumutinkoulutus<br>- Teleskooppipatukkakoulutus<br>- Yleinen osa<br>- Voimankäytön lisäkoulutus</p>
+        <p><strong>Vartijakortti</strong><br>- Kaasusumutinkoulutus<br>- Teleskooppipatukkakoulutus<br>- Yleinen osa</p>
+      
       </article>
 
       <div class="linkContainer col-5 col-t12">
@@ -69,25 +72,26 @@
           <a class="clean" href="#bottom"><h5><i class="fas fa-laptop-code"></i> IT-alan työnäytteet <i class="fas fa-long-arrow-alt-down"></i></h5></a></div>
 
         <article class="bigBox mobileBox padBox">
+
           <h2><i class="fas fa-graduation-cap"></i> Koulutukset</h2>
-          <p class="sectiontxt">
-            <strong>Sähkö- ja automaatioasentajan perustutkinto</strong><br> - <span>Jyväskylän ammattiopisto, 2012.</span><br>
-            <strong>Järjestyksenvalvojan peruskurssi</strong><br> - <span>MH-Service, 2012.</span><br>
-            <strong>Vartijan peruskoulutus</strong><br> - <span>Turun AKK, 2015.</span><br>
-            <strong>Turvallisuusalan ammattitutkinto</strong><br> - <span>Turun AKK - Oppisopimus, 2020 (kesken).</span></p>
+          <p><strong>Sähkö- ja automaatioasentajan perustutkinto</strong><br> - <span>Jyväskylän ammattiopisto, 2012.</span><br>
+          <strong>Järjestyksenvalvojan peruskurssi</strong><br> - <span>MH-Service, 2012.</span><br>
+          <strong>Vartijan peruskoulutus</strong><br> - <span>Turun AKK, 2015.</span><br>
+          <strong>Turvallisuusalan ammattitutkinto</strong><br> - <span>Turun AKK - Oppisopimus, 2020 (kesken).</span></p>
+
         </article>
 
-      </div> <!-- linkContainer -->
+      </div> <!-- linkContainer päättyy -->
 
-  </div>
+  </div> <!-- Yläosan sisältö päättyy -->
     
-
-  <div class="row alempi">
+  <div class="row alempi"> <!-- Keskiosan sisältö alkaa -->
 
     <div class="col-12 col-t12" id="middle">
       <a class="mobileDisable linkki" href="#top"><i class="fas fa-angle-up fa-6x"></i></a>
     </div>
 
+    <!-- Desktop ja Tablet näkymien työkokemus osio -->
     <table class="mobileDisable col-12 col-t11" id="kokemus">
       <tr>
         <th id="otsikko" colspan="4">Työkokemus</th>
@@ -154,33 +158,34 @@
       </tr>
     </table>
 
+    <!-- Mobiilinäkymän työkokemus osio -->
     <article class="mobileBox bigBox desktopDisable tabDisable col-">
       <h2><i class="fas fa-briefcase"></i> Työkokemus</h2>
-      <p class="sectiontxt">
-        <strong>Vartija</strong>, Securitas Oy<br>15.5.2015 - Toistaiseksi<br>Piirivartija, PORA-järjestyksenvalvoja, teollisuusvartija, myymälävartija, tapahtumajärjestyksenvalvoja, henkilösuojaus.<br><br>
-        <strong>Järjestyksenvalvoja</strong>, Safety Solutions Oy<br> 2018<br>Blockfest, toimintaryhmä 2:n ryhmänjohtaja. Voimankäyttö, kiinniotot sekä alueelta poistamiset.<br><br>
-        <strong>Järjestyksenvalvoja</strong>, KST Oy<br>2016, 2017 ja 2019<br>Ilosaarirock, anniskelualueet. Yleisen järjestyksen ja turvallisuuden ylläpitäminen anniskelualueilla.<br><br>
-        <strong>Sähköasentaja</strong>, Are Oy<br>12.05.2014 - 30.08.2014<br>Sähköasennukset saneeraus- sekä uudiskohteissa. Kiinteistöpalvelut. Vuosihuollot ja korjaustyöt.<br><br>
-        <strong>Rakennusapumies</strong>, Selekta Oy<br>11.09.2013 - 15.5.2015<br>Betoniraudoitukset, rakennussiivous.<br><br>
-        <strong>Kylmälaiteasentaja</strong>, Are Oy<br>31.10.2012 - 31.12.2012<br>Kylmälaiteasennusten ja -huoltojen sähkötyöt.<br><br>
-        <strong>Sähköasentajaharjoittelija</strong>, Are Oy<br>01.06.2011 - 19.08.2011<br>Kiinteistöpalvelut. Vuosihuollot ja korjaustyöt.<br><br>
-        <strong>Sähköasennusharjoittelija</strong>, Are Oy<br>05.07.2010 - 30.07.2010<br>Kiinteistöpalvelut. Vuosihuollot ja korjaustyöt.<br><br>
-        <strong>Kesätyöharjoittelija</strong>, Are Oy<br>01.06.2009 - 26.06.2009<br>Kylmälaiteasennukset sekä -huollot.</p>
+      <p><strong>Vartija</strong>, Securitas Oy<br>15.5.2015 - Toistaiseksi<br>Piirivartija, PORA-järjestyksenvalvoja, teollisuusvartija, myymälävartija, tapahtumajärjestyksenvalvoja, henkilösuojaus.</p>
+      <p><strong>Järjestyksenvalvoja</strong>, Safety Solutions Oy<br> 2018<br>Blockfest, toimintaryhmä 2:n ryhmänjohtaja. Voimankäyttö, kiinniotot sekä alueelta poistamiset.</p>
+      <p><strong>Järjestyksenvalvoja</strong>, KST Oy<br>2016, 2017 ja 2019<br>Ilosaarirock, anniskelualueet. Yleisen järjestyksen ja turvallisuuden ylläpitäminen anniskelualueilla.</p>
+      <p><strong>Sähköasentaja</strong>, Are Oy<br>12.05.2014 - 30.08.2014<br>Sähköasennukset saneeraus- sekä uudiskohteissa. Kiinteistöpalvelut. Vuosihuollot ja korjaustyöt.</p>
+      <p><strong>Rakennusapumies</strong>, Selekta Oy<br>11.09.2013 - 15.5.2015<br>Betoniraudoitukset, rakennussiivous.</p>
+      <p><strong>Kylmälaiteasentaja</strong>, Are Oy<br>31.10.2012 - 31.12.2012<br>Kylmälaiteasennusten ja -huoltojen sähkötyöt.</p>
+      <p><strong>Sähköasentajaharjoittelija</strong>, Are Oy<br>01.06.2011 - 19.08.2011<br>Kiinteistöpalvelut. Vuosihuollot ja korjaustyöt.</p>
+      <p><strong>Sähköasennusharjoittelija</strong>, Are Oy<br>05.07.2010 - 30.07.2010<br>Kiinteistöpalvelut. Vuosihuollot ja korjaustyöt.</p>
+      <p><strong>Kesätyöharjoittelija</strong>, Are Oy<br>01.06.2009 - 26.06.2009<br>Kylmälaiteasennukset sekä -huollot.</p>
     </article>
 
     <div class="arrow col-12 col-t12 tabDisable mobileDisable">
       <a class="linkki" href="#bottom"><i class="fas fa-angle-down fa-6x"></i></a>
     </div>
 
-  </div>
+  </div> <!-- Keskiosan sisältö päättyy -->
 
-  <div class="alin row">
+  <div class="alin row"> <!-- Alaosan sisältö alkaa -->
 
     <article id="bottom" class="itContainer col-12 col-t12">
-      <h6 class="col-12 col-t12">IT-alan työnäytteitä</h6>
+
+      <h6 class="col-12 col-t12"><i class="fas fa-laptop-code"></i> IT-alan työnäytteitä</h6>
 
       <aside class="tabDisable mobileDisable floatLeft col-4 col-t4">
-        <a class="linkki" href="#middle"><i class="fas fa-angle-up fa-6x"></i></a><br>
+        <a class="linkki" href="#middle"><i class="fas fa-angle-up fa-6x"></i></a>
         <a class="linkki" href="#top"><i class="fas fa-angle-double-up fa-6x"></i></a>
       </aside>
 
@@ -194,15 +199,14 @@
         <a class="clean" href="https://student.labranet.jamk.fi/~ab3681/web_tekniikat/harj6/" target="_blank"><h4>Responsiivinen sivusto</h4></a></div>
     
       <div class="desktopDisable col-t12">
-        <a class="linkki" href="#top"><i class="fas fa-angle-double-up fa-6x"></i></a>
-      </div>
+        <a class="linkki" href="#top"><i class="fas fa-angle-double-up fa-6x"></i></a></div>
 
     </article>
 
-  </div>
+  </div> <!-- Alaosan sisältö päättyy -->
 
   <footer class="row">
-    <div class="contact" onclick="">
+    <div class="contact" onclick=""> <!-- 'onclick' lisää tuen kosketusnäytöille -->
       <i class="far fa-envelope fa-2x"></i>
       <span>olli.maula@gmail.com | <i class="fas fa-phone"></i> 045 634 6077</span>
     </div>
