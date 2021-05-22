@@ -14,10 +14,8 @@
 
 * {box-sizing: border-box;}
 
-.row::after {
-  clear: both;
-  display: block;
-}
+.row::after {clear: both; display: block;}
+
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -102,6 +100,7 @@ h2 {
 }
 h3 {
   font-family: 'Russo One', sans-serif;
+  letter-spacing: 0.05em;
   margin: 0;
   margin-top: 0.5rem;
   padding: 0;
@@ -124,7 +123,8 @@ h6 {
   text-decoration: underline;
   text-shadow: var(--lightgrey) 2px 2px 2px;
 }
-article span {font-style: italic;}
+article span {font-style: italic;} 
+/* span käytössä 'em' tai 'i' sijaan, koska kursivoinnilla ei tarvetta semanttiselle merkitykselle */
 
 a.block {display: block; width: max-content; margin: 0 auto;}
 
@@ -151,7 +151,7 @@ a.linkki:active {color: var(--darkred); text-decoration: underline;}
 .smallBox {
   text-align: center;
   margin: 0 auto;
-  margin-top: 1.5rem;
+  margin-bottom: 2rem;
   padding: 0.5rem;
   overflow: visible;
   background-color: var(--background);
@@ -177,19 +177,14 @@ a.linkki:active {color: var(--darkred); text-decoration: underline;}
 }
 .linkContainer {
   margin: 0rem; 
-  margin-top: 5rem; 
-  margin-bottom: 3rem; 
-  float: left;
-}
-.kouluBox {
-  margin: 0rem; 
-  margin-left: 4rem;
-  float: left;
+  margin-top: 8.1rem; 
+  margin-right: 3rem;
+  float: right;
 }
 .itContainer {margin: 0; margin-top: 5rem;}
 .floatLeft {float: left;}
 
-.left {
+.first {
   margin: 0;
   margin-top: 1em;
   margin-left: 2em;
@@ -199,7 +194,7 @@ a.linkki:active {color: var(--darkred); text-decoration: underline;}
   background-color: var(--background);
   border-radius: 25px;
 }
-.right {
+.second {
   margin: 0;
   margin-top: 10rem;
   margin-right: 2rem;
@@ -281,7 +276,7 @@ a.nonactive:hover {background-color: var(--lightgrey); height: 2em;}
 
 .alempi {
   margin: 0;
-  margin-top: 10%;
+  margin-top: 15%;
   padding: 0;
 }
 
@@ -439,5 +434,9 @@ footer span {
   transition: max-width 1s;
   white-space: nowrap; /* Pitää tekstin samalla rivillä. */
   overflow: hidden;
+}
+footer span::selection, footer span::-moz-selection{
+  background: var(--white);
+  color: var(--red);
 }
 .contact:hover span {max-width: 24rem;}
