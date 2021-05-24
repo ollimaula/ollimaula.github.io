@@ -4,7 +4,7 @@ body {
   max-width: 785px;
   background-image: url("../images/background7.jpg");
 }
-main {max-width: 700px; padding-bottom: 6rem;}
+.page {max-width: 700px; padding-bottom: 6rem;}
 
 /* || Yläpalkki */
 .mobileDisable {display: none;}
