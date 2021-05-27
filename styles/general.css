@@ -54,6 +54,7 @@ section, article {
 }
 
 p {margin: 0; padding: 0;}
+
 section p, article p {
   text-align: left;
   color: var(--darkgrey);
@@ -64,6 +65,39 @@ section p, article p {
   margin-left: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.4rem;
+}
+
+article span {font-style: italic;}  /* span käytössä 'em' tai 'i' sijaan, koska kursivoinnilla ei tarvetta semanttiselle merkitykselle */
+
+a.block {display: block; width: max-content; margin: 0 auto;}
+
+#top, #middle, #bottom, .arrow {text-align: center; margin: 0; padding: 0;}
+
+a.clean:link {text-decoration: none;}
+a.clean:visited {text-decoration: none;}
+a.clean:hover {text-decoration: none;}
+a.clean:active {text-decoration: none;}
+
+a.linkki:link {color: var(--red); text-decoration: none;}
+a.linkki:visited {color: var(--red); text-decoration: none;}
+a.linkki:hover {color: var(--darkred); text-decoration: underline;}
+a.linkki:active {color: var(--darkred); text-decoration: underline;}
+aside a.linkki {display: block;}
+
+#reenikuva{
+  display: block;
+  float: left;
+  margin: 1rem;
+  margin-top: 0.1em;
+  border: 0.2em var(--red) ridge;
+  transition-duration: 0.5s;
+}
+#reenikuva:hover{
+  margin-top: 0;
+  margin-left: 0.5rem;
+  margin-right: 1.5rem;
+  box-shadow: var(--lightgrey) 5px 5px 5px;
+  transition-duration: 0.5s;
 }
 
 /* || Otsikot */
@@ -110,39 +144,6 @@ h6 {
   font-size: 150%;
   text-decoration: underline;
   text-shadow: var(--lightgrey) 2px 2px 2px;
-}
-/* | Otsikot */
-
-article span {font-style: italic;}  /* span käytössä 'em' tai 'i' sijaan, koska kursivoinnilla ei tarvetta semanttiselle merkitykselle */
-
-a.block {display: block; width: max-content; margin: 0 auto;}
-
-#top, #middle, #bottom, .arrow {text-align: center; margin: 0; padding: 0;}
-
-a.clean:link {text-decoration: none;}
-a.clean:visited {text-decoration: none;}
-a.clean:hover {text-decoration: none;}
-a.clean:active {text-decoration: none;}
-
-a.linkki:link {color: var(--red); text-decoration: none;}
-a.linkki:visited {color: var(--red); text-decoration: none;}
-a.linkki:hover {color: var(--darkred); text-decoration: underline;}
-a.linkki:active {color: var(--darkred); text-decoration: underline;}
-
-#reenikuva{
-  display: block;
-  float: left;
-  margin: 1rem;
-  margin-top: 0.1em;
-  border: 0.2em var(--red) ridge;
-  transition-duration: 0.5s;
-}
-#reenikuva:hover{
-  margin-top: 0;
-  margin-left: 0.5rem;
-  margin-right: 1.5rem;
-  box-shadow: var(--lightgrey) 5px 5px 5px;
-  transition-duration: 0.5s;
 }
 
 /* || Kuvagalleria */

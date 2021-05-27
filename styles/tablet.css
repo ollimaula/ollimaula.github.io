@@ -34,6 +34,47 @@ body {
 }
 
 .tabDisable {display: none;}
+.floatLeft {float: left; margin-right: 1rem;}
+
+.padBox {
+  margin: 3rem;
+  overflow: hidden;
+  background-color: var(--background);
+  border-radius: 25px;
+}
+.padClean {
+  margin: 0;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  background-color: var(--background);
+  border-radius: 25px;
+}
+.padSelf {
+  margin: 0;
+  margin-top: 5rem;
+  margin-left: 1rem;
+  float: left;
+}
+
+.alempi{
+  margin: 0;
+  padding: 0;
+}
+.alin {
+  margin: 0;
+  margin-bottom: 35%;
+  padding: 0;
+}
+
+.omakuva {
+  margin: 0;
+  margin-top: 2em;
+  margin-right: 2em;
+  float: right;
+  overflow: hidden;
+}
 
 /* || Yläpalkki */
 header {
@@ -89,49 +130,6 @@ p.bar {
 }
 a.active {background-color: var(--darkred); height: 2em;}
 a.nonactive {height: 2em;}
-/* | Yläpalkki */
-
-.floatLeft {float: left; margin-right: 1rem;}
-
-.padBox {
-  margin: 3rem;
-  overflow: hidden;
-  background-color: var(--background);
-  border-radius: 25px;
-}
-.padClean {
-  margin: 0;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem;
-  overflow: hidden;
-  background-color: var(--background);
-  border-radius: 25px;
-}
-.padSelf {
-  margin: 0;
-  margin-top: 5rem;
-  margin-left: 1rem;
-  float: left;
-}
-
-.alempi{
-  margin: 0;
-  padding: 0;
-}
-.alin {
-  margin: 0;
-  margin-bottom: 35%;
-  padding: 0;
-}
-
-.omakuva {
-  margin: 0;
-  margin-top: 2em;
-  margin-right: 2em;
-  float: right;
-  overflow: hidden;
-}
 
 /* || Työkokemustaulukko */
 table#kokemus {
