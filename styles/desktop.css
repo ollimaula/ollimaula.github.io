@@ -162,14 +162,16 @@ li a {
   float: left;
   box-shadow: var(--lightgrey) 5px 5px 5px;
 }
+li a:hover{ color: var(--black); }
 p.bar {
   -webkit-transform: skewX(25deg);
   -ms-transform: skewX(25deg);
   transform: skewX(25deg);
 }
 a.active {background-color: var(--darkred); height: 2em;}
+a.active:hover { color: var(--white) ;}
 a.nonactive {height: 2em;}
-a.nonactive:hover {background-color: var(--lightgrey); height: 2em;}
+a.nonactive:hover {background-color: var(--white); height: 2em;}
 
 /* || Työkokemustaulukko */
 table#kokemus {

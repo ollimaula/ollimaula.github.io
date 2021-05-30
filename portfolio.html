@@ -11,7 +11,7 @@
 <link rel="stylesheet" media="all and (max-width: 890px)" href="styles/phone.css"> <!-- Mobiilinäkymä -->
 <link rel="stylesheet" media="all and (min-width: 891px) and (max-width: 1119px)" href="styles/tablet.css"> <!-- Tabletnäkymä -->
 <link rel="stylesheet" media="all and (min-width: 1120px)" href="styles/desktop.css"> <!-- Desktopnäkymä -->
-<script src="https://kit.fontawesome.com/55ff3240d5.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/55ff3240d5.js" crossorigin="anonymous"></script> <!-- Scripti iconeille. Scriptiä kutsutaan koodissa "i" elementillä, iconi määritellään i:n classissa. -->
 <script src="jscript/mobilemenu.js"></script> <!-- Hampurilaisvalikko -->
 </head>
 <body>
@@ -25,8 +25,7 @@
       <h3>Turvallisuuden ammattilainen</h3>
     </header>
 
-    <!-- Desktop- ja Tabletnäkymän navigointi -->
-    <nav class="mobileDisable col-6 col-t11"> 
+    <nav class="mobileDisable col-6 col-t11"> <!-- Desktop- ja Tabletnäkymän navigointi -->
       <ul id="navlist">
         <li class="navig">
           <a class="nonactive" href="index.html" title="Etusivu"><p class="bar"><i class="fas fa-home"></i> ETUSIVU</p></a></li>
@@ -37,8 +36,7 @@
       </ul>
     </nav>
 
-    <!-- Mobiilinäkymän navigointi -->
-    <nav class="desktopDisable tabDisable mobileNav col-"> 
+    <nav class="desktopDisable tabDisable mobileNav col-"> <!-- Mobiilinäkymän navigointi -->
       <div id="links">
         <a href="index.html" title="Etusivu"><i class="fas fa-home"></i> ETUSIVU</a>
         <a href="harrastukset.html" title="Harrastukset"><i class="far fa-keyboard"></i> HARRASTUKSET</a>
@@ -49,7 +47,7 @@
 
   </div> <!-- top päättyy -->
 
-  <main class="row">
+  <main class="row"> <!-- sisältö alkaa -->
 
     <div class="row"> <!-- Yläosan sisältö alkaa -->
 
@@ -76,10 +74,10 @@
           <article class="bigBox mobileBox padBox">
 
             <h2><i class="fas fa-graduation-cap"></i> Koulutukset</h2>
-            <p><strong>Sähkö- ja automaatioasentajan perustutkinto</strong><br> - <span>Jyväskylän ammattiopisto, 2012.</span><br>
-            <strong>Järjestyksenvalvojan peruskurssi</strong><br> - <span>MH-Service, 2012.</span><br>
-            <strong>Vartijan peruskoulutus</strong><br> - <span>Turun AKK, 2015.</span><br>
-            <strong>Turvallisuusalan ammattitutkinto</strong><br> - <span>Turun AKK - Oppisopimus, 2020 (kesken).</span></p>
+            <p><strong>Turvallisuusalan ammattitutkinto</strong><br> - <span>Turun AKK - Oppisopimus, 2020 (kesken)<br></span>
+            <strong>Vartijan peruskoulutus</strong><br> - <span>Turun AKK, 2015</span><br>
+            <strong>Järjestyksenvalvojan peruskurssi</strong><br> - <span>MH-Service, 2012</span><br>
+            <strong>Sähkö- ja automaatioasentajan perustutkinto</strong><br> - <span>Jyväskylän ammattiopisto, 2012</span></p>
 
           </article>
 
@@ -93,7 +91,7 @@
         <a class="mobileDisable linkki" href="#top"><i class="fas fa-angle-up fa-6x"></i></a>
       </div>
 
-      <table class="mobileDisable col-12 col-t11" id="kokemus"> <!-- Desktop ja Tablet näkymien työkokemus osio -->
+      <table class="mobileDisable col-12 col-t11" id="kokemus"> <!-- Desktop ja Tablet näkymien työkokemus-osio -->
         <tr>
           <th id="otsikko" colspan="4">Työkokemus</th>
         </tr>
@@ -159,7 +157,7 @@
         </tr>
       </table>
 
-      <article class="mobileBox bigBox desktopDisable tabDisable col-"> <!-- Mobiilinäkymän työkokemus osio -->
+      <article class="mobileBox bigBox desktopDisable tabDisable col-"> <!-- Mobiilinäkymän työkokemus-osio -->
         <h2><i class="fas fa-briefcase"></i> Työkokemus</h2>
         <p><strong>Vartija</strong>, Securitas Oy<br>15.5.2015 - Toistaiseksi<br>Piirivartija, PORA-järjestyksenvalvoja, teollisuusvartija, myymälävartija, tapahtumajärjestyksenvalvoja, henkilösuojaus.</p>
         <p><strong>Järjestyksenvalvoja</strong>, Safety Solutions Oy<br> 2018<br>Blockfest, toimintaryhmä 2:n ryhmänjohtaja. Voimankäyttö, kiinniotot sekä alueelta poistamiset.</p>
@@ -172,7 +170,7 @@
         <p><strong>Kesätyöharjoittelija</strong>, Are Oy<br>01.06.2009 - 26.06.2009<br>Kylmälaiteasennukset sekä -huollot.</p>
       </article>
 
-      <div class="arrow col-12 col-t12 tabDisable mobileDisable">
+      <div class="arrow col-12 col-t12 tabDisable mobileDisable"> <!-- Smooth scroll linkit -->
         <a class="linkki" href="#bottom"><i class="fas fa-angle-down fa-6x"></i></a>
       </div>
 
@@ -184,13 +182,13 @@
 
         <h6 class="col-12 col-t12"><i class="fas fa-laptop-code"></i> IT-alan työnäytteitä</h6>
 
-        <aside class="tabDisable mobileDisable floatLeft col-4 col-t4">
+        <aside class="tabDisable mobileDisable floatLeft col-4 col-t4"> <!-- Smooth scroll linkit -->
           <a class="linkki" href="#middle"><i class="fas fa-angle-up fa-6x"></i></a>
           <a class="linkki" href="#top"><i class="fas fa-angle-double-up fa-6x"></i></a>
         </aside>
 
         <div class="smallBox mobileBox padBox col-4 col-t11">
-          <a class="clean" href="https://student.labranet.jamk.fi/~ab3681/web_tekniikat/harj7/" target="_blank"><h4>HTML mediat</h4></a></div>
+          <a class="clean" href="https://student.labranet.jamk.fi/~ab3681/web_tekniikat/harj7/" target="_blank"><h4>HTML-mediat</h4></a></div>
         <div class="smallBox mobileBox padBox col-4 col-t11">
           <a class="clean" href="https://student.labranet.jamk.fi/~ab3681/web_tekniikat/harj3/asiakkaat_taulukko.html" target="_blank"><h4>Taulukoiden muotoilut</h4></a></div>
         <div class="smallBox mobileBox padBox col-4 col-t11">
@@ -198,14 +196,14 @@
         <div class="smallBox mobileBox padBox col-4 col-t11">
           <a class="clean" href="https://student.labranet.jamk.fi/~ab3681/web_tekniikat/harj6/" target="_blank"><h4>Responsiivinen sivusto</h4></a></div>
       
-        <div class="desktopDisable col-t12">
+        <div class="desktopDisable col-t12"> <!-- Smooth scroll linkit -->
           <a class="linkki" href="#top"><i class="fas fa-angle-double-up fa-6x"></i></a></div>
 
       </article>
 
     </div> <!-- /alin, Alaosan sisältö päättyy -->
 
-  </main>
+  </main> <!-- sisältö päättyy -->
 
   <footer class="row">
     <div class="contact" onclick=""> <!-- 'onclick' lisää tuen kosketusnäytöille -->
@@ -214,7 +212,7 @@
     </div>
   </footer>
 
-</div>
+</div> <!-- page päättyy -->
 
 </body> 
 </html>
