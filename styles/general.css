@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Ubuntu&family=Audiowide&family=Play&family=Roboto&family=Montserrat+Subrayada:wght@700&family=Saira+Stencil+One&display=swap');
-/* lisää tähän kommentti import komennosta */
+/* import hakee css tiedostossa käytettävät fontit palvelimelta */
+
+* {
+  box-sizing: border-box; /* sisällyttää borderin ja paddingin elementin kokoon */
+  margin: 0;
+  padding: 0;
+} 
 
 :root {
   --red:#af0404;
@@ -13,10 +19,6 @@
   --white: #f5f5f5;
 }
 
-* {box-sizing: border-box;}
-
-.row::after {clear: both; display: block;}
-
 html {
   min-height: 100%;
   scroll-behavior: smooth;
@@ -27,19 +29,11 @@ body {
   margin: 0 auto;
   min-height: 100%;
   background-color: transparent;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.page {
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-::selection, ::-moz-selection{
+::selection{
   background: var(--red);
   color: var(--background);
 }
@@ -49,57 +43,41 @@ body {
   flex-grow: 1;
   flex-shrink: 1;
 }
+.page {
+  height: 100%;
+  margin: 0 auto;
+}
 section, article {
   background-color: transparent;
   text-align: center;
 }
 
-p {margin: 0; padding: 0;}
-
-section p, article p {
-  text-align: left;
-  color: var(--darkgrey);
-  font-family: 'Roboto', sans-serif;
-  font-size: 110%;
-  margin: 0;
-  margin-right: 1rem;
-  margin-left: 1rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.4rem;
-}
-
-article span {font-style: italic;}  /* span käytössä 'em' tai 'i' sijaan, koska kursivoinnilla ei tarvetta semanttiselle merkitykselle */
-
 a.block {display: block; width: max-content; margin: 0 auto;}
-
-#top, #middle, #bottom, .arrow {text-align: center; margin: 0; padding: 0;}
-
-a.clean:link {text-decoration: none;}
-a.clean:visited {text-decoration: none;}
-a.clean:hover {text-decoration: none;}
-a.clean:active {text-decoration: none;}
-
-a.linkki:link {color: var(--red); text-decoration: none;}
-a.linkki:visited {color: var(--red); text-decoration: none;}
-a.linkki:hover {color: var(--darkred); text-decoration: underline;}
-a.linkki:active {color: var(--darkred); text-decoration: underline;}
-aside a.linkki {display: block;}
+.row::after {clear: both; display: block;}
+#top, #middle, #bottom, .arrow {text-align: center;}
 
 #reenikuva{
   display: block;
   float: left;
-  margin: 1rem;
-  margin-top: 0.1em;
+  margin: 0.2em 1em 0 1.6em; /* Shorthand: top, right, bottom, left */
   border: 0.2em var(--red) ridge;
   transition-duration: 0.5s;
 }
 #reenikuva:hover{
-  margin-top: 0;
-  margin-left: 0.5rem;
-  margin-right: 1.5rem;
-  box-shadow: var(--lightgrey) 5px 5px 5px;
+  margin: 0 2.1em 0 0.5em;
+  box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
   transition-duration: 0.5s;
 }
+
+/* || Linkit */
+a.clean:link {text-decoration: none;}
+a.clean:visited {text-decoration: none;}
+a.clean:hover {text-decoration: none;}
+a.clean:active {text-decoration: none;}
+a.linkki:link {color: var(--red); text-decoration: none;}
+a.linkki:visited {color: var(--red); text-decoration: none;}
+a.linkki:hover {color: var(--darkred); text-decoration: underline;}
+a.linkki:active {color: var(--darkred); text-decoration: underline;}
 
 /* || Otsikot */
 h1 {
@@ -108,9 +86,7 @@ h1 {
   font-size: 5rem;
   font-family: 'Saira Stencil One', cursive;
   letter-spacing: 0.1875em;
-  text-shadow: var(--lightgrey) 1px 1px 2px;
-  margin: 0;
-  padding: 0;
+  text-shadow: var(--lightgrey) 0.0625em 0.0625em 0.125em;
   line-height: 1em;
 }
 h2 {
@@ -118,10 +94,7 @@ h2 {
   background-color: transparent;
   font-family: 'Play', sans-serif;
   text-align: left;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 2rem;
-  margin-left: 1em;
+  margin: 0 0 2rem 1em;
 }
 h3 {
   color: var(--red);
@@ -129,15 +102,11 @@ h3 {
   font-family: 'Play', sans-serif;
   letter-spacing: 0.15em;
   font-size: 1.2rem;
-  margin: 0;
-  margin-top: 0.5rem;
-  padding: 0;
+  margin: 0.5em 0;
 }
 h4, h5 {  
   color: var(--grey);
   background-color: transparent;
-  margin: 0;
-  padding: 0;
 }
 h4 {font-family: 'Audiowide', cursive; font-size: 120%;}
 .galleria h4 {padding-bottom: 2rem;}
@@ -147,7 +116,20 @@ h6 {
   background-color: transparent;
   font-family: 'Play', sans-serif;
   font-size: 150%;
+  margin: 2em auto;
 }
+
+/* || Tekstit */
+section p, article p {
+  text-align: left;
+  color: var(--darkgrey);
+  font-family: 'Roboto', sans-serif;
+  font-size: 110%;
+  margin: 0 1em 1.4em 1.5em; 
+  line-height: 1.4rem;
+}
+article span {font-style: italic;}  /* span käytössä 'em' tai 'i' sijaan, koska kursivoinnilla ei tarvetta semanttiselle merkitykselle */
+
 
 /* || Kuvagalleria */
 .galleria {
@@ -155,20 +137,18 @@ h6 {
 }
 .galleria img  {
   margin: 2em;
-  max-width: 200px;
-  max-height: 100px;
+  max-width: 12.5em;
+  max-height: 6.25em;
   border: 0.5em var(--red) ridge;
-  box-shadow: var(--lightgrey) 4px 4px 4px;
+  box-shadow: var(--lightgrey) 0.25em 0.25em 0.25em;
   transition-duration: 0.5s;
 }
 .galleria img:hover {
   margin: 2em;
-  max-width: 200px;
-  max-height: 100px;
+  max-width: 12.5em;
+  max-height: 6.25em;
   border: 0.5em var(--red) ridge;
-  box-shadow: var(--lightgrey) 7px 7px 4px;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
+  box-shadow: var(--lightgrey) 0.4375em 0.4375em 0.25em;
   transform: scale(1.1);
   transition-duration: 0.5s;
 }
@@ -181,7 +161,6 @@ h6 {
 /* || Footer */
 footer {
   height: 3em;
-  margin: 0;
   background-color: transparent;
   font-size: 1.2em;
   overflow: visible;
@@ -195,24 +174,20 @@ footer {
   color: var(--white);
   background: rgb(175, 4, 4); /* IE fallback */
   background-color: var(--red);
-  border: 2px solid var(--black);
-  border-radius: 25px;
-  padding: 0.3em;
-  padding-left: 1.1em;
-  padding-right: 0;
-  box-shadow: var(--lightgrey) 5px 5px 5px;
+  border: 0.125em solid var(--black);
+  border-radius: 1.5625em;
+  padding: 0.3em 0 0.3em 1.1em;
+  box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
 footer span {
   display: inline-block;
-  margin-top: 0.2em;
-  margin-right: 0.8em;
+  margin: 0.2em 0.8em 0 0;
   max-width: 0;
-  -webkit-transition: max-width 1s;
   transition: max-width 1s;
   white-space: nowrap; /* Pitää tekstin samalla rivillä. */
   overflow: hidden;
 }
-footer span::selection, footer span::-moz-selection{
+footer span::selection{
   background: var(--white);
   color: var(--red);
 }
