@@ -6,8 +6,7 @@ body {
 }
 .page {max-width: 700px; padding-bottom: 6em;}
 
-article img {float: left; margin-right: 1em;}
-.mobileDisable {display: none;}
+.mobileDisable {display: none;} /* Piilottaa elementit, joiden ei tule näkyä Mobile-näkymässä. */
 
 /* || Containerit */
 .first {
@@ -41,7 +40,7 @@ article img {float: left; margin-right: 1em;}
   margin: 2em auto;
   max-width: 90%;
 }
-.mobileClean {margin: 0 0 2em 0; padding-bottom: 1em;}
+.mobileClean {margin: 0 0 2em 0; padding: 1em 0;}
 
 /* || Yläpalkki */
 .mobileNav {

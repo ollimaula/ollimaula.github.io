@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<div class="page flex"> <!-- div "page wrapper", koska mikään semanttinen elementti ei sovellu tähän. -->
+<div class="page"> <!-- "page wrapperinä" div, koska mikään semanttinen elementti ei sovellu tähän. -->
 
   <section id="top" class="row">
 
@@ -51,7 +51,7 @@
 
     <article class="first padSelf col-6 col-t6">
       <h2><i class="fas fa-info-circle"></i> Tietoa minusta</h2>
-      <p><img class="desktopDisable tabDisable" src="images/omakuva1.png" alt="OMAKUVA" width="150" height="178"> <!-- Omakuva mobiilinäkymässä -->
+      <p><img id="omakuvaMobile" class="desktopDisable tabDisable" src="images/omakuva1.png" alt="OMAKUVA" width="150" height="178"> <!-- Omakuva mobiilinäkymässä -->
       <strong>Tällä hetkellä työskentelen <a class="linkki" title="www.securitas.fi" href="https://www.securitas.fi/" target="_blank">Securitas Oy:llä</a> 
       ase- ja räjähdeteollisuuden kohteissa paikallisvartijana.</strong><br>
       Vastaan työssäni kohteiden fyysisestä turvallisuudesta sekä LVISJ- ja prosessihälytyksiin reagoinnista.
@@ -64,7 +64,7 @@
       Lisäksi harrastan kamppailulajeja ja vietän aikaa koirani kanssa.</p>
     </article>
 
-    <aside class="mobileDisable omakuva col-5 col-t5"> <!-- Omakuva desktop- ja tabletnäkymässä -->
+    <aside id="omakuva" class="mobileDisable col-5 col-t5"> <!-- Omakuva desktop- ja tabletnäkymässä -->
       <img src="images/omakuva2.png" alt="OMAKUVA" height="722" width="427">
     </aside>
 

@@ -17,13 +17,7 @@ body {
 }
 .page {max-width: 1140px;}
 
-.floatAside {float: left;}
-.desktopDisable {display: none;}
-.omakuva {
-  margin: 2em 2em 0 0;
-  float: right;
-  overflow: hidden;
-}
+.desktopDisable {display: none;} /* Piilottaa elementit, joiden ei tule näkyä Desktop-näkymässä. */
 
 /* || Containerit */
 .first {
@@ -75,8 +69,9 @@ body {
 }
 .linkContainer {margin: 9.4em 3em 0 0; float: right;}
 .itContainer {margin: 5em 0 0 0;}
-.alempi {margin: 50em 0 0 0;}
-.alin {margin: 10em 0 25em 0;}
+.ylin {min-height: 45em;}
+.alempi {margin: 5em 0 0 0;}
+.alin {margin: 10em 0 0 0; padding-bottom: 25em;}
 
 /* || Yläpalkki */
 header {
