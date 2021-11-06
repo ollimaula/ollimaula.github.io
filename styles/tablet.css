@@ -13,7 +13,7 @@
 
 body {
   max-width: 1115px;
-  background-image: url("../images/background6.jpg");
+  background-image: url("../images/background6bw.jpg");
 }
 
 .tabDisable {display: none;} /* Piilottaa elementit, joiden ei tule näkyä Tablet-näkymässä. */
@@ -22,7 +22,7 @@ body {
 .bigBox {
   padding: 1em;
   background-color: var(--background);
-  border: 0.125em solid var(--red);
+  border: 0.125em solid var(--darkergrey);
   border-radius: 1.5625em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
@@ -31,7 +31,7 @@ body {
   margin: 0.2em;
   padding: 0.5em;
   background-color: var(--background);
-  border: 0.125em solid var(--red);
+  border: 0.125em solid var(--darkergrey);
   border-radius: 1.5625em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
@@ -55,7 +55,7 @@ body {
 header {
   display: block;
   text-align: left;
-  color: var(--red);
+  color: var(--darkergrey);
   margin: 1em;
   float: left;
 }
@@ -85,9 +85,9 @@ li a {
   display: block;
   color: var(--white);
   font-family: 'Play', sans-serif;
-  background-color: var(--red);
+  background-color: var(--darkergrey);
   text-decoration: none;
-  border: 0.1875em solid #1a1a2e;
+  border: 0.2em solid var(--black);
   transform: skewX(-25deg);
   padding: 0.3em 0.5em 0.1em;
   float: left;
@@ -95,47 +95,66 @@ li a {
 }
 li a:hover{ color: var(--black); }
 p.bar {transform: skewX(25deg);}
-a.active {background-color: var(--darkred); height: 2em;}
+a.active {background-color: var(--darkestgrey); height: 2em;}
 a.active:hover {color: var(--white);}
 a.nonactive {height: 2em;}
 a.nonactive:hover {background-color: var(--white);}
 
 /* || Työkokemustaulukko */
 table#kokemus {
-  border: 0.125em solid var(--black);
-  border-radius: 1.5625em;
-  border-spacing: 1em;
-  margin: 1em auto;
-  max-width: 90%;
-  background-color: var(--white);
-  color: var(--darkgrey);
-  box-shadow: var(--lightgrey) 0.25em 0.25em 0.25em;
-}
-th {
-  font-family: Play, sans-serif;
-  text-align: center;
-  border: 0.125em solid var(--black);
-}
-td {
-  font-family: Roboto, sans-serif;
-  text-align: left;
-  margin: 1em;
-  padding: 0 1em 0 1.5em;
-  border: 0.0625em solid var(--black);
-  border-left: 0.125em solid var(--black);
-}
-td.kuvaus {
-  font-family: Roboto, sans-serif;
-  text-align: left;
-  border: 0.0625em solid var(--black);
-  border-left: 0.125em solid var(--black);
-  margin: 0.5em;
-  padding: 0.1875em 2em;
-}
-td.aika {
-  font-family: Roboto, sans-serif;
-  text-align: center;
+    border: 0.2em solid var(--black);
+    border-radius: 1.5625em;
+    margin: 1em auto;
+    width: 90%;
+    background-color: var(--background);
+    color: var(--darkgrey);
+    box-shadow: var(--lightgrey) 0.25em 0.25em 0.25em;
 }
 th#otsikko {
-  font-size: 1.25em;
+    font-size: 1.25em;
+    border-radius: 1em 1em 0 0;
+  }
+th {
+    font-family: Play, sans-serif;
+    text-align: center;
+    border: 0.125em solid var(--black);
+    padding: 0.5em;
+}
+td {
+    font-family: Roboto, sans-serif;
+    text-align: left;
+    margin: 1em;
+    padding: 0 1.5em 0 1em;
+    border: 0.0625em solid var(--black);
+    border-left: 0.125em solid var(--black);
+}
+td.south_west {
+    font-family: Roboto, sans-serif;
+    text-align: left;
+    margin: 1em;
+    padding: 0 1.5em 0 1em;
+    border: 0.0625em solid var(--black);
+    border-left: 0.125em solid var(--black);
+    border-radius: 0 0 0 1.4em;
+}
+td.south_east {
+    font-family: Roboto, sans-serif;
+    text-align: left;
+    border: 0.0625em solid var(--black);
+    border-left: 0.125em solid var(--black);
+    margin: 0.5em;
+    padding: 0.1875em 2em;
+    border-radius: 0 0 1.4em 0;
+}
+td.kuvaus {
+    font-family: Roboto, sans-serif;
+    text-align: left;
+    border: 0.0625em solid var(--black);
+    border-left: 0.125em solid var(--black);
+    margin: 0.5em;
+    padding: 0.1875em 2em;
+}
+td.aika {
+    font-family: Roboto, sans-serif;
+    text-align: center;
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Ubuntu&family=Audiowide&family=Play&family=Roboto&family=Montserrat+Subrayada:wght@700&family=Saira+Stencil+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Russo+One&family=Ubuntu&family=Audiowide&family=Play&family=Roboto&family=Saira+Stencil+One&family=Goldman:wght@700&family=Press+Start+2P&display=swap');
 /* import hakee css tiedostossa käytettävät fontit palvelimelta */
 
 * {
@@ -11,8 +11,10 @@
   --red:#af0404;
   --darkred:#662200;
   --grey: #494949;
-  --darkgrey: #333333;
   --lightgrey: #808080;
+  --darkestgrey: #111111;
+  --darkergrey: #222222;
+  --darkgrey: #333333;
   --border: #1a1a2e;
   --black: #000000;
   --background: #fafafa;
@@ -63,7 +65,7 @@ body {
   display: block;
   float: left;
   margin: 0.2em 1em 1em 1.6em; 
-  border: 0.2em var(--red) ridge;
+  border: 0.2em var(--darkergrey) ridge;
   transition-duration: 0.5s;
 }
 #reenikuva:hover{
@@ -81,14 +83,20 @@ a.linkki:link {color: var(--red); text-decoration: none;}
 a.linkki:visited {color: var(--red); text-decoration: none;}
 a.linkki:hover {color: var(--darkred); text-decoration: underline;}
 a.linkki:active {color: var(--darkred); text-decoration: underline;}
+a.navlinkki:link {color: var(--darkgrey); text-decoration: none;}
+a.navlinkki:visited {color: var(--darkgrey); text-decoration: none;}
+a.navlinkki:hover {color: var(--darkred); text-decoration: none;}
+a.navlinkki:active {color: var(--darkred); text-decoration: none;}
 a.block {display: block; width: max-content; margin: 0 auto;}
 
 /* || Otsikot */
 h1 {
-  color: var(--red);
+  color: var(--darkergrey);
   background-color: transparent;
-  font-size: 5rem;
-  font-family: 'Saira Stencil One', cursive;
+  font-size: 5.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-style: bold;
+  font-weight: 900;
   letter-spacing: 0.1875em;
   text-shadow: var(--lightgrey) 0.0625em 0.0625em 0.125em;
   line-height: 1em;
@@ -101,7 +109,7 @@ h2 {
   margin: 0 0 2rem 1em;
 }
 h3 {
-  color: var(--red);
+  color: var(--darkergrey);
   background-color: transparent;
   font-family: 'Play', sans-serif;
   letter-spacing: 0.15em;
@@ -118,7 +126,7 @@ h5 {font-family: 'Ubuntu', sans-serif; font-size: 150%;}
 h6 {
   color: var(--grey);
   background-color: transparent;
-  font-family: 'Play', sans-serif;
+  font-family: 'Press Start 2P', cursive;
   font-size: 150%;
   margin: 2em auto;
 }
@@ -126,7 +134,7 @@ h6 {
 /* || Tekstit */
 article p {
   text-align: left;
-  color: var(--darkgrey);
+  color: var(--darkergrey);
   font-family: 'Roboto', sans-serif;
   font-size: 110%;
   margin: 0 1em 1.4em 1.5em; 
@@ -144,7 +152,7 @@ article span {font-style: italic;}  /* span käytössä 'em' tai 'i' sijaan, kos
   margin: 2em;
   max-width: 12.5em;
   max-height: 6.25em;
-  border: 0.5em var(--red) ridge;
+  border: 0.5em var(--grey) ridge;
   box-shadow: var(--lightgrey) 0.25em 0.25em 0.25em;
   transition-duration: 0.5s;
 }
@@ -178,7 +186,7 @@ footer {
   float: right;
   color: var(--white);
   background: rgb(175, 4, 4); /* IE fallback */
-  background-color: var(--red);
+  background-color: var(--darkergrey);
   border: 0.125em solid var(--black);
   border-radius: 1.5625em;
   padding: 0.3em 0 0.3em 1.1em;
@@ -194,6 +202,6 @@ footer span {
 }
 footer span::selection{
   background: var(--white);
-  color: var(--red);
+  color: var(--darkestgrey);
 }
 .contact:hover span {max-width: 24rem;}

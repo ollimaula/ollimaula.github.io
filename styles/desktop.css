@@ -13,7 +13,7 @@
 
 body {
   max-width: 1440px;
-  background-image: url("../images/background5.jpg");
+  background-image: url("../images/background5bw.jpg");
 }
 .page {max-width: 1140px;}
 
@@ -39,7 +39,7 @@ body {
   padding: 1em;
   overflow: visible;
   background-color: var(--background);
-  border: 0.125em solid var(--red);
+  border: 0.125em solid var(--black);
   border-radius: 1.5625em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
@@ -49,7 +49,7 @@ body {
   padding: 0.5em;
   overflow: visible;
   background-color: var(--background);
-  border: 0.125em solid var(--red);
+  border: 0.125em solid var(--black);
   border-radius: 1.5625em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
   transition-duration: 1s;
@@ -63,7 +63,7 @@ body {
   padding: 1em;
   overflow: visible;
   background-color: var(--background);
-  border: 0.125em solid var(--red);
+  border: 0.125em solid var(--black);
   border-radius: 1.5625em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
@@ -77,7 +77,7 @@ body {
 header {
   display: block;
   text-align: left;
-  color: var(--red);
+  color: var(--black);
   background-color: transparent;
   margin: 2em 4em 0 0;
   float: right;
@@ -112,36 +112,40 @@ li a {
   color: var(--white);
   font-family: Play, sans-serif;
   background: rgb(175, 4, 4); /* IE fallback */
-  background-color: var(--red);
+  background-color: var(--darkergrey);
   text-decoration: none;
-  border: 0.1875em solid var(--border);
+  border: 0.2em solid var(--black);
   transform: skewX(-25deg);
   padding: 0.3em 0.5em 0.1em;
   float: left;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
-li a:hover{ color: var(--black); }
+li a:hover{ color: var(--darkergrey); }
 p.bar {transform: skewX(25deg);}
-a.active {background-color: var(--darkred); height: 2em;}
+a.active {background-color: var(--darkestgrey); height: 2em;}
 a.active:hover {color: var(--white);}
 a.nonactive {height: 2em;}
 a.nonactive:hover {background-color: var(--white);}
 
 /* || Työkokemustaulukko */
 table#kokemus {
-  border: 0.125em solid var(--black);
+  border: 0.2em solid var(--black);
   border-radius: 1.5625em;
-  border-spacing: 1em;
   margin: 1em auto;
   width: 90%;
   background-color: var(--background);
   color: var(--darkgrey);
   box-shadow: var(--lightgrey) 0.25em 0.25em 0.25em;
 }
+th#otsikko {
+    font-size: 1.25em;
+    border-radius: 1em 1em 0 0;
+  }
 th {
   font-family: Play, sans-serif;
   text-align: center;
   border: 0.125em solid var(--black);
+  padding: 0.5em;
 }
 td {
   font-family: Roboto, sans-serif;
@@ -150,6 +154,24 @@ td {
   padding: 0 1.5em 0 1em;
   border: 0.0625em solid var(--black);
   border-left: 0.125em solid var(--black);
+}
+td.south_west {
+    font-family: Roboto, sans-serif;
+    text-align: left;
+    margin: 1em;
+    padding: 0 1.5em 0 1em;
+    border: 0.0625em solid var(--black);
+    border-left: 0.125em solid var(--black);
+    border-radius: 0 0 0 1.4em;
+}
+td.south_east {
+    font-family: Roboto, sans-serif;
+    text-align: left;
+    border: 0.0625em solid var(--black);
+    border-left: 0.125em solid var(--black);
+    margin: 0.5em;
+    padding: 0.1875em 2em;
+    border-radius: 0 0 1.4em 0;
 }
 td.kuvaus {
   font-family: Roboto, sans-serif;
@@ -162,7 +184,4 @@ td.kuvaus {
 td.aika {
   font-family: Roboto, sans-serif;
   text-align: center;
-}
-th#otsikko {
-  font-size: 1.25em;
 }

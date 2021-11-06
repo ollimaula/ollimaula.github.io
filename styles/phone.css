@@ -2,7 +2,7 @@
 
 body {
   max-width: 700px;
-  background-image: url("../images/background7.jpg");
+  background-image: url("../images/background7bw.jpg");
 }
 .page {padding-bottom: 6em;}
 
@@ -23,7 +23,7 @@ body {
 .bigBox {
   padding: 1em;
   background-color: var(--background);
-  border: 0.125em solid var(--red);
+  border: 0.125em solid var(--darkergrey);
   border-radius: 1.5625em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 } 
@@ -32,7 +32,7 @@ body {
   margin: 0.2em;
   padding: 0.5em;
   background-color: var(--background);
-  border: 0.125em solid var(--red);
+  border: 0.125em solid var(--darkergrey);
   border-radius: 1.5625em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
@@ -44,11 +44,12 @@ body {
 
 /* || Yläpalkki */
 .mobileNav {
-  background-color: var(--red);
+  background-color: var(--darkergrey);
   overflow: hidden;
   position: fixed;
   left: 0;
   top: 0;
+  display: block;
 }
 .mobileNav #links {display: none;}
 .mobileNav a {
@@ -59,28 +60,22 @@ body {
   display: block;
 }
 .mobileNav a.icon {
-  background: var(--darkred);
-  border-radius: 0 0 0 1.5625em;
+  background: var(--darkergrey);
   display: block;
   width: 4rem;
   position: fixed;
-  right: 0;
   top: 0;
+  left: 0;
+  border-right: 0.125em solid var(--black);
+  border-bottom: 0.125em solid var(--black);
 }
-.activeLink {background-color: var(--darkred);}
+.activeLink {background-color: var(--darkestgrey);}
 header {
   display: block;
   text-align: center;
-  color: var(--red);
+  color: var(--darkergrey);
   background-color: transparent;
   margin: 2em auto 4em auto;
-}
-nav {
-  text-align: center;
-  background-color: transparent;
-  color: var(--white);
-  font-size: 1.2em;
-  overflow: visible;
 }
 
 /* || Kuvagalleria */

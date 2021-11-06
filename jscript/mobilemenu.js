@@ -1,8 +1,14 @@
-function myFunction() {
-  var x = document.getElementById("links");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+function nav_onclick() {
+
+    var linkit = document.getElementById("links");
+        if (linkit.style.display === "block") 
+            {linkit.style.display = "none";} 
+        else 
+            {linkit.style.display = "block";}
+
+    var burger = document.getElementsByClassName('icon');
+    var item;
+        for (item = 0; item < burger.length; item++)
+            {burger[item].style.display = "none";} 
+
 }
