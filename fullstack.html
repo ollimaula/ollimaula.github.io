@@ -8,85 +8,115 @@
 </head>
 <body>
 
-    <h1 id="otsikko"></h1>
+    <div class="H1T1">
+
+        <p>Harjoitus 1 Tehtävä 1</p>
+
+        <h1 id="otsikko"></h1>
+        
+        <script id="H1T1">
+
+            var v1 = 'haloo', v2 = 'maailma!', tulos = v1 + ' ' + v2;
+            document.getElementById("otsikko").innerHTML = tulos;
+            console.log(tulos);
+
+        </script>
     
-    <script id="H1T1">
+    </div>
 
-        var v1 = 'haloo', v2 = 'maailma!', tulos = v1 + ' ' + v2;
-        document.getElementById("otsikko").innerHTML = tulos;
-        console.log(tulos);
+    <div class="H1T2">
 
-    </script>
+        <hr><p>Harjoitus 1 Tehtävä 2</p>
 
-    <p id="H1T2">
-        Harjoitus 1, Tehtävä 2; Kuvat --&gt
-        <a href="images/jsbinH1T2.png" target="_blank"><img src="images/jsbinH1T2.png" alt="H1T2_jsbin_kuva" width="150" height="178"></a>
-        <a href="images/jsfiddleH1T2.png" target="_blank"><img src="images/jsfiddleH1T2.png" alt="H1T2_jsfiddle_kuva" width="150" height="178"></a>
-    </p>   
+        <p id="H1T2">
+            <a href="images/jsbinH1T2.png" target="_blank"><img src="images/jsbinH1T2.png" alt="H1T2_jsbin_kuva" width="150" height="178"></a>
+            <a href="images/jsfiddleH1T2.png" target="_blank"><img src="images/jsfiddleH1T2.png" alt="H1T2_jsfiddle_kuva" width="150" height="178"></a>
+        </p>
 
-    <script id="H1T3">
+    </div>
 
-        let arr_h3 = ["JavaScriptin", "opiskelu", "on", "ihanaa!"];
-        let arr_str = '';
+    <div class="H1T3">
 
-        for(let i = 0; i < arr_h3.length; i++) {
-            if(i == arr_h3.length -1) { arr_str += arr_h3[i]; }
-            else { arr_str += arr_h3[i] + ' '; };
-        };
+        <hr><p>Harjoitus 1 Tehtävä 3</p>
 
-        console.log(arr_str)
+        <script id="H1T3">
 
-    </script>
+            let arr_h3 = ["JavaScriptin", "opiskelu", "on", "ihanaa!"];
+            let arr_str = '';
 
-    <script id="H1T4">
-
-    function suurin(arr) {
-
-        let suurin_luku = 0;
-
-        for(let i = 0; i < arr.length; i++) {
-            if(suurin_luku < arr[i]) {
-                suurin_luku = arr[i];
+            for(let i = 0; i < arr_h3.length; i++) {
+                if(i == arr_h3.length -1) { arr_str += arr_h3[i]; }
+                else { arr_str += arr_h3[i] + ' '; };
             };
-        };
 
-        return suurin_luku;
+            console.log(arr_str)
 
-    };
+        </script>
 
-    let arr_h4 = [1, 2, 3];
+    </div>
 
-    console.log(suurin(arr_h4));
+    <div class="H1T4">
 
-    </script>
+        <hr><p>Harjoitus 1 Tehtävä 4</p>
 
-    <script id="H1T5">
+        <script id="H1T4">
 
-        function parilliset(arr) {
-            
-            let par_arr = [];
+        function suurin(arr) {
+
+            let suurin_luku = 0;
 
             for(let i = 0; i < arr.length; i++) {
-                if(arr[i] % 2 == 0) {
-                    par_arr += arr[i] + ' ';
+                if(suurin_luku < arr[i]) {
+                    suurin_luku = arr[i];
                 };
             };
 
-            return par_arr;
-            
+            return suurin_luku;
+
         };
 
-        let arr_h5 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let arr_h4 = [1, 2, 3];
 
-        console.log(parilliset(arr_h5));
+        console.log(suurin(arr_h4));
 
-    </script>
+        </script>
 
-    <div class="H1T6" style="outline: solid; outline-offset: 15px;">
+    </div>
+
+    <div class="H1T5">
+
+        <hr><p>Harjoitus 1 Tehtävä 5</p>
+
+        <script id="H1T5">
+
+            function parilliset(arr) {
+                
+                let par_arr = [];
+
+                for(let i = 0; i < arr.length; i++) {
+                    if(arr[i] % 2 == 0) {
+                        par_arr += arr[i] + ' ';
+                    };
+                };
+
+                return par_arr;
+                
+            };
+
+            let arr_h5 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            console.log(parilliset(arr_h5));
+
+        </script>
+        
+    </div>
+
+    <div class="H1T6">
+
+        <hr><p>Harjoitus 1 Tehtävä 6</p>
 
         <h2>JavaScript-taulukon läpikäynti</h2>
         <p>for- ja for...of silmukoilla</p>
-        <hr>
         <p id="harkka6"></p>
 
         <script id="H1T6">
@@ -117,6 +147,8 @@
 
     <div class="H1T7" style="margin: 35px 0 25px 0;">
 
+        <hr><p>Harjoitus 1 Tehtävä 7</p>
+
         <label for="vuosiluku">Syötä vuosiluku:</label><br>
         <input type="text" id="vluku" name="vuosiluku">
         <button onclick="karkaus(document.getElementById('vluku').value)">Tarkista vuosiluku!</button>
@@ -141,7 +173,9 @@
 
     </div>
 
-    <div class="H2T1" style="outline: solid; outline-offset: 15px;">
+    <div class="H2T1">
+        
+        <hr><p>Harjoitus 2 Tehtävä 1</p>
 
         <form id="f">
             <input type="text" id="n1"><br>
@@ -163,7 +197,7 @@
 
     <div id="H2T2">
 
-        <h3>Harjoitus 2, Tehtävä 2</h3>
+        <hr><p>Harjoitus 2 Tehtävä 2</p>
 
         <p>
             const myFunctionWithCallback = (p1, p2, callback) =&gt {return callback(p1, p2)}; // tätä kutsutaan toisena. kolmas arg kutsuu nyt myFunc functiota. <br>
@@ -176,7 +210,7 @@
 
     <div id="H2T3">
 
-        <h3>Harjoitus 2, Tehtävä 3</h3>
+        <hr><p>Harjoitus 2 Tehtävä 3</p>
 
         <p>
             Ohjelma tulostaa consoleen "Task# finished" annetun timeoutin jälkeen. <br>
@@ -185,7 +219,9 @@
 
     </div>
 
-    <div class="H2T4" style="outline: solid; outline-offset: 15px; margin: 25px 0 25px 0;">
+    <div class="H2T4">
+
+        <hr><p>Harjoitus 2 Tehtävä 4</p>
 
         <button type="button" id="disable_this" onclick="concert()">Aloita konsertti</button>
 
@@ -213,26 +249,34 @@
 
     </div>
 
-    <script id="H2T5">
+    <div class="H2T5">
 
-        function Person(name, age, phone, email) {
-            this.name = name;
-            this.age = age;
-            this.phone = phone;
-            this.email = email;
-            this.raise_age = () => {
-                this.age += 1;
+        <hr><p>Harjoitus 2 Tehtävä 5</p>
+
+        <script id="H2T5">
+
+            function Person(name, age, phone, email) {
+                this.name = name;
+                this.age = age;
+                this.phone = phone;
+                this.email = email;
+                this.raise_age = () => {
+                    this.age += 1;
+                };
             };
-        };
 
-        let kalle = new Person('kalle', 12, '045 123 1123', 'kalle@email.fi');
-        let tero = new Person('tero', 14, '045 134 1231', 'tero@email.fi');
-        let ville = new Person('ville', 26, '045 145 1232', 'tero@email.fi');
-        console.log (kalle, tero, ville);
+            let kalle = new Person('kalle', 12, '045 123 1123', 'kalle@email.fi');
+            let tero = new Person('tero', 14, '045 134 1231', 'tero@email.fi');
+            let ville = new Person('ville', 26, '045 145 1232', 'tero@email.fi');
+            console.log (kalle, tero, ville);
 
-    </script>
+        </script>
+
+    </div>
 
     <div class="H2T6">
+
+        <hr><p>Harjoitus 2 Tehtävä 6</p>
 
         <form id="vl">
 
@@ -244,7 +288,7 @@
                 Kilometrit: <input type="number" value="20" id="km">
             </p>
 
-            <button type="button" onclick="let obj_vl = new Vauhtilaskin(vl.h.value, vl.m.value, vl.s.value, vl.km.value)">
+            <button type="button" onclick="button_click()">
                 Laske vauhdit
             </button>
 
@@ -256,62 +300,101 @@
 
             class Vauhtilaskin{
 
-                calcKmhPace(tunnit, minuutit, sekuntit, kilometrit) {
+                constructor (tunnit, minuutit, sekuntit, kilometrit) {
 
-                    let tunnit_laskuun = parseInt(tunnit)+(parseInt(minuutit)*60+parseInt(sekuntit))/3600;
-
-                    this.kmh = (kilometrit/tunnit_laskuun).toFixed(2);
+                this.tunnit = tunnit;
+                this.minuutit = minuutit;
+                this.sekuntit = sekuntit;
+                this.kilometrit = kilometrit;
 
                 };
 
-                calcMinkmPace(tunnit, minuutit, sekuntit, kilometrit) {
+                calcKmhPace() {
 
-                    let sekuntit_laskuun = parseInt(tunnit)*60*60 + parseInt(minuutit)*60 + parseInt(sekuntit); // sulkeita tänne
-                    var sekunnitPerKm = sekuntit_laskuun/kilometrit;
+                    let tunnit_laskuun = parseInt(this.tunnit)+(parseInt(this.minuutit)*60+parseInt(this.sekuntit))/3600;
 
-                    var minuutit_laskuun = 0;
+                    return (this.kilometrit/tunnit_laskuun);
+
+                };
+
+                calcMinkmPace() {
+
+                    let sekuntit_laskuun = parseInt(this.tunnit)*60*60 + parseInt(this.minuutit)*60 + parseInt(this.sekuntit);
+                    let sekunnitPerKm = sekuntit_laskuun/this.kilometrit;
+                    let minuutit_laskuun = 0;
 
                     while (sekunnitPerKm >= 60){
                         minuutit_laskuun++;
                         sekunnitPerKm = sekunnitPerKm - 60;
                     };
+
                     sekunnitPerKm = Math.round(sekunnitPerKm);
                     sekunnitPerKm = String('0'+ sekunnitPerKm).slice(-2);
+                    
+                    let str_for_return = minuutit_laskuun + ':' + sekunnitPerKm;
 
-                    this.sekunnitPerKm = sekunnitPerKm;
-                    this.minuutit_laskuun = minuutit_laskuun;
+                    return str_for_return;
 
                 };
 
-                kmhpace() {
-                    document.getElementById('vauhti_results').innerHTML = this.kmh + ' km/h | ';
+                get kmhpace() {
+                    return this.calcKmhPace().toFixed(2) + ' km/h | ';
                 };
 
-                minkmpace() {
-                    document.getElementById('vauhti_results').innerHTML += this.minuutit_laskuun + ':' + this.sekunnitPerKm +'/km';
+                get minkmpace() {
+                    return this.calcMinkmPace() + '/km';
                 };
 
-                constructor (tunnit, minuutit, sekuntit, kilometrit) {
+            };
 
-                    this.tunnit = tunnit;
-                    this.minuutit = minuutit;
-                    this.sekuntit = sekuntit;
-                    this.kilometrit = kilometrit;
-
-                    this.calcKmhPace(tunnit, minuutit, sekuntit, kilometrit);
-                    this.calcMinkmPace(tunnit, minuutit, sekuntit, kilometrit);
-
-                    this.kmhpace();
-                    this.minkmpace();
-                
-                };
-
+            function button_click() {
+                let obj_vl = new Vauhtilaskin(vl.h.value, vl.m.value, vl.s.value, vl.km.value);
+                document.getElementById('vauhti_results').innerHTML = obj_vl.kmhpace;
+                document.getElementById('vauhti_results').innerHTML += obj_vl.minkmpace;
             };
 
         </script>
 
     </div>
 
+    <div class="H3T1">
+
+        <hr><p>Harjoitus 3 Tehtävä 1</p>
+
+        <a href="javascript:;" onclick="choose_photo(1)">KUVA1 |</a>
+        <a href="javascript:;" onclick="choose_photo(2)"> KUVA2 </a>
+        <a href="javascript:;" onclick="choose_photo(3)">| KUVA3</a>
+        <br>
+        <img src="images\numpad_thumb.jpg" alt="Kuva" id="vaihtoon">
+
+        <script id="H3T1">
+
+            function choose_photo(x) {
+                if (x == 1) {
+                    document.getElementById('vaihtoon').alt = "testi";
+                    document.getElementById('vaihtoon').src = "images\numpad_thumb.jpg";
+                };
+                if (x == 2) {
+                    document.getElementById('vaihtoon').alt = "testi2";
+                    document.getElementById('vaihtoon').src = "images\flat_thumb.jpg";
+                };
+                if (x == 3) {
+                    document.getElementById('vaihtoon').alt = "testi3";
+                    document.getElementById('vaihtoon').src = "images\full_thumb.jpg";
+                };
+            };
+
+        </script>
+
+    </div>
+
+    <div class="H3T2">
+
+        <hr><p>Harjoitus 3 Tehtävä 2</p>
+
+    </div>
+
+    
 </body>
 </html>
 
