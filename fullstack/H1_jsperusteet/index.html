@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Olli Maula">
+    <meta charset="UTF-8">
+    <title>Olli Maula - Harjoitus 1</title>
+</head>
+<body style="margin-bottom: 15em;">
+
+    <div class="H1T1">
+
+        <p>Harjoitus 1 Tehtävä 1</p>
+
+        <h1 id="otsikko"></h1>
+        
+        <script id="H1T1">
+
+            var v1 = 'haloo', v2 = 'maailma!', tulos = v1 + ' ' + v2;
+            document.getElementById("otsikko").innerHTML = tulos;
+            console.log(tulos);
+
+        </script>
+    
+    </div>
+
+    <div class="H1T2">
+
+        <hr><p>Harjoitus 1 Tehtävä 2</p>
+
+        <p id="H1T2">
+            <a href="images/jsbinH1T2.png" target="_blank"><img src="images/jsbinH1T2.png" alt="H1T2_jsbin_kuva" width="150" height="178"></a>
+            <a href="images/jsfiddleH1T2.png" target="_blank"><img src="images/jsfiddleH1T2.png" alt="H1T2_jsfiddle_kuva" width="150" height="178"></a>
+        </p>
+
+    </div>
+
+    <div class="H1T3">
+
+        <hr><p>Harjoitus 1 Tehtävä 3</p>
+
+        <script id="H1T3">
+
+            let arr_h3 = ["JavaScriptin", "opiskelu", "on", "ihanaa!"];
+            let arr_str = '';
+
+            for(let i = 0; i < arr_h3.length; i++) {
+                if(i == arr_h3.length -1) { arr_str += arr_h3[i]; }
+                else { arr_str += arr_h3[i] + ' '; };
+            };
+
+            console.log(arr_str)
+
+        </script>
+
+    </div>
+
+    <div class="H1T4">
+
+        <hr><p>Harjoitus 1 Tehtävä 4</p>
+
+        <script id="H1T4">
+
+        function suurin(arr) {
+
+            let suurin_luku = 0;
+
+            for(let i = 0; i < arr.length; i++) {
+                if(suurin_luku < arr[i]) {
+                    suurin_luku = arr[i];
+                };
+            };
+
+            return suurin_luku;
+
+        };
+
+        let arr_h4 = [1, 2, 3];
+
+        console.log(suurin(arr_h4));
+
+        </script>
+
+    </div>
+
+    <div class="H1T5">
+
+        <hr><p>Harjoitus 1 Tehtävä 5</p>
+
+        <script id="H1T5">
+
+            function parilliset(arr) {
+                
+                let par_arr = [];
+
+                for(let i = 0; i < arr.length; i++) {
+                    if(arr[i] % 2 == 0) {
+                        par_arr += arr[i] + ' ';
+                    };
+                };
+
+                return par_arr;
+                
+            };
+
+            let arr_h5 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            console.log(parilliset(arr_h5));
+
+        </script>
+        
+    </div>
+
+    <div class="H1T6">
+
+        <hr><p>Harjoitus 1 Tehtävä 6</p>
+
+        <h2>JavaScript-taulukon läpikäynti</h2>
+        <p>for- ja for...of silmukoilla</p>
+        <p id="harkka6"></p>
+
+        <script id="H1T6">
+
+            let taulukko = [11, 22, 33, 44];
+            let summa = 0;
+            let lukumaara = 0;
+            let keskiarvo;
+            let tulosrivit = '';
+
+            for(const element of taulukko) {
+                ++lukumaara;
+                summa += element;
+            };
+
+            for (let i = 0; i < taulukko.length; i++) {
+                tulosrivit += 'taulukko[' + i + '] = ' + taulukko[i] + '<br>';
+            };
+
+            keskiarvo = (summa/taulukko.length).toFixed(1);
+
+            document.getElementById("harkka6").innerHTML = 'Taulukon alkiot ovat<br><br>' + tulosrivit + '<br><br>Taulukon alkioiden<br><br>lukumäärä: ' + lukumaara + '<br>summa: ' + summa + '<br>keskiarvo: ' + keskiarvo;
+
+
+        </script>
+
+    </div>
+
+    <div class="H1T7" style="margin: 35px 0 25px 0;">
+
+        <hr><p>Harjoitus 1 Tehtävä 7</p>
+
+        <label for="vuosiluku">Syötä vuosiluku:</label><br>
+        <input type="text" id="vluku" name="vuosiluku">
+        <button onclick="karkaus(document.getElementById('vluku').value)">Tarkista vuosiluku!</button>
+        <p id="karkaus_tulos"><br></p>
+
+        <script id="H1T7">
+
+            function karkaus(input) {
+
+                if ((input % 4 == 0 && input % 100 != 0) || input % 400 == 0) {
+                    document.getElementById('karkaus_tulos').innerHTML = 'On karkausvuosi!'
+                    return true;
+                }
+                else {
+                    document.getElementById('karkaus_tulos').innerHTML = 'Ei ole karkausvuosi!'
+                    return false;
+                };
+
+            };
+
+        </script>
+
+    </div>
+
+</body>
+</html>

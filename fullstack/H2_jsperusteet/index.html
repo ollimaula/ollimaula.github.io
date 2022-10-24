@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Olli Maula">
+    <meta charset="UTF-8">
+    <title>Olli Maula - Harjoitus 2</title>
+</head>
+<body style="margin-bottom: 15em;">
+
+    <div class="H2T1">
+        
+        <p>Harjoitus 2 Tehtävä 1</p>
+
+        <form id="f">
+            <input type="text" id="n1"><br>
+            <input type="text" id="n2"><br>
+            <button type="button" onclick="tulostaSumma(f.n1.value, f.n2.value)">Laske</button>
+            <div id="tulos"></div>
+        </form>
+
+        <script id="H2T1">
+
+            function tulostaSumma(int1, int2) {
+                function laskeSumma(int1, int2) {return parseInt(int1) + parseInt(int2)};
+                document.getElementById('tulos').innerHTML = laskeSumma(int1, int2);
+            };
+
+        </script>
+
+    </div>
+
+    <div id="H2T2">
+
+        <hr><p>Harjoitus 2 Tehtävä 2</p>
+
+        <p>
+            const myFunctionWithCallback = (p1, p2, callback) =&gt {return callback(p1, p2)}; // tätä kutsutaan toisena. kolmas arg kutsuu nyt myFunc functiota. <br>
+            const myFunc = (p1, p2) =&gt (`Pitsa ${p1} ja ${p2}`); // tätä kutsutaan kolmantena. tämä ajetaan loppuun ja palataan myFunctionWithCallback ja palautetaan täältä saatu arvo.<br>
+            const result = myFunctionWithCallback('kinkulla', 'juustolla', myFunc); // tätä kutsutaan ensin.<br>
+            console.log(result);
+        </p>
+
+    </div>
+
+    <div id="H2T3">
+
+        <hr><p>Harjoitus 2 Tehtävä 3</p>
+
+        <p>
+            Ohjelma tulostaa consoleen "Task# finished" annetun timeoutin jälkeen. <br>
+            Asynchronisesta suoritustavasta johtuen ohjelma tulostaa "Last code line executed" ennen "Task# finished" printtejä.
+        </p>
+
+    </div>
+
+    <div class="H2T4">
+
+        <hr><p>Harjoitus 2 Tehtävä 4</p>
+
+        <button type="button" id="disable_this" onclick="concert()">Aloita konsertti</button>
+
+        <p id="gaga"></p>
+
+        <script id="H2T4">
+
+            function concert() {
+
+                document.getElementById('disable_this').disabled = true;
+
+                var timeout = 5000;
+
+                document.getElementById('gaga').innerHTML = 'OMG - Lady Gaga start singing!'
+
+                for(let i = 0; i < 4; i++, timeout += 5000) {
+                    setTimeout( () => {document.getElementById('gaga').innerHTML += '<br>NICE - fireworks!'}, timeout);
+                }
+
+                setTimeout( () => {document.getElementById('gaga').innerHTML += '<br>WOW - It was the best concert in my life...'}, timeout - 3000);
+
+            };
+
+        </script>
+
+    </div>
+
+    <div class="H2T5">
+
+        <hr><p>Harjoitus 2 Tehtävä 5</p>
+
+        <script id="H2T5">
+
+            function Person(name, age, phone, email) {
+                this.name = name;
+                this.age = age;
+                this.phone = phone;
+                this.email = email;
+                this.raise_age = () => {
+                    this.age += 1;
+                };
+            };
+
+            let kalle = new Person('kalle', 12, '045 123 1123', 'kalle@email.fi');
+            let tero = new Person('tero', 14, '045 134 1231', 'tero@email.fi');
+            let ville = new Person('ville', 26, '045 145 1232', 'tero@email.fi');
+            console.log (kalle, tero, ville);
+
+        </script>
+
+    </div>
+
+    <div class="H2T6">
+
+        <hr><p>Harjoitus 2 Tehtävä 6</p>
+
+        <form id="vl">
+
+            <p>
+                <b>Vauhtilaskin</b><br><br>
+                Tunnit: <input type="number" value="1" id="h">
+                Minuutit: <input type="number" value="13" id="m">
+                Sekunnit: <input type="number" value="13" id="s">
+                Kilometrit: <input type="number" value="20" id="km">
+            </p>
+
+            <button type="button" onclick="button_click()">
+                Laske vauhdit
+            </button>
+
+            <span id="vauhti_results"></span>
+
+        </form>
+
+        <script id="H2T6">
+
+            class Vauhtilaskin{
+
+                constructor (tunnit, minuutit, sekuntit, kilometrit) {
+
+                this.tunnit = tunnit;
+                this.minuutit = minuutit;
+                this.sekuntit = sekuntit;
+                this.kilometrit = kilometrit;
+
+                };
+
+                calcKmhPace() {
+
+                    let tunnit_laskuun = parseInt(this.tunnit)+(parseInt(this.minuutit)*60+parseInt(this.sekuntit))/3600;
+
+                    return (this.kilometrit/tunnit_laskuun);
+
+                };
+
+                calcMinkmPace() {
+
+                    let sekuntit_laskuun = parseInt(this.tunnit)*60*60 + parseInt(this.minuutit)*60 + parseInt(this.sekuntit);
+                    let sekunnitPerKm = sekuntit_laskuun/this.kilometrit;
+                    let minuutit_laskuun = 0;
+
+                    while (sekunnitPerKm >= 60){
+                        minuutit_laskuun++;
+                        sekunnitPerKm = sekunnitPerKm - 60;
+                    };
+
+                    sekunnitPerKm = Math.round(sekunnitPerKm);
+                    sekunnitPerKm = String('0'+ sekunnitPerKm).slice(-2);
+                    
+                    let str_for_return = minuutit_laskuun + ':' + sekunnitPerKm;
+
+                    return str_for_return;
+
+                };
+
+                get kmhpace() {
+                    return this.calcKmhPace().toFixed(2) + ' km/h | ';
+                };
+
+                get minkmpace() {
+                    return this.calcMinkmPace() + '/km';
+                };
+
+            };
+
+            function button_click() {
+                let obj_vl = new Vauhtilaskin(vl.h.value, vl.m.value, vl.s.value, vl.km.value);
+                document.getElementById('vauhti_results').innerHTML = obj_vl.kmhpace;
+                document.getElementById('vauhti_results').innerHTML += obj_vl.minkmpace;
+            };
+
+        </script>
+
+    </div>
+    
+</body>
+</html>

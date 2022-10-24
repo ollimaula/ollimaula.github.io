@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Olli Maula">
+    <meta charset="UTF-8">
+    <title>Olli Maula - Harjoitus 3</title>
+</head>
+<body style="margin-bottom: 15em;">
+
+    <div class="H3T1">
+
+        <p>Harjoitus 3 Tehtävä 1</p>
+
+        <a href="javascript:;" onclick="choose_photo(1)">KUVA1 |</a>
+        <a href="javascript:;" onclick="choose_photo(2)"> KUVA2 </a>
+        <a href="javascript:;" onclick="choose_photo(3)">| KUVA3</a>
+        <br>
+        <img src="images/numpad_thumb.jpg" alt="Kuva1" id="vaihtoon">
+
+        <script id="H3T1">
+
+            function choose_photo(x) {
+                if (x == 1) {
+                    document.getElementById('vaihtoon').alt = "Kuva1";
+                    document.getElementById('vaihtoon').src = "images/numpad_thumb.jpg";
+                };
+                if (x == 2) {
+                    document.getElementById('vaihtoon').alt = "Kuva2";
+                    document.getElementById('vaihtoon').src = "images/flat_thumb.jpg";
+                };
+                if (x == 3) {
+                    document.getElementById('vaihtoon').alt = "Kuva3";
+                    document.getElementById('vaihtoon').src = "images/full_thumb.jpg";
+                };
+            };
+
+        </script>
+
+    </div>
+
+    <div class="H3T2">
+
+        <hr><p>Harjoitus 3 Tehtävä 2</p>
+
+        <button type="button" onclick="hcp_click()">Tulosta tasoitukset</button>
+        <ul id="hcplist"></ul>
+
+        <script id="H3T2">
+
+            var hcpdata = [{ "name": "Ari", "hcp": 54 },
+                           { "name": "Pasi", "hcp": 5 },
+                           { "name": "Seppo", "hcp": 20 }];
+
+            function hcp_click() {
+
+                document.getElementById("hcplist").innerHTML = '';
+
+                for (let element of hcpdata) {
+                    let first = document.getElementById("hcplist");
+                    let second = document.createElement('li');
+                    let third = document.createTextNode(element.name + " " + element.hcp);
+                    second.appendChild(third);
+                    first.appendChild(second);
+                };
+
+            };
+
+        </script>
+
+    </div>
+
+    <div class="H3T3">
+
+        <hr><p>Harjoitus 3 Tehtävä 2</p>
+
+        <form id="arvosanat" style="border-style: dotted; padding: 0.5em; width: 18em;">
+
+            <p style="border-style: outset; padding: 0.5em; width: 16em;">
+
+                <span style="background:lightblue; border-style: inset; margin: 1em 0.5em 1em 1em; padding: 0 0.5em 0 0.5em;">T1</span>
+                <span style="background:lightblue; border-style: inset; margin: 1em 0.5em; padding: 0 0.5em 0 0.5em;">T2</span>
+                <span style="background:lightblue; border-style: inset; margin: 1em 0.5em; padding: 0 0.5em 0 0.5em;">T3</span>
+                <span style="background:lightblue; border-style: inset; margin: 1em 0.5em; padding: 0 0.5em 0 0.5em;">T4</span>
+                <br>
+                <input type="text" id="t1" onblur="update_points()" 
+                style="
+                    width: 2.5em; 
+                    margin: 1em 0.5em 0 1.2em;
+                    border-style: inset;
+                ">
+                <input type="text" id="t2" onblur="update_points()" 
+                style="
+                    width: 2.5em; 
+                    margin: 1em 0.6em;
+                    border-style: inset;
+                ">
+                <input type="text" id="t3" onblur="update_points()" 
+                style="
+                    width: 2.5em; 
+                    margin: 1em 0.6em;
+                    border-style: inset;
+                ">
+                <input type="text" id="t4" onblur="update_points()" 
+                style="
+                    width: 2.5em; 
+                    margin: 1em 0.6em;
+                    border-style: inset;
+                ">
+                <br>
+
+            </p>
+
+            <span> Pistemäärä (summa): </span><span id="arvosanat_sum"></span><br>
+            <span>Arvosana: </span><span id="arvosanat_result"></span>
+
+        </form>
+
+        <script id="H3T3">
+
+            function check_points(p_get) {
+
+                let check_list = [0, 1, 2, 3, 4, 5, 6];
+                let value_list = [ (+p_get.t1.value), (+p_get.t2.value), (+p_get.t3.value), (+p_get.t4.value) ];
+
+                for (element of value_list) {
+                    if (!(element in check_list)) {
+                        return 1;
+                    };
+                };
+
+                return 0;
+
+            };
+
+            function update_points() {
+
+                let p_get = document.getElementById("arvosanat");
+
+                if (check_points(p_get) == 0) {
+
+                    var arvosana = "";
+
+                    let pisteet = +p_get.t1.value + +p_get.t2.value + +p_get.t3.value + +p_get.t4.value;
+
+                    if (pisteet >= 00 && 12 >= pisteet) { 
+                        arvosana = "0";
+                    }
+                    else if (pisteet >= 13 && 15 >= pisteet) {
+                        arvosana = "1";
+                    }
+                    else if (pisteet >= 16 && 17 >= pisteet) {
+                        arvosana = "2";
+                    }
+                    else if (pisteet >= 18 && 19 >= pisteet) {
+                        arvosana = "3";
+                    }
+                    else if (pisteet >= 20 && 21 >= pisteet) {
+                        arvosana = "4";
+                    }
+                    else if (pisteet >= 22 && 24 >= pisteet) {
+                        arvosana = "5";
+                    };
+
+                    document.getElementById("arvosanat_sum").innerHTML = pisteet;
+                    document.getElementById("arvosanat_result").innerHTML = arvosana;
+
+                }
+                else {
+                    document.getElementById("arvosanat_sum").innerHTML = "VIRHE!";
+                    document.getElementById("arvosanat_result").innerHTML = "VIRHE!";
+                };
+
+            };
+
+
+        </script>
+
+    </div>
+
+    <div class="H3T4"> 
+
+        <hr><p>Harjoitus 3 Tehtävä 4</p>
+
+        <div style="border-style: dotted; width: 15em; padding: 0 0 1em 0.5em;">
+
+            <h2 style="margin: 0 0 0.5em 0;">SimpleToDo</h2>
+            <span>ToDo:</span><br>
+            <input type="text" id="todo"><br><br>
+
+            <button type="button" onclick="add_todo()">Lisää</button>
+            <button type="button" onclick="empty_todo()">Tyhjää lista</button>
+
+            <ul id="lista"></ul>
+
+        </div>
+
+        <script id="H3T4">
+
+            function empty_todo() {
+
+                document.getElementById("lista").innerHTML = '';
+
+            };
+
+            function add_todo() {
+
+                get_todo = document.getElementById("todo").value;
+
+                if (get_todo != "") {
+                    document.getElementById("todo").value = "";
+
+                    let first = document.getElementById("lista");
+                    let second = document.createElement('li');
+                    let third = document.createTextNode(get_todo);
+                    second.appendChild(third);
+                    first.appendChild(second);
+                    second.addEventListener("click", () => { first.removeChild(second) });
+                };
+            };
+
+        </script>
+
+    </div>
+
+    <div class="H3T5"> 
+
+        <hr><p>Harjoitus 3 Tehtävä 5</p>
+
+        <div style="border-style: dashed; width: 25em; padding: 1em; background: lightblue;">
+
+            <label for="color">Valitse juhlaväri:</label><br>
+            <select name="color" id="color_choice" onclick="update_color()">
+                <option value="#FFFF00">Keltainen</option>
+                <option value="#FF0000">Punainen</option>
+                <option value="#0000FF">Sininen</option>
+            </select><br> 
+
+            <span>Mikä juhla?</span><br>
+            <input type="text" id="juhla_input" oninput="update_output()"><br><br>
+
+            <button type="button" onclick="change_color()"
+            style="
+                padding: 0.5em 1em; 
+                background: blue; 
+                color: white; 
+                border-radius: 0.7em; 
+                border-style: none;
+            ">
+                Vaihda valittu taustaväri
+            </button>
+
+            <div id="juhla_bg" style="border-style: dashed; padding: 1em; margin: 0.5em 0;">
+
+                <span><strong>Tulosaslue</strong></span><br>
+                <span>Valittu: </span><span id="color_print"></span><br><br>
+                <span id="juhla_print"></span>
+
+            </div>
+
+        </div>
+
+        <script id="H3T5">
+
+            function update_color() {
+                document.getElementById("color_print").innerHTML = document.getElementById("color_choice").value;
+            };
+
+            function update_output() {
+                document.getElementById("juhla_input").value = document.getElementById("juhla_input").value.replace(/[0-9.]/g, '');
+                document.getElementById("juhla_print").innerHTML = document.getElementById("juhla_input").value;
+            };
+
+            function change_color() {
+                document.getElementById("juhla_bg").style.background = document.getElementById("color_choice").value;
+            };
+
+
+        </script>
+
+    </div>
+
+</body>
+</html>
