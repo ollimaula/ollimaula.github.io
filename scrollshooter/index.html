@@ -8,9 +8,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>ScrollShooter</title>
-    <link rel="stylesheet" media="all" href="styles/general.css"> <!-- Kaikille näkymille yhteiset tyylit -->
-    <link rel="stylesheet" media="all and (min-width: 891px) and (max-width: 1119px)" href="styles/tablet.css"> <!-- Mobiilinäkymä -->
-    <link rel="stylesheet" media="all and (min-width: 1120px)" href="styles/desktop.css"> <!-- Desktopnäkymä -->
+    <!-- 
+    <link rel="stylesheet" media="all" href="styles/general.css">
+    <link rel="stylesheet" media="all and (min-width: 891px) and (max-width: 1119px)" href="styles/tablet.css">
+    <link rel="stylesheet" media="all and (min-width: 1120px)" href="styles/desktop.css">
+    -->
     <link rel="shortcut icon" href="TemplateData/favicon.ico"> <!-- Unityn ikoni -->
     <link rel="stylesheet" href="TemplateData/style.css"> <!-- Unityn tyylit -->
 </head>
@@ -110,35 +112,19 @@
         script.src = loaderUrl;
         script.onload = () => 
         {
-            createUnityInstance(canvas, config, (progress) => 
-            {
-                progressBarFull.style.width = 100 * progress + "%";
-            })
+            createUnityInstance(canvas, config, (progress) => { progressBarFull.style.width = 100 * progress + "%"; })
             .then((unityInstance) => 
             {
                 loadingBar.style.display = "none";
-                fullscreenButton.onclick = () => 
-                {
-                    unityInstance.SetFullscreen(1);
-                };
-                
-                function setVolume(volume) 
-                {
-                // Set the volume of the game
-                unityInstance.SendMessage("AudioManager", "SetVolume", volume);
-                }
                 var volume_slider = document.getElementById("volume-slider");
-                volume_slider.addEventListener("input", function() 
+                volume_slider.addEventListener("input", () => 
                 {
-                    var volume = volume_slider.value;
-                    console.log("Volume: " + volume);
-                    setVolume(volume);
+                    var volume = parseFloat(volume_slider.value);
+                    unityInstance.SendMessage("AudioManager", "SetVolume", volume);
                 });
+                fullscreenButton.onclick = () => unityInstance.SetFullscreen(1);
             })
-            .catch((message) => 
-            {
-                alert(message);
-            });
+            .catch((message) => { alert(message); });
         };
         document.body.appendChild(script);
     </script>      
