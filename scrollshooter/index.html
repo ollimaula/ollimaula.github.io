@@ -8,13 +8,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>ScrollShooter</title>
-    <!-- 
-    <link rel="stylesheet" media="all" href="styles/general.css">
-    <link rel="stylesheet" media="all and (min-width: 891px) and (max-width: 1119px)" href="styles/tablet.css">
-    <link rel="stylesheet" media="all and (min-width: 1120px)" href="styles/desktop.css">
-    -->
-    <link rel="shortcut icon" href="TemplateData/favicon.ico"> <!-- Unityn ikoni -->
-    <link rel="stylesheet" href="TemplateData/style.css"> <!-- Unityn tyylit -->
+    <script src="https://kit.fontawesome.com/55ff3240d5.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <div id="unity-container" class="unity-desktop">
@@ -27,7 +23,8 @@
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
-        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1" />
+        <i class="fas fa-volume-high"></i>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1"/>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">ScrollShooter</div>
       </div>
@@ -99,9 +96,9 @@
           // config.devicePixelRatio = 1;
       
           unityShowBanner('WebGL builds are not supported on mobile devices.');
-        } else {
-          // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-      
+        } 
+        else 
+        {
           canvas.style.width = "1280px";
           canvas.style.height = "720px";
         }
@@ -116,13 +113,20 @@
             .then((unityInstance) => 
             {
                 loadingBar.style.display = "none";
+
                 var volume_slider = document.getElementById("volume-slider");
                 volume_slider.addEventListener("input", () => 
                 {
                     var volume = parseFloat(volume_slider.value);
                     unityInstance.SendMessage("AudioManager", "SetVolume", volume);
                 });
+
                 fullscreenButton.onclick = () => unityInstance.SetFullscreen(1);
+
+                // just saving these here for now
+                // <i class="fa-solid fa-volume-off"></i>
+                // <i class="fa-solid fa-volume-low"></i>
+                // <i class="fa-solid fa-volume-xmark"></i>
             })
             .catch((message) => { alert(message); });
         };

@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Russo+One&family=Ubuntu&family=Audiowide&family=Play&family=Roboto&family=Saira+Stencil+One&family=Goldman:wght@700&family=Press+Start+2P&display=swap');
 /* import hakee css tiedostossa käytettävät fontit palvelimelta */
 
-* {
+* 
+{
   box-sizing: border-box; /* sisällyttää borderin ja paddingin elementin kokoon */
   margin: 0;
   padding: 0;
 } 
 
-:root {
+:root 
+{
   --red:#af0404;
   --darkred:#662200;
   --grey: #494949;
@@ -21,16 +23,19 @@
   --white: #f5f5f5;
 }
 
-::selection{ 
+::selection
+{ 
   background: var(--red); 
   color: var(--background);
 } /* Muuttaa maalatun tekstin väriä ja taustaa */
 
-html {
+html 
+{
   min-height: 100%;
   scroll-behavior: smooth;
 }
-body {
+body 
+{
   font-family: sans-serif; /* Fallback */
   font-size: 100%;
   margin: 0 auto;
@@ -40,7 +45,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.page {
+.page 
+{
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -49,48 +55,52 @@ body {
   flex-shrink: 1;
 }
 
-.row::after {clear: both; display: block;}
+.row::after { clear: both; display: block; }
 
-.floatAside {float: left;}
+.floatAside { float: left; }
 
 /* || id:t */
-#top, #middle, #bottom, .arrow {text-align: center;}
-#omakuva {
+#top, #middle, #bottom, .arrow { text-align: center; }
+#omakuva 
+{
   margin: 2em 2em 0 0; /* Shorthand: top, right, bottom, left */
   float: right; 
   overflow: visible;
 }
-#omakuvaMobile {float: left; margin: 0.5em 0.8em 0.3em 0.1em;}
-#reenikuva{
+#omakuvaMobile { float: left; margin: 0.5em 0.8em 0.3em 0.1em; }
+#reenikuva
+{
   display: block;
   float: left;
   margin: 0.2em 1em 1em 1.6em; 
   border: 0.2em var(--darkergrey) ridge;
   transition-duration: 0.5s;
 }
-#reenikuva:hover{
+#reenikuva:hover
+{
   margin: 0 2.1em 1em 0.5em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
   transition-duration: 0.5s;
 }
 
 /* || Linkit */
-a.clean:link {text-decoration: none;}
-a.clean:visited {text-decoration: none;}
-a.clean:hover {text-decoration: none;}
-a.clean:active {text-decoration: none;}
-a.linkki:link {color: var(--red); text-decoration: none;}
-a.linkki:visited {color: var(--red); text-decoration: none;}
-a.linkki:hover {color: var(--darkred); text-decoration: underline;}
-a.linkki:active {color: var(--darkred); text-decoration: underline;}
-a.navlinkki:link {color: var(--darkgrey); text-decoration: none;}
-a.navlinkki:visited {color: var(--darkgrey); text-decoration: none;}
-a.navlinkki:hover {color: var(--darkred); text-decoration: none;}
-a.navlinkki:active {color: var(--darkred); text-decoration: none;}
-a.block {display: block; width: max-content; margin: 0 auto;}
+a.clean:link { text-decoration: none; }
+a.clean:visited { text-decoration: none; }
+a.clean:hover { text-decoration: none; }
+a.clean:active { text-decoration: none; }
+a.linkki:link { color: var(--red); text-decoration: none; }
+a.linkki:visited { color: var(--red); text-decoration: none; }
+a.linkki:hover { color: var(--darkred); text-decoration: underline; }
+a.linkki:active { color: var(--darkred); text-decoration: underline; }
+a.navlinkki:link { color: var(--darkgrey); text-decoration: none; }
+a.navlinkki:visited { color: var(--darkgrey); text-decoration: none; }
+a.navlinkki:hover { color: var(--darkred); text-decoration: none; }
+a.navlinkki:active { color: var(--darkred); text-decoration: none; }
+a.block { display: block; width: max-content; margin: 0 auto; }
 
 /* || Otsikot */
-h1 {
+h1 
+{
   color: var(--darkergrey);
   background-color: transparent;
   font-size: 5rem;
@@ -101,14 +111,16 @@ h1 {
   text-shadow: var(--lightgrey) 0.0625em 0.0625em 0.125em;
   line-height: 1em;
 }
-h2 {
+h2 
+{
   color: var(--grey);
   background-color: transparent;
   font-family: 'Play', sans-serif;
   text-align: left;
   margin: 0 0 2rem 1em;
 }
-h3 {
+h3 
+{
   color: var(--darkergrey);
   background-color: transparent;
   font-family: 'Play', sans-serif;
@@ -116,14 +128,16 @@ h3 {
   font-size: 1.2rem;
   margin: 0.5em 0;
 }
-h4, h5 {  
+h4, h5 
+{  
   color: var(--grey);
   background-color: transparent;
 }
-h4 {font-family: 'Audiowide', cursive; font-size: 120%;}
-.galleria h4 {padding-bottom: 2rem;}
-h5 {font-family: 'Ubuntu', sans-serif; font-size: 150%;}
-h6 {
+h4 { font-family: 'Audiowide', cursive; font-size: 120%; }
+.galleria h4 { padding-bottom: 2rem; }
+h5 { font-family: 'Ubuntu', sans-serif; font-size: 150%; }
+h6 
+{
   color: var(--grey);
   background-color: transparent;
   font-family: 'Press Start 2P', cursive;
@@ -132,7 +146,8 @@ h6 {
 }
 
 /* || Tekstit */
-article p {
+article p 
+{
   text-align: left;
   color: var(--darkergrey);
   font-family: 'Roboto', sans-serif;
@@ -140,15 +155,16 @@ article p {
   margin: 0 1em 1.4em 1.5em; 
   line-height: 1.4rem;
 }
-article span {font-style: italic;}  /* span käytössä 'em' tai 'i' sijaan, koska kursivoinnilla ei tarvetta semanttiselle merkitykselle */
-
+article span { font-style: italic; }  /* span käytössä 'em' tai 'i' sijaan, koska kursivoinnilla ei tarvetta semanttiselle merkitykselle */
 
 /* || Kuvagalleria */
-.galleria {
+.galleria 
+{
   text-align: center;
   padding-bottom: 15em;
 }
-.galleria img  {
+.galleria img  
+{
   margin: 2em;
   max-width: 12.5em;
   max-height: 6.25em;
@@ -156,7 +172,8 @@ article span {font-style: italic;}  /* span käytössä 'em' tai 'i' sijaan, kos
   box-shadow: var(--lightgrey) 0.25em 0.25em 0.25em;
   transition-duration: 0.5s;
 }
-.galleria img:hover {
+.galleria img:hover 
+{
   margin: 2em;
   max-width: 12.5em;
   max-height: 6.25em;
@@ -165,14 +182,16 @@ article span {font-style: italic;}  /* span käytössä 'em' tai 'i' sijaan, kos
   transform: scale(1.1);
   transition-duration: 0.5s;
 }
-.galleria a, .galleria a:hover {
+.galleria a, .galleria a:hover 
+{
   background-color: transparent;
   text-decoration: none;
   color: unset;
 }
 
 /* || Footer */
-footer {
+footer 
+{
   height: 3em;
   background-color: transparent;
   font-size: 1.2em;
@@ -181,7 +200,8 @@ footer {
   bottom: 2.5rem;
   right: 2.5rem;
 }
-.contact {
+.contact 
+{
   display: block;
   float: right;
   color: var(--white);
@@ -192,7 +212,8 @@ footer {
   padding: 0.3em 0 0.3em 1.1em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
-footer span {
+footer span 
+{
   display: inline-block;
   margin: 0.2em 0.8em 0 0;
   max-width: 0;
@@ -200,8 +221,9 @@ footer span {
   white-space: nowrap; /* Pitää tekstin samalla rivillä. */
   overflow: hidden;
 }
-footer span::selection{
+footer span::selection
+{
   background: var(--white);
   color: var(--darkestgrey);
 }
-.contact:hover span {max-width: 24rem;}
+.contact:hover span { max-width: 24rem; }

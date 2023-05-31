@@ -1,33 +1,38 @@
-[class*="col-"] {width: 100%;}
+[class*="col-"] { width: 100%; }
 
-body {
+body 
+{
   max-width: 700px;
   background-image: url("../images/background7bw.jpg");
 }
-.page {padding-bottom: 6em;}
+.page { padding-bottom: 6em; }
 
-.mobileDisable {display: none;} /* Piilottaa elementit, joiden ei tule näkyä Mobile-näkymässä. */
+.mobileDisable { display: none; } /* Piilottaa elementit, joiden ei tule näkyä Mobile-näkymässä. */
 
 /* || Containerit */
-.first {
+.first 
+{
   overflow: hidden;
   background-color: var(--background);
   border-radius: 1.5625em;
 }
-.second {
+.second 
+{
   margin: 2em 0 0 0;
   overflow: hidden;
   background-color: var(--background);
   border-radius: 1.5625em;
 }
-.bigBox {
+.bigBox 
+{
   padding: 1em;
   background-color: var(--background);
   border: 0.125em solid var(--darkergrey);
   border-radius: 1.5625em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 } 
-.smallBox {
+.smallBox 
+{
   text-align: center;
   margin: 0.2em;
   padding: 0.5em;
@@ -36,14 +41,16 @@ body {
   border-radius: 1.5625em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
-.mobileBox {
+.mobileBox 
+{
   margin: 2em auto;
   max-width: 90%;
 }
-.mobileClean {margin: 0 0 2em 0; padding: 1em 0;}
+.mobileClean { margin: 0 0 2em 0; padding: 1em 0; }
 
 /* || Yläpalkki */
-.mobileNav {
+.mobileNav 
+{
   background-color: var(--darkergrey);
   overflow: hidden;
   position: fixed;
@@ -51,15 +58,17 @@ body {
   top: 0;
   display: block;
 }
-.mobileNav #links {display: none;}
-.mobileNav a {
+.mobileNav #links { display: none; }
+.mobileNav a 
+{
   color: var(--white);
   padding: 0.8rem;
   text-decoration: none;
   font-size: 1.2rem;
   display: block;
 }
-.mobileNav a.icon {
+.mobileNav a.icon 
+{
   background: var(--darkergrey);
   display: block;
   width: 4rem;
@@ -69,8 +78,9 @@ body {
   border-right: 0.125em solid var(--black);
   border-bottom: 0.125em solid var(--black);
 }
-.activeLink {background-color: var(--darkestgrey);}
-header {
+.activeLink { background-color: var(--darkestgrey); }
+header 
+{
   display: block;
   text-align: center;
   color: var(--darkergrey);
@@ -79,8 +89,8 @@ header {
 }
 
 /* || Kuvagalleria */
-.galleria {padding-bottom: 10em;}
-.galleria img  {margin: 1em; float: none;}
+.galleria { padding-bottom: 10em; }
+.galleria img  { margin: 1em; float: none; }
 
 /* || Footer */
-footer {font-size: 1em; bottom: 1em; right: 1em;}
+footer { font-size: 1em; bottom: 1em; right: 1em; }

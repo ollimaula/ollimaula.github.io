@@ -1,26 +1,28 @@
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+.col-1 { width: 8.33%; }
+.col-2 { width: 16.66%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.33%; }
+.col-5 { width: 41.66%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.33%; }
+.col-8 { width: 66.66%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+.col-12 { width: 100%; }
 
-body {
+body 
+{
   max-width: 1440px;
   background-image: url("../images/background5bw.jpg");
 }
-.page {max-width: 1140px;}
+.page { max-width: 1140px; }
 
-.desktopDisable {display: none;} /* Piilottaa elementit, joiden ei tule näkyä Desktop-näkymässä. */
+.desktopDisable { display: none; } /* Piilottaa elementit, joiden ei tule näkyä Desktop-näkymässä. */
 
 /* || Containerit */
-.first {
+.first 
+{
   margin: 0 0 0 2em;
   padding-bottom: 1em;
   float: left;
@@ -28,14 +30,16 @@ body {
   background-color: var(--background);
   border-radius: 1.5625em;
 }
-.second {
+.second 
+{
   margin: 8em 2em 0 0;
   float: right;
   overflow: hidden;
   background-color: var(--background);
   border-radius: 1.5625em;
 }
-.bigBox {
+.bigBox 
+{
   padding: 1em;
   overflow: visible;
   background-color: var(--background);
@@ -43,7 +47,8 @@ body {
   border-radius: 1.5625em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
-.smallBox {
+.smallBox 
+{
   text-align: center;
   margin: 0 auto 2rem auto;
   padding: 0.5em;
@@ -54,12 +59,14 @@ body {
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
   transition-duration: 1s;
 }
-.smallBox:hover {
+.smallBox:hover 
+{
   box-shadow: var(--lightgrey) 0.4375em 0.4375em 0.4375em;
   transform: scale(1.05);
   transition-duration: 1s;
 }
-.itBox {
+.itBox 
+{
   padding: 1em;
   overflow: visible;
   background-color: var(--background);
@@ -67,14 +74,15 @@ body {
   border-radius: 1.5625em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
-.linkContainer {margin: 9.4em 3em 0 0; float: right;}
-.itContainer {margin: 5em 0 0 0;}
-.ylin {min-height: 45em;}
-.alempi {margin: 5em 0 0 0;}
-.alin {margin: 10em 0 0 0; padding-bottom: 25em;}
+.linkContainer { margin: 9.4em 3em 0 0; float: right; }
+.itContainer { margin: 5em 0 0 0; }
+.ylin { min-height: 45em; }
+.alempi { margin: 5em 0 0 0; }
+.alin { margin: 10em 0 0 0; padding-bottom: 25em; }
 
 /* || Yläpalkki */
-header {
+header 
+{
   display: block;
   text-align: left;
   color: var(--black);
@@ -82,7 +90,8 @@ header {
   margin: 2em 4em 0 0;
   float: right;
 }
-nav {
+nav 
+{
   text-align: center;
   margin: 2em 0 0 0.8em;
   background-color: transparent;
@@ -92,22 +101,26 @@ nav {
   overflow: visible;
   float: left;
 }
-ul#navlist {
+ul#navlist 
+{
   text-align: center;
   list-style-type: none;
   height: 100%;
 }
-li.navig {
+li.navig 
+{
   display: block;
   letter-spacing: 0.1em;
   transition-duration: 0.5s;
 }
-li.navig:hover {
+li.navig:hover 
+{
   display: block;
   letter-spacing: 0.2em;
   transition-duration: 0.5s;
 }
-li a {
+li a 
+{
   display: block;
   color: var(--white);
   font-family: Play, sans-serif;
@@ -121,14 +134,15 @@ li a {
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
 li a:hover{ color: var(--darkergrey); }
-p.bar {transform: skewX(25deg);}
-a.active {background-color: var(--darkestgrey); height: 2em;}
-a.active:hover {color: var(--white);}
-a.nonactive {height: 2em;}
-a.nonactive:hover {background-color: var(--white);}
+p.bar { transform: skewX(25deg); }
+a.active { background-color: var(--darkestgrey); height: 2em; }
+a.active:hover { color: var(--white); }
+a.nonactive { height: 2em; }
+a.nonactive:hover { background-color: var(--white); }
 
 /* || Työkokemustaulukko */
-table#kokemus {
+table#kokemus 
+{
   border: 0.2em solid var(--black);
   border-radius: 1.5625em;
   margin: 1em auto;
@@ -137,17 +151,20 @@ table#kokemus {
   color: var(--darkgrey);
   box-shadow: var(--lightgrey) 0.25em 0.25em 0.25em;
 }
-th#otsikko {
+th#otsikko 
+{
     font-size: 1.25em;
     border-radius: 1em 1em 0 0;
-  }
-th {
+}
+th 
+{
   font-family: Play, sans-serif;
   text-align: center;
   border: 0.125em solid var(--black);
   padding: 0.5em;
 }
-td {
+td 
+{
   font-family: Roboto, sans-serif;
   text-align: left;
   margin: 1em;
@@ -155,7 +172,8 @@ td {
   border: 0.0625em solid var(--black);
   border-left: 0.125em solid var(--black);
 }
-td.south_west {
+td.south_west 
+{
     font-family: Roboto, sans-serif;
     text-align: left;
     margin: 1em;
@@ -164,7 +182,8 @@ td.south_west {
     border-left: 0.125em solid var(--black);
     border-radius: 0 0 0 1.4em;
 }
-td.south_east {
+td.south_east 
+{
     font-family: Roboto, sans-serif;
     text-align: left;
     border: 0.0625em solid var(--black);
@@ -173,7 +192,8 @@ td.south_east {
     padding: 0.1875em 2em;
     border-radius: 0 0 1.4em 0;
 }
-td.kuvaus {
+td.kuvaus 
+{
   font-family: Roboto, sans-serif;
   text-align: left;
   border: 0.0625em solid var(--black);
@@ -181,7 +201,8 @@ td.kuvaus {
   margin: 0.5em;
   padding: 0.1875em 2em;
 }
-td.aika {
+td.aika 
+{
   font-family: Roboto, sans-serif;
   text-align: center;
 }

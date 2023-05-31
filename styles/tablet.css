@@ -1,32 +1,35 @@
-.col-t1 {width: 8.33%;}
-.col-t2 {width: 16.66%;}
-.col-t3 {width: 25%;}
-.col-t4 {width: 33.33%;}
-.col-t5 {width: 41.66%;}
-.col-t6 {width: 50%;}
-.col-t7 {width: 58.33%;}
-.col-t8 {width: 66.66%;}
-.col-t9 {width: 75%;}
-.col-t10 {width: 83.33%;}
-.col-t11 {width: 91.66%;}
-.col-t12 {width: 100%;}
+.col-t1 { width: 8.33%; }
+.col-t2 { width: 16.66%; }
+.col-t3 { width: 25%; }
+.col-t4 { width: 33.33%; }
+.col-t5 { width: 41.66%; }
+.col-t6 { width: 50%; }
+.col-t7 { width: 58.33%; }
+.col-t8 { width: 66.66%; }
+.col-t9 { width: 75%; }
+.col-t10 { width: 83.33%; }
+.col-t11 { width: 91.66%; }
+.col-t12 { width: 100%; }
 
-body {
+body 
+{
   max-width: 1115px;
   background-image: url("../images/background6bw.jpg");
 }
 
-.tabDisable {display: none;} /* Piilottaa elementit, joiden ei tule näkyä Tablet-näkymässä. */
+.tabDisable { display: none; } /* Piilottaa elementit, joiden ei tule näkyä Tablet-näkymässä. */
 
 /* || Containerit */
-.bigBox {
+.bigBox 
+{
   padding: 1em;
   background-color: var(--background);
   border: 0.125em solid var(--darkergrey);
   border-radius: 1.5625em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
-.smallBox {
+.smallBox 
+{
   text-align: center;
   margin: 0.2em;
   padding: 0.5em;
@@ -35,54 +38,62 @@ body {
   border-radius: 1.5625em;
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
-.padBox {
+.padBox 
+{
   margin: 3em;
   overflow: hidden;
   background-color: var(--background);
   border-radius: 1.5625em;
 }
-.padClean {
+.padClean 
+{
   margin: 3em auto;
   padding-bottom: 1em;
   overflow: hidden;
   background-color: var(--background);
   border-radius: 1.5625em;
 }
-.padSelf {margin: 5em 0 0 1em; float: left;}
-.alempi {margin: 5em 0 0 0; padding-bottom: 15em;}
-.alin {padding: 0 0 20em 0;}
+.padSelf { margin: 5em 0 0 1em; float: left; }
+.alempi { margin: 5em 0 0 0; padding-bottom: 15em; }
+.alin { padding: 0 0 20em 0; }
 
 /* || Yläpalkki */
-header {
+header 
+{
   display: block;
   text-align: left;
   color: var(--darkergrey);
   margin: 1em;
   float: left;
 }
-nav {
+nav 
+{
   text-align: center;
   margin: 0 0.8em;
   background-color: transparent;
   color: var(--white);
   font-size: 1.2em;
 }
-ul#navlist {
+ul#navlist 
+{
   text-align: center;
   list-style-type: none;
   height: 100%;
 }
-li.navig {
+li.navig 
+{
   display: block;
   letter-spacing: 0.1em;
   transition-duration: 0.5s;
 }
-li.navig:hover {
+li.navig:hover 
+{
   display: block;
   letter-spacing: 0.2em;
   transition-duration: 0.5s;
 }
-li a {
+li a 
+{
   display: block;
   color: var(--white);
   font-family: 'Play', sans-serif;
@@ -95,14 +106,15 @@ li a {
   box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
 }
 li a:hover{ color: var(--black); }
-p.bar {transform: skewX(25deg);}
-a.active {background-color: var(--darkestgrey); height: 2em;}
-a.active:hover {color: var(--white);}
-a.nonactive {height: 2em;}
-a.nonactive:hover {background-color: var(--white);}
+p.bar { transform: skewX(25deg); }
+a.active { background-color: var(--darkestgrey); height: 2em; }
+a.active:hover { color: var(--white); }
+a.nonactive { height: 2em; }
+a.nonactive:hover { background-color: var(--white); }
 
 /* || Työkokemustaulukko */
-table#kokemus {
+table#kokemus 
+{
     border: 0.2em solid var(--black);
     border-radius: 1.5625em;
     margin: 1em auto;
@@ -111,17 +123,20 @@ table#kokemus {
     color: var(--darkgrey);
     box-shadow: var(--lightgrey) 0.25em 0.25em 0.25em;
 }
-th#otsikko {
+th#otsikko 
+{
     font-size: 1.25em;
     border-radius: 1em 1em 0 0;
-  }
-th {
+}
+th 
+{
     font-family: Play, sans-serif;
     text-align: center;
     border: 0.125em solid var(--black);
     padding: 0.5em;
 }
-td {
+td 
+{
     font-family: Roboto, sans-serif;
     text-align: left;
     margin: 1em;
@@ -129,7 +144,8 @@ td {
     border: 0.0625em solid var(--black);
     border-left: 0.125em solid var(--black);
 }
-td.south_west {
+td.south_west 
+{
     font-family: Roboto, sans-serif;
     text-align: left;
     margin: 1em;
@@ -138,7 +154,8 @@ td.south_west {
     border-left: 0.125em solid var(--black);
     border-radius: 0 0 0 1.4em;
 }
-td.south_east {
+td.south_east 
+{
     font-family: Roboto, sans-serif;
     text-align: left;
     border: 0.0625em solid var(--black);
@@ -147,7 +164,8 @@ td.south_east {
     padding: 0.1875em 2em;
     border-radius: 0 0 1.4em 0;
 }
-td.kuvaus {
+td.kuvaus 
+{
     font-family: Roboto, sans-serif;
     text-align: left;
     border: 0.0625em solid var(--black);
@@ -155,7 +173,8 @@ td.kuvaus {
     margin: 0.5em;
     padding: 0.1875em 2em;
 }
-td.aika {
+td.aika 
+{
     font-family: Roboto, sans-serif;
     text-align: center;
 }
