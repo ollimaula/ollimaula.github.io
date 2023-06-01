@@ -39,7 +39,7 @@ var config =
     streamingAssetsUrl: "StreamingAssets",
     companyName: "OlliMaula",
     productName: "ScrollShooter",
-    productVersion: "1.2.1",
+    productVersion: "1.3.1",
     showBanner: unityShowBanner,
 };
 
@@ -101,6 +101,8 @@ script.onload = () =>
             }
         
             unityInstance.SendMessage("AudioManager", "SetVolume", volume);
+
+            // localStorage.setItem("Volume", volume);
         });
 
         volume_icon.onclick = () =>
@@ -110,7 +112,6 @@ script.onload = () =>
                 mute = true;
                 volume_icon.classList.toggle("fa-volume-xmark");
                 unityInstance.SendMessage("AudioManager", "SetVolume", 0);
-                return;
             }
             else
             {
@@ -118,8 +119,9 @@ script.onload = () =>
                 volume_icon.classList.toggle("fa-volume-xmark");
                 var volume = parseFloat(volume_slider.value);
                 unityInstance.SendMessage("AudioManager", "SetVolume", volume);
-                return;
             }
+
+            // localStorage.setItem("Volume", volume);
         };
 
         fullscreenButton.onclick = () => unityInstance.SetFullscreen(1);
