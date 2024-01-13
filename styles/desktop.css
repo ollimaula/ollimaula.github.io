@@ -40,6 +40,7 @@ body
 }
 .bigBox 
 {
+  margin: 3em 0 0 0;
   padding: 1em;
   overflow: visible;
   background-color: var(--background);
@@ -70,12 +71,13 @@ body
   padding: 1em;
   overflow: visible;
   background-color: var(--background);
-  border: 0.125em solid var(--black);
-  border-radius: 1.5625em;
-  box-shadow: var(--lightgrey) 0.3125em 0.3125em 0.3125em;
+  border: 0.1em solid var(--black);
 }
-.linkContainer { margin: 9.4em 3em 0 0; float: right; }
-.itContainer { margin: 5em 0 0 0; }
+#workLink 
+{
+    float: left;
+    margin: 2.5em 0 0 2em;
+}
 .ylin { min-height: 45em; }
 .alempi { margin: 5em 0 0 0; }
 .alin { margin: 10em 0 0 0; padding-bottom: 25em; }

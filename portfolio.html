@@ -2,8 +2,8 @@
 <html lang="fi">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Turvallisuusalan portfolio">
-    <meta name="keywords" content="Portfolio, CV, Curriculum Vitae, Turvallisuusala, Vartija, Olli Maula">
+    <meta name="description" content="Portfolio">
+    <meta name="keywords" content="Portfolio, CV, Curriculum Vitae, Olli Maula">
     <meta name="author" content="Olli Maula">
     <meta charset="UTF-8">
     <title>Olli Maula - Portfolio</title>
@@ -16,13 +16,12 @@
 </head>
 <body>
 
-<div class="page"> <!-- "page wrapperinä" div, koska mikään semanttinen elementti ei sovellu tähän. -->
+<div class="page">
 
   <section id="top" class="row">
 
     <header class="col-5 col-t11">
       <h1>OLLI<br>MAULA</h1>
-      <h3>Turvallisuuden ammattilainen</h3>
     </header>
 
     <nav class="mobileDisable col-6 col-t11"> <!-- Desktop- ja Tabletnäkymän navigointi -->
@@ -30,7 +29,7 @@
         <li class="navig">
           <a class="nonactive" href="index.html" title="Etusivu"><p class="bar"><i class="fas fa-home"></i> ETUSIVU</p></a></li>
         <li class="navig">
-          <a class="nonactive" href="harrastukset.html" title="Harrastukset"><p class="bar"><i class="far fa-keyboard"></i>  HARRASTUKSET</p></a></li>
+          <a class="nonactive" href="harrastukset.html" title="Harrastukset"><p class="bar"><i class="far fa-keyboard"></i> HARRASTUKSET</p></a></li>
         <li class="navig">
           <a class="active" href="portfolio.html" title="Portfolio"><p class="bar"><i class="far fa-file-alt"></i> PORTFOLIO</p></a></li>
       </ul>
@@ -45,41 +44,61 @@
       <a href="javascript:void(0);" class="icon" onclick="nav_onclick()"><i class="fas fa-bars"></i></a>
     </nav>
 
+    <div id="workLink" class="smallBox mobileBox padBox col-5">
+        <a class="clean" href="#middle"><h5><i class="fas fa-briefcase"></i> Työkokemus <i class="fas fa-long-arrow-alt-down"></i></h5></a>
+    </div>
+
   </section> <!-- top päättyy -->
 
   <main class="row"> <!-- sisältö alkaa -->
 
     <section class="ylin row"> <!-- Yläosan sisältö alkaa -->
 
-        <article class="first bigBox padBox mobileBox col-5 col-t11">
+        <article class="bigBox mobileBox padBox">
 
-          <h2><i class="fas fa-certificate"></i> Pätevyydet</h2>
-          <p>
-          <a class="linkki" href="https://www.naemt.org/education/tecc" target="_blank"><strong>TECC Ensiapu 1</strong></a><br>- <span>Voimassa: 9 / 2025</span><br>
-          <strong>Tulityökortti</strong><br>- <span>Voimassa: 5 / 2025</span><br>
-          <strong>Työturvallisuuskortti</strong><br>- <span>Voimassa: 10 / 2025</span><br>
-          <strong>Paloilmoitinlaitteenhoitaja</strong><br>- <span>Voimassa: toistaiseksi</span>
-          </p>
-          <p><strong>Järjestyksenvalvojakortti</strong><br>- Kaasusumutinkoulutus<br>- Teleskooppipatukkakoulutus<br>- Yleinen osa<br>- Voimankäytön lisäkoulutus</p>
-          <p><strong>Vartijakortti</strong><br>- Kaasusumutinkoulutus<br>- Teleskooppipatukkakoulutus<br>- Yleinen osa</p>
+            <h2><i class="fa-solid fa-laptop-code"></i> Projektit</h2>
+
+                <div class="itBox">
+                    <i class="fa-solid fa-rocket"></i>
+                    <a class="linkki" title="ScrollShooter" href="/scrollshooter/" target="_blank"><strong>ScrollShooter</strong></a> | 
+                    <a href="https://github.com/ollimaula/scrollshooter" target="_blank">(github)</a>
+                    <p>2023 | C#, Unity, MongoDB</p>
+                </div>
+
+                <div class="itBox">
+                    <i class="fa-solid fa-certificate"></i>
+                    <a class="linkki" title="HTB-CTF-UNI" href="/images/Certificate-Olli-HTB-Uni.pdf.png" target="_blank">
+                        <strong>HTB-CTF-UNI</strong>
+                    </a>
+                    <p>2023 | Hack The Box - University CTF</p>
+                </div>
+
+                <div class="itBox">
+                    <i class="fa-solid fa-snowflake"></i>
+                    <a class="linkki" title="Refrigeradar" href="http://35.228.199.238:8080/" target="_blank">
+                        <strong>Refrigeradar</strong>
+                    </a> |  
+                    <a href="https://github.com/ollimaula/refrigeradar" target="_blank">(github)</a>
+                    <p>2022 | Javascript, NodeJS, RedNode, MongoDB</p>
+                </div>
+
+                <div class="itBox">
+                    <i class="fa-solid fa-business-time"></i>
+                    <a class="linkki" title="Työaikahallinta" href="https://github.com/ollimaula/worktracking" target="_blank">
+                        <strong>Työaikahallinta</strong>
+                    </a>
+                    <p>2022 | C#, WPF, OOP</p>
+                </div>
+
+                <div class="itBox">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <a class="linkki" title="Nopeusvalvonta" href="https://github.com/ollimaula/nopeusvalvonta" target="_blank">
+                        <strong>Nopeusvalvonta</strong>
+                    </a>
+                    <p>2021 | Python, Tkinter</p>
+                </div>
 
         </article>
-
-        <section class="linkContainer col-5 col-t12">
-
-          <div class="smallBox mobileBox padBox col-10">
-            <a class="clean" href="#middle"><h5><i class="fas fa-briefcase"></i> Työkokemus <i class="fas fa-long-arrow-alt-down"></i></h5></a></div>
-
-          <article class="bigBox mobileBox padBox">
-            <h2><i class="fas fa-graduation-cap"></i> Koulutukset</h2>
-            <p><strong>Tieto- ja viestintätekniikka, insinööri</strong><br> - <span>Jyväskylän ammattikorkeakoulu, Kesken<br></span>
-            <strong>Turvallisuusalan ammattitutkinto</strong><br> - <span>Turun aikuiskoulutuskeskus - Oppisopimus, 2020<br></span>
-            <strong>Vartijan peruskoulutus</strong><br> - <span>Turun aikuiskoulutuskeskus, 2015</span><br>
-            <strong>Järjestyksenvalvojan peruskurssi</strong><br> - <span>Jyväskylän ammattiopisto (MH-Service), 2012</span><br>
-            <strong>Sähkö- ja automaatioasentajan perustutkinto</strong><br> - <span>Jyväskylän ammattiopisto, 2012</span></p>
-          </article>
-
-        </section> <!-- linkContainer päättyy -->
 
     </section> <!-- Yläosan sisältö päättyy -->
       
