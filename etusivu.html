@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio">
+    <meta name="keywords" content="Portfolio, CV, Curriculum Vitae, Olli Maula">
+    <meta name="author" content="Olli Maula">
+    <meta charset="UTF-8">
+    <title>Olli Maula - Etusivu</title>
+    <link rel="stylesheet" media="all" href="styles/general.css"> <!-- Kaikille näkymille yhteiset tyylit -->
+    <link rel="stylesheet" media="all and (max-width: 890px)" href="styles/phone.css"> <!-- Mobiilinäkymä -->
+    <link rel="stylesheet" media="all and (min-width: 891px) and (max-width: 1119px)" href="styles/tablet.css"> <!-- Tabletnäkymä -->
+    <link rel="stylesheet" media="all and (min-width: 1120px)" href="styles/desktop.css"> <!-- Desktopnäkymä -->
+    <script src="https://kit.fontawesome.com/55ff3240d5.js" crossorigin="anonymous"></script> <!-- Scripti iconeille. Scriptiä kutsutaan koodissa "i" elementillä ja sen class määritelmällä. -->
+    <script src="jscript/mobilemenu.js"></script> <!-- Hampurilaisvalikko mobiilinäkymälle-->
+</head>
+<body>
+
+<div class="page">
+
+  <section id="top" class="row">
+
+    <header class="col-5 col-t11">
+      <h1>OLLI<br>MAULA</h1>
+    </header>
+   
+    <nav class="mobileDisable col-6 col-t11"> <!-- Desktop- ja Tabletnäkymän navigointi -->
+      <ul id="navlist">
+        <li class="navig">
+          <a class="active" href="index.html" title="Etusivu"><p class="bar"><i class="fas fa-home"></i> ETUSIVU</p></a></li>
+        <li class="navig">
+          <a class="nonactive" href="harrastukset.html" title="Harrastukset"><p class="bar"><i class="far fa-keyboard"></i>  HARRASTUKSET</p></a></li>
+        <li class="navig">
+          <a class="nonactive" href="portfolio.html" title="Portfolio"><p class="bar"><i class="far fa-file-alt"></i> PORTFOLIO</p></a></li>
+      </ul>
+    </nav>
+    
+    <nav class="desktopDisable tabDisable mobileNav col-"> <!-- Mobiilinäkymän navigointi -->
+      <div id="links">
+        <a class="activeLink" href="index.html" title="Etusivu"><i class="fas fa-home"></i> ETUSIVU</a>
+        <a href="harrastukset.html" title="Harrastukset"><i class="far fa-keyboard"></i> HARRASTUKSET</a>
+        <a href="portfolio.html" title="Portfolio"><i class="far fa-file-alt"></i> PORTFOLIO</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="nav_onclick()"><i class="fas fa-bars"></i></a>
+    </nav>
+
+  </section> <!-- top päättyy -->
+
+  <main class="row"> <!-- sisältö alkaa -->
+
+    <article class="first padSelf col-6 col-t6">
+      <h2 ><i class="fas fa-info-circle"></i> Tietoa minusta</h2>
+      <p><img id="omakuvaMobile" class="desktopDisable tabDisable" src="images/omakuva1.png" alt="OMAKUVA" width="150" height="178"> <!-- Omakuva mobiilinäkymässä -->
+      <strong>Tällä hetkellä työskentelen <a class="linkki" title="securitas.fi" href="https://www.securitas.fi/yhteystiedot/toimipaikkamme-suomessa/jyvaskyla/" target="_blank">Securitas Oy:llä</a> 
+      ase- ja räjähdeteollisuuden kohteissa paikallisvartijana.</strong><br>
+      Tämänhetkiset työkohteeni ovat Millog Oy:n Lievestuoreen toimipiste sekä Nammon Vihtavuoren ruutitehdas.
+      Vastaan työssäni kohteiden fyysisestä turvallisuudesta sekä LVISJ- ja prosessihälytyksiin reagoinnista.
+      Ennen turvallisuusalalle siirtymistäni työskentelin muun muassa rakennustyömailla sekä kiinteistöpalvelutehtävissä.</p>
+      <p>Käytän työssäni enenevissä määrin elektronista valvontaa ja se on saanut minut kiinnostumaan tietoturvasta alana.
+      Tällä hetkellä opiskelen tieto- ja viestintätekniikan insinööriksi Jyväskylän ammattikorkeakoulussa.
+      Tarkoituksenani on erikoistua kyberturvallisuuteen, opiskellen nykyisen työni ohella. <strong>Tämä sivusto toimi ammattikorkeakouluni pääsykokeena.
+      </strong> </p>
+      <p>Vapaa-aikani menee pääasiallisesti erilaisten elektronisten laitteiden sekä ruutujen parissa.
+      Lisäksi harrastan kamppailulajeja ja vietän aikaa koirani kanssa.</p>
+    </article>
+
+    <aside id="omakuva" class="mobileDisable col-5 col-t5"> <!-- Omakuva desktop- ja tabletnäkymässä -->
+      <img src="images/omakuva2.png" alt="OMAKUVA" height="722" width="427">
+    </aside>
+
+  </main>  <!-- sisältö päättyy -->
+
+  <footer class="row">
+    <div class="contact" onclick=""> <!-- 'onclick' lisää tuen kosketusnäytöille -->
+      <i class="far fa-envelope fa-2x"></i>
+      <span>olli.maula@gmail.com | <i class="fas fa-phone"></i> 045 634 6077</span>
+    </div>
+  </footer>
+
+</div> <!-- page päättyy -->
+
+</body> 
+</html>
