@@ -12,7 +12,7 @@
             background-color: #f9f9f9;
         }
         .container {
-            max-width: 600px;
+            max-width: 1024px;
             margin: 0 auto;
             padding: 20px;
             background: white;
@@ -49,9 +49,24 @@
         .link-list li {
             padding: 10px;
             border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            word-wrap: break-word;
         }
         .link-list li:last-child {
             border-bottom: none;
+        }
+        .remove-button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .remove-button:hover {
+            background-color: #c82333;
         }
     </style>
 </head>
@@ -78,12 +93,22 @@
             if (data) {
                 Object.entries(data).forEach(([key, value]) => {
                     const li = document.createElement('li');
-                    li.textContent = value;
+
+                    const linkText = document.createElement('span');
+                    linkText.textContent = value;
+
+                    const removeButton = document.createElement('button');
+                    removeButton.textContent = 'Remove';
+                    removeButton.classList.add('remove-button');
+                    removeButton.onclick = () => removeLink(key);
+
+                    li.appendChild(linkText);
+                    li.appendChild(removeButton);
                     linkList.appendChild(li);
                 });
             }
         }
-      
+
         async function addLink() {
             const linkInput = document.getElementById('linkInput');
             const link = linkInput.value.trim();
@@ -103,9 +128,17 @@
                 alert('Please enter a valid link.');
             }
         }
-      
+        
+        async function removeLink(key) {
+            await fetch(`https://linkstore-d5535-default-rtdb.europe-west1.firebasedatabase.app/links/${key}.json`, {
+                method: 'DELETE'
+            });
+
+            fetchLinks();
+        }
+
         fetchLinks();
-      
+
         document.getElementById('linkInput').addEventListener('keydown', (event) => {
             if (event.key === 'Enter') {
                 addLink();
