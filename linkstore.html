@@ -52,7 +52,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            overflow-wrap: break-word;
             word-wrap: break-word;
+        }
+        .link-list li span {
+            max-width: calc(100% - 90px); /* Accounts for button width plus spacing */
+            word-break: break-word;
         }
         .link-list li:last-child {
             border-bottom: none;
@@ -83,6 +88,7 @@
     <script>
         const dbUrl = 'https://linkstore-d5535-default-rtdb.europe-west1.firebasedatabase.app/links.json';
 
+        // Fetch and display links
         async function fetchLinks() {
             const response = await fetch(dbUrl);
             const data = await response.json();
@@ -109,6 +115,7 @@
             }
         }
 
+        // Add a new link
         async function addLink() {
             const linkInput = document.getElementById('linkInput');
             const link = linkInput.value.trim();
@@ -128,7 +135,8 @@
                 alert('Please enter a valid link.');
             }
         }
-        
+
+        // Remove a link
         async function removeLink(key) {
             await fetch(`https://linkstore-d5535-default-rtdb.europe-west1.firebasedatabase.app/links/${key}.json`, {
                 method: 'DELETE'
@@ -137,8 +145,10 @@
             fetchLinks();
         }
 
+        // Fetch links on page load
         fetchLinks();
 
+        // Add event listener for pressing Enter
         document.getElementById('linkInput').addEventListener('keydown', (event) => {
             if (event.key === 'Enter') {
                 addLink();
