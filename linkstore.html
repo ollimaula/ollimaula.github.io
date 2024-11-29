@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkStore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .input-group {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .input-group input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+        .input-group button {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+        }
+        .input-group button:hover {
+            background-color: #218838;
+        }
+        .link-list {
+            list-style: none;
+            padding: 0;
+        }
+        .link-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .link-list li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LinkStore</h1>
+        <div class="input-group">
+            <input type="text" id="linkInput" placeholder="Enter a link">
+            <button onclick="addLink()">Add Link</button>
+        </div>
+        <ul id="linkList" class="link-list"></ul>
+    </div>
+
+    <script>
+        const dbUrl = 'https://linkstore-d5535-default-rtdb.europe-west1.firebasedatabase.app/links.json';
+
+        async function fetchLinks() {
+            const response = await fetch(dbUrl);
+            const data = await response.json();
+
+            const linkList = document.getElementById('linkList');
+            linkList.innerHTML = '';
+
+            if (data) {
+                Object.entries(data).forEach(([key, value]) => {
+                    const li = document.createElement('li');
+                    li.textContent = value;
+                    linkList.appendChild(li);
+                });
+            }
+        }
+      
+        async function addLink() {
+            const linkInput = document.getElementById('linkInput');
+            const link = linkInput.value.trim();
+
+            if (link) {
+                await fetch(dbUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(link)
+                });
+
+                linkInput.value = '';
+                fetchLinks();
+            } else {
+                alert('Please enter a valid link.');
+            }
+        }
+      
+        fetchLinks();
+      
+        document.getElementById('linkInput').addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                addLink();
+            }
+        });
+    </script>
+</body>
+</html>
